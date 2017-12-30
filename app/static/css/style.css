@@ -279,7 +279,8 @@ h3 a {
     border-radius: 4px;
     font-size: 12px;
     background: #00b8ff;
-    padding: 4px 9px
+    padding: 4px 9px;
+    margin-right: 10px;
 }
 
 .default {
@@ -1177,4 +1178,20 @@ textarea {
 
 .icon-skype:before {
     content: '\e803'
+}
+
+#contactMap{
+    height: 350px;
+}
+
+#contactMap div:first-child {
+    height: 100%;
+}
+
+#contactMap button {
+    display: none;
+}
+
+.gmnoprint {
+    display: none !important;
 }

@@ -22,7 +22,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="static/favicon/favicon-180.png">
     <meta name="msapplication-TileColor" content="#FFFFFF">
     <meta name="msapplication-TileImage" content="static/favicon/favicon-144.png">
-    <meta name="msapplication-config" content="/browserconfig.xml">
+    <meta name="msapplication-config" content="static/favicon/browserconfig.xml">
     <!-- ****** faviconit.com favicons ****** -->
 
     <meta charset=UTF-8>
@@ -183,36 +183,9 @@
             <div class="row" id="clients" style="padding-top:45px;">
                 <div class="container">
                     <div class="center">
-                        <div class="center">
-
-                            <h1 style="color: black">
-                                Hackathons
-                            </h1>
-                            <!-- 
-                                                <div class="row">
-                                                        <div class="container">
-                                                            <div class="portfolio-col hack-col screenshot">
-                                                                <a href=https://techcrunch.com/2016/09/11/thehighflyers-helps-you-join-the-mile-high-chat-club target=_blank/><img alt="Techcrunch Disrupt" src='static/images/projects/techcrunch_disrupt.png' class="grayscale client-fade" style="width: 100%"></a>
-                                                            </div>
-                                                            <div class="portfolio-col hack-col screenshot">
-                                                                <a href=https://angelhack.com/2016/10/17/hacking-for-good-tech-museum target=_blank/><img alt="Techcrunch Disrupt" src='static/images/projects/angelhack.jpg' class="grayscale client-fade" style="width: 100%"></a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                            <div class="client portfolio-col screenshot">
-                                <img alt="Angelhack" src='static/images/projects/angelhack.jpg' class="grayscale client-fade">
-                            </div>
-                            <div class="client portfolio-col screenshot">
-                                <img alt="Angelhack" src='static/images/projects/techcrunch_disrupt.png' class="grayscale client-fade">
-                            </div>
-                                <div class="client">
-                                <img alt="Techchrunch dusrupt" src="static/images/projects/techcrunch_disrupt.png" class="grayscale client-fade">
-                            </div>
-                            <div class="client">
-                                <img alt="Angelhack" src="static/images/projects/angelhack.jpg" class="grayscale client-fade">
-                            </div> -->
-                        </div>
+                        <h1 style="color: black">
+                            Hackathons
+                        </h1>
                     </div>
                 </div>
             </div>
@@ -268,43 +241,11 @@
                 <!-- <div class="separator"></div> -->
             </div>
 
-            <!-- 
-            <div class=row>
-                <div class=container>
-                    <div class="cf portfolio-item">
-                        <div class="portfolio-col screenshot">
-                            <img alt=Tweetmap src=img/tweetmap.jpg>
-                        </div>
-                        <div class="portfolio-col description-container">
-                            <div class=cf>
-                                <div class=project-title>
-                                    <h3>
-                                        <a href=https://jonny.me/tweetmap target=_blank>Tweetmap</a>
-                                    </h3>
-                                </div>
-                                <div class=githubButton>
-                                    <a href=https://github.com/jonnymaceachern/tweetmap class=github-button data-count-api=/repos/jonnymaceachern/tweetmap#stargazers_count
-                                        data-count-href=/jonnymaceachern/tweetmap/stargazers data-icon=octicon-star data-style=mega>Star</a>
-                                </div>
-                            </div>
-                            <p class=description>A web app that lets users view who is tweeting nearby. Using geocode data, each tweet is pinned
-                                on a map where it originated.</p>
-                            <ul class=skills>
-                                <li>Google Maps API v3</li>
-                                <li>Twitter Search API 1.1</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class=separator></div>
+            <div class="row map-offset" style="height:350px;">
+                    <div id=map></div>
             </div>
-        -->
+            
 
-            <div class=row id=contactMap>
-                <div class=map-offset>
-                    <div id=map-canvas></div>
-                </div>
-            </div>
         </div>
     </main>
     <div id=footer>
@@ -331,7 +272,7 @@
                     </div>
                 </div>
                 <div class=span8 id=contact>
-                    <form action=mailer.php id=contact-form method=post name=contact-form>
+                    <form action=/contact id=contact-form method=post name=contact-form>
                         <div class=buffer-bottom>
                             <input type=text name=name placeholder=Name required id=field1>
                             <input type=email name=email placeholder=Email required>
@@ -358,8 +299,116 @@
         </ul>
     </div>
 
+
+
+    <script>
+            function initMap() {
+              // Styles a map in night mode.
+              var map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: 40.674, lng: -73.945},
+                zoom: 12,
+                styles: [
+                  {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
+                  {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
+                  {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
+                  {
+                    featureType: 'administrative.locality',
+                    elementType: 'labels.text.fill',
+                    stylers: [{color: '#d59563'}]
+                  },
+                  {
+                    featureType: 'poi',
+                    elementType: 'labels.text.fill',
+                    stylers: [{color: '#d59563'}]
+                  },
+                  {
+                    featureType: 'poi.park',
+                    elementType: 'geometry',
+                    stylers: [{color: '#263c3f'}]
+                  },
+                  {
+                    featureType: 'poi.park',
+                    elementType: 'labels.text.fill',
+                    stylers: [{color: '#6b9a76'}]
+                  },
+                  {
+                    featureType: 'road',
+                    elementType: 'geometry',
+                    stylers: [{color: '#38414e'}]
+                  },
+                  {
+                    featureType: 'road',
+                    elementType: 'geometry.stroke',
+                    stylers: [{color: '#212a37'}]
+                  },
+                  {
+                    featureType: 'road',
+                    elementType: 'labels.text.fill',
+                    stylers: [{color: '#9ca5b3'}]
+                  },
+                  {
+                    featureType: 'road.highway',
+                    elementType: 'geometry',
+                    stylers: [{color: '#746855'}]
+                  },
+                  {
+                    featureType: 'road.highway',
+                    elementType: 'geometry.stroke',
+                    stylers: [{color: '#1f2835'}]
+                  },
+                  {
+                    featureType: 'road.highway',
+                    elementType: 'labels.text.fill',
+                    stylers: [{color: '#f3d19c'}]
+                  },
+                  {
+                    featureType: 'transit',
+                    elementType: 'geometry',
+                    stylers: [{color: '#2f3948'}]
+                  },
+                  {
+                    featureType: 'transit.station',
+                    elementType: 'labels.text.fill',
+                    stylers: [{color: '#d59563'}]
+                  },
+                  {
+                    featureType: 'water',
+                    elementType: 'geometry',
+                    stylers: [{color: '#17263c'}]
+                  },
+                  {
+                    featureType: 'water',
+                    elementType: 'labels.text.fill',
+                    stylers: [{color: '#515c6d'}]
+                  },
+                  {
+                    featureType: 'water',
+                    elementType: 'labels.text.stroke',
+                    stylers: [{color: '#17263c'}]
+                  }
+                ]
+              });
+            }
+          </script>
+
+          <style>
+                /* Always set the map height explicitly to define the size of the div
+                 * element that contains the map. */
+                #map {
+                  height: 100%;
+                }
+                /* Optional: Makes the sample page fill the window. */
+                html, body {
+                  height: 100%;
+                  margin: 0;
+                  padding: 0;
+                }
+              </style>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEu5asnQjhEg1yLvMPjUXAS8LMMXf-6Vk&callback=initMap" async defer></script>
+
+    
     <script src=static/js/scripts.min.js></script>
 </body>
 
