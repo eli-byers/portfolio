@@ -6,12 +6,13 @@ $(document).ready(function() {
     var burger = $("#hamburger")                
     var drop = $("#dropdown");                  
     
-    burger.click(function() {                   
+    burger.on('click', function(e) {
+        e.preventDefault()                   
         burger.data('open', !drop.attr('open'));
         drop.slideToggle("fast")                
     })                                          
     
-    drop.find("a").on("click", function() {     
+    drop.find("a").on("click", function(e) {     
         burger.data('open', false)
         drop.slideToggle()                   
     })                                          
@@ -87,8 +88,9 @@ $(document).ready(function() {
 
     // window resize
     $(window).resize(function() {
-        if ($(this).width() > 691) {
-            hideDropdown()
+        if ($(this).width() >= 691) {
+            burger.data('open', false)
+            drop.css('display', 'none')
         }
       });
 
