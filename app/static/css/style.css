@@ -321,24 +321,31 @@ h3 a {
 }
 
 #dropdown {
-    background: #00b8ff;
+    background: #242424;
     right: 0;
     left: 0;
     position: absolute;
     margin: 20px 30px 30px;
     display: none;
+    border: 1px solid #333;
     border-radius: 3px
 }
 
 #dropdown ul li {
     display: block;
-    padding: 11px 0;
+    padding: 16px 0;
     font-weight: 700;
     font-size: 17px;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #333;
     color: #fff
 }
+#dropdown a:hover {
+    color: #00b8ff;
+}
 
+#dropdown ul li:last-child {
+    border-bottom: 0px;
+}
 .active {
     border-bottom: 4px solid #00b8ff
 }
@@ -396,7 +403,7 @@ h3 a {
 #header.nav-fixed {
     padding-top: 9px;
     padding-bottom: 8px;
-    background: #fff!important;
+    background: #fff !important;
     border-bottom: 1px solid #f5f5f5
 }
 
@@ -404,10 +411,11 @@ h3 a {
     padding-bottom: 7px
 }
 
+
 #header.nav-fixed .name,
 #header.nav-fixed .title,
 #header.nav-fixed li a {
-    color: #303030!important
+    color: #333 !important
 }
 
 .index #header {
@@ -514,6 +522,7 @@ a.button:hover {
     padding-bottom: 21px!important
 }
 
+
 #nav ul {
     font-size: 0
 }
@@ -541,7 +550,8 @@ a.button:hover {
 }
 
 nav li a:hover {
-    background: #f7f7f7
+    color: #00b8ff;
+    /* background: #f7f7f7 */
 }
 
 .index #nav li a:hover {
@@ -615,6 +625,26 @@ p {
 #map-canvas {
     width: 100%;
     height: 400px
+}
+
+#map-cover {
+    position: relative !important;
+    height: inherit;
+    top: -400px;
+    left: 0;
+}
+
+#map {
+    height: inherit;
+    width: inherit;
+}
+
+#map button {
+    display: none;
+}
+
+.gmnoprint {
+    display: none !important;
 }
 
 .pull-right {
@@ -699,11 +729,15 @@ h2 a:hover {
     float: left
 }
 
-.hamburger {
-    width: 36px;
-    height: 30px;
+.hamburger i {
+    color: white;
+    border: 1px solid white;
+    border-radius: 3px;
+    padding: 2px 5px 1px 5px;
     display: none;
-    background: url(../images/hamburger.png)
+    /* width: 36px;
+    height: 30px;
+    background: url(../images/hamburger.png) */
 }
 
 .btn {
@@ -997,7 +1031,7 @@ textarea {
 
 @media (max-width:800px) {
     .nav-fixed {
-        position: relative!important
+        /* position: relative!important */
     }
 }
 
@@ -1012,7 +1046,31 @@ textarea {
     .separator {
         display: none
     }
-    .hamburger {
+    .nav-fixed #dropdown {
+        background: #fff;
+        border: 1px solid #eee;
+    }
+    .nav-fixed #dropdown ul li {
+        border-color: #eee;
+        color: #333;
+    }
+    #header.default li a {
+        color: #eee !important
+    }
+    .nav-fixed a {
+        padding-bottom: 2px !important;
+    }
+    .nav-fixed a:hover {
+        background: none;
+    }
+    .active {
+        border-bottom: 2px solid #00b8ff;
+    }
+    .nav-fixed .hamburger i {
+        margin-top: -10px;
+        color: black;
+    }
+    .hamburger i {
         display: inline-block
     }
     #hero {
@@ -1035,14 +1093,17 @@ textarea {
         padding: 30px 0 100px
     }
     #nav li a:hover {
-        background: 0 0;
-        color: #00b8ff
+        /* background: 0 0; */
+        color: white;
     }
     .span4 {
         width: 100%
     }
     #map-canvas {
         height: 200px
+    }
+    #map-cover {
+        top: -200px;
     }
     #header {
         text-align: center!important;
@@ -1178,20 +1239,4 @@ textarea {
 
 .icon-skype:before {
     content: '\e803'
-}
-
-#contactMap{
-    height: 350px;
-}
-
-#contactMap div:first-child {
-    height: 100%;
-}
-
-#contactMap button {
-    display: none;
-}
-
-.gmnoprint {
-    display: none !important;
 }

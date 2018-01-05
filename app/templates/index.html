@@ -32,7 +32,7 @@
     <meta content="san jose web development, san jose software engineering" name=keywords>
     <meta content="width=device-width,user-scalable=no" name=viewport>
 
-    <link href=static/css/style.min.css rel=stylesheet>
+    <link href=static/css/style.css rel=stylesheet>
     <script src="https://use.fontawesome.com/b59847f86f.js"></script>
 </head>
 
@@ -55,23 +55,29 @@
                 <div class=pull-right>
                     <nav id=nav>
                         <ul class=nav-default>
-                            <li>
-                                <a href=#top class=active data-nav=home>HOME</a>
-                            </li>
-                            <li>
-                                <a href=#projects data-nav=projects>PROJECTS</a>
-                            </li>
-                            <li>
-                                <a href=#contact data-nav=contact>CONTACT</a>
-                            </li>
+                            <li><a href=#top class=active data-nav=home>HOME</a></li>
+                            <li><a href=#projects data-nav=projects>PROJECTS</a></li>
+                            <li><a href=#contact data-nav=contact>CONTACT</a></li>
                         </ul>
-                        <a href=# class=hamburger id=hamburger></a>
+                        <a href=# id=hamburger class=hamburger data-open=false><i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+                        </a>
+                    </nav>
+                    <!-- mobile nav -->
+                    <nav id=dropdown>
+                        <ul class=nav-default>
+                            <li><a href=#top class=active data-nav=home>HOME</a></li>
+                            <li><a href=#projects data-nav=projects>PROJECTS</a></li>
+                            <li><a href=#contact data-nav=contact>CONTACT</a></li>
+                        </ul>
                     </nav>
                 </div>
+
             </div>
         </div>
     </header>
+
     <main>
+
         <div id=row-hero>
             <div class=container>
                 <div class=buffer-top id=hero>
@@ -105,8 +111,9 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div id=projects>
+        </div> <!-- end row-hero -->
+
+        <div id='projects'>
 
             <div class="row">
                 <div class="container">
@@ -241,12 +248,14 @@
                 <!-- <div class="separator"></div> -->
             </div>
 
-            <div class=row id=contactMap>
+            <div class=row id=map-canvas>
                 <div id=map class=map-offset></div>
+                <div id=map-cover></div>
             </div>
 
-        </div>
+        </div> <!-- end projects -->
     </main>
+
     <div id=footer>
         <div class=row>
             <div class=container>
@@ -288,7 +297,8 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> <!-- end footer -->
+
     <div class=center id=links>
         <ul>
             <li>&copy; ELIBYERS.COM 2017 </li>
@@ -300,9 +310,10 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+    <!-- google maps -->
     <script src=static/js/map.js></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEu5asnQjhEg1yLvMPjUXAS8LMMXf-6Vk&callback=initMap" async defer></script>
-    
+    <!-- custom scripts -->
     <script src=static/js/scripts.js></script>
     
 </body>

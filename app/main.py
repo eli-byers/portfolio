@@ -5,8 +5,7 @@ from flask_mail import Mail, Message
 
 app = Flask(__name__, static_url_path='/static')
 
-APP_ROOT = os.path.join(os.path.dirname(__file__), '..')   # refers to application_top
-dotenv_path = os.path.join(APP_ROOT, '.env')
+dotenv_path = os.path.join(os.path.dirname(__file__), '.env')
 load_dotenv(dotenv_path)
 
 app.config.update(dict(
@@ -36,12 +35,12 @@ def contact():
     subject = "Contact Form: {}".format(name)
     msgStr='{}<br>{}<br>{}<br><br>{}'.format(name, email, phone, message)
 
-    msg = Message(sender=email, subject=subject, html=msgStr, recipients=[me])
+    msg = Message(sender=email, reply_to=email, subject=subject, html=msgStr, recipients=[me])
     mail.send(msg)
 
     return redirect('/')
 
-    
+
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True, port=80)
