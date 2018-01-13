@@ -832,6 +832,12 @@ a.btn:hover {
     color: #F44336 !important;
 }
 
+.hack {
+    padding-bottom: 40px;
+    border-bottom: 1px solid #eee;
+    border-top: 1px solid #eee;
+}
+
 #contact {
     padding-bottom: 40px
 }
