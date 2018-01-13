@@ -40,42 +40,51 @@ $(document).ready(function() {
     $(window).scroll(function() {
         hideDropdown()
 
+        let scrollTop = $(this).scrollTop()
+        // if (!header.fixed) {
+        //     header.fixed = true
+        //     header.toggleClass('default', 50).toggleClass('nav-fixed', 50);
+        //     console.log("asdf")
+        // }
+
         // if bellow header
-        if ($(this).scrollTop() >= projectsOffset.top - 58){
+        if (scrollTop >= 60){
 
             if (header.hasClass("default")){
                 header.hide().removeClass("default").addClass("nav-fixed").fadeIn()
             }
-
-            if ($(this).scrollTop() > projectsOffset.top - 200){
-                var projects = header.find("[data-nav='projects']") 
-                if (!projects.hasClass('active')) {
-                    header.find(".active").removeClass("active")
-                    header.find("[data-nav='projects']").addClass("active")
-                }
-            }
+ 
+            if (scrollTop <= projectsOffset.top - 200) {
+                activateNav("home")
+            } 
             
-            if ($(this).scrollTop() > mapCanvasOffset.top - 200){
-                var contact = header.find("[data-nav='contact']") 
-                if (!contact.hasClass('active')) {
-                    header.find(".active").removeClass("active")
-                    header.find("[data-nav='contact']").addClass("active")
-                }
+            if (scrollTop > projectsOffset.top - 200 && scrollTop <= mapCanvasOffset.top - 200 ){
+                activateNav("projects")
+            } 
+            
+            if (scrollTop > mapCanvasOffset.top - 200){
+                activateNav("contact")
             }
         } 
         // in the header
         else if(header.hasClass("nav-fixed")){
             header.removeClass("nav-fixed").addClass("default")
-            header.find(".active").removeClass("active")
-            header.find("[data-nav='home']").addClass("active")
         }
     })
     
+    function activateNav(str){
+        let nav = header.find("[data-nav='"+str+"']")
+        if (!nav.hasClass('active')) {
+            header.find(".active").removeClass("active")
+            header.find("[data-nav='"+str+"']").addClass("active")
+        }
+    }
+
     // scroll to element with #id
     $("a[href^='#']").on('click', function(e) {
         e.preventDefault();
         var dest = $.attr(this, "href")
-        var offset = dest == '#projects' ? 57 : 0
+        var offset = dest == '#projects' ? 55 : 0
         if (dest.length) {
             $('html, body').animate({
                 scrollTop: $(dest).offset().top - offset
@@ -92,6 +101,6 @@ $(document).ready(function() {
             burger.data('open', false)
             drop.css('display', 'none')
         }
-      });
+    });
 
 });
