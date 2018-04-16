@@ -1094,6 +1094,11 @@ textarea {
     .projects .container {
         padding: 0
     }
+    .message {
+        margin-left: 0px;
+        margin-right: 0px;
+        width: 100%;
+    }
 }
 
 @media (max-width:800px) {
@@ -1310,12 +1315,6 @@ textarea {
 .icon-skype:before {
     content: '\e803'
 } */
-
-.message {
-    margin-left: 0;
-    margin-right: 0;
-    width: 100%;
-}
 
 #success { 
     background: #00800042

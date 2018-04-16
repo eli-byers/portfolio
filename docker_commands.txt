@@ -1,0 +1,6 @@
+
+sudo docker ps
+sudo docker kill <process_name>
+
+docker_build
+docker_run
