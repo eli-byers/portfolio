@@ -103,4 +103,27 @@ $(document).ready(function() {
         }
     });
 
+
+    $('#contact-form').submit(function(e){
+        e.preventDefault();
+        $('#err').hide();
+        $('#success').hide();
+        $('#sendbtn').html("Sending")
+
+        const url = $(this).attr('action');
+        const data = $(this).serialize();
+        $.post(url, data, function(data, status){
+            $('#sendbtn').html("Send")
+            if (data && data.status){
+                console.log(data);
+                $("#contact-form")[0].reset();
+                $('#err').hide();
+                $('#success').show();
+            } else {
+                $('#success').hide();
+                $('#err').show();
+            }
+        });
+    })
+    
 });

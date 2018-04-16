@@ -1311,7 +1311,32 @@ textarea {
     content: '\e803'
 } */
 
+.message {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+}
 
+#success { 
+    background: #00800042
+}
 
+#err { 
+    background: #80000042
+}
+
+.response {
+    padding: 10px;
+    border-radius: 5px;
+    color: #555;
+    margin-right: 127px;
+    max-height: 38px;
+    text-align: center;
+    display: none;
+}
+
+body {
+    min-width: 320px;
+}
 
 /* #00o8ff */
