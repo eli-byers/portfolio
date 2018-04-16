@@ -103,7 +103,7 @@ $(document).ready(function() {
         }
     });
 
-
+    // AJAX Form
     $('#contact-form').submit(function(e){
         e.preventDefault();
         $('#err').hide();
@@ -115,7 +115,6 @@ $(document).ready(function() {
         $.post(url, data, function(data, status){
             $('#sendbtn').html("Send")
             if (data && data.status){
-                console.log(data);
                 $("#contact-form")[0].reset();
                 $('#err').hide();
                 $('#success').show();
@@ -125,5 +124,9 @@ $(document).ready(function() {
             }
         });
     })
-    
+
+    console.log("Eli Byers - Software Engineer")
+    console.log("");
+    console.log("Thank you for ckecking out my portfolio.")
+    console.log("Please reach out if you want to know more!")
 });
