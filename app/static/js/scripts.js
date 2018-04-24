@@ -30,6 +30,15 @@ $(document).ready(function() {
     // clientsOffset = clients.offset()
     // contactOffset = $("#contact").offset()
     
+    function setHeroHeight(params) {
+        windowHeight = $(window).height();
+        headerContainerHeight = $("header").height();
+        
+        height = windowHeight - headerContainerHeight > 410 ? windowHeight - headerContainerHeight : 410;
+        $('#row-hero').css('height', height);
+    }
+    setHeroHeight();
+
     header = $("#header")
     projects = $("#projects")
     projectsOffset = projects.offset()
@@ -101,6 +110,7 @@ $(document).ready(function() {
             burger.data('open', false)
             drop.css('display', 'none')
         }
+        setHeroHeight()
     });
 
     // AJAX Form

@@ -235,12 +235,10 @@ em {
 }
 
 #row-hero {
-    padding: 115px 0 200px
-}
-
-#hero p {
-    padding: 45px 0 18px;
-    margin-bottom: 20px
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 700px;
 }
 
 #hero img {
@@ -272,7 +270,12 @@ h3 a {
 }
 
 .description {
-    color: #555
+    color: #555;
+    line-height: 26px;
+    font-size: 14px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    line-height: 26px;
 }
 
 .githubButton {
@@ -293,13 +296,14 @@ h3 a {
 .skills li {
     color: #555;
     /* text-shadow: 0 1px 0 rgba(0, 0, 0, .15); */
-    line-height: 32px;
-    display: inline;
+    line-height: 27px;
+    display: inline-block;
     border-radius: 4px;
     font-size: 12px;
     background: #ddd;
-    padding: 4px 9px;
+    padding: 0px 9px;
     margin-right: 10px;
+    margin-bottom: 9px;
 }
 
 .default {
@@ -368,7 +372,7 @@ h3 a {
     border-bottom: 0px;
 }
 .active {
-    border-bottom: 3px solid #F44336
+    border-bottom: 3px solid #F44336;
 }
 
 #social {
@@ -389,11 +393,6 @@ h3 a {
 #social img {
     width: 22px;
     margin: 0 5px
-}
-
-#hero p {
-    font-size: 16px;
-    line-height: 26px
 }
 
 #social img:hover {
@@ -469,9 +468,7 @@ h3 a {
 .nav-fixed .info {
     margin-top: -2px !important;
 }
-.nav-fixed .info .name {
 
-}
 
 /* .default .pull-right .nav-default {
     margin-top: 9px !important
@@ -502,7 +499,7 @@ h3 a {
 }
 
 #header .title {
-    font-size: 11px;
+    font-size: 14px;
     letter-spacing: 1px;
     padding-left: 2px;
 }
@@ -520,6 +517,7 @@ h3 a {
     color: #555;
     font-size: 12px;
     padding: 0px;
+    line-height: 26px;
 }
 
 .description-container {
@@ -543,7 +541,8 @@ h3 a {
 
 #nav {
     margin-top: 0;
-    display: inline-block
+    display: inline-block;
+    margin-top: 7px;
 }
 
 a.button {
@@ -570,12 +569,12 @@ a.button:hover {
     text-decoration: none;
     font-weight: 800;
     color: #000;
-    font-size: 13px;
+    font-size: 15px;
     padding: 93px 32px 20px
 }
 
 .nav-fixed a {
-    padding-bottom: 21px!important
+    padding-bottom: 16px !important
 }
 
 
@@ -643,14 +642,6 @@ h3 a {
 
 h3 a:hover {
     color: #F44336
-}
-
-p {
-    color: #fff;
-    line-height: 26px;
-    font-size: 14px;
-    padding-top: 25px;
-    padding-bottom: 25px
 }
 
 .buffer-top {
@@ -759,6 +750,13 @@ h2 a:hover {
     margin-bottom: -70px
 }
 
+.vid-text {
+    margin-top: 30px;
+}
+
+iframe {
+    background-image: '/static/images/projects/techcrunch_disrupt.png';
+}
 .portfolio-col,
 .span4,
 .span8 {
@@ -853,6 +851,7 @@ a.btn:hover {
     color: #fff!important
 }
 
+.portfolio-item iframe,
 .portfolio-item img {
     width: 100%
 }
@@ -1069,6 +1068,9 @@ textarea {
     .brand {
         display: block
     }
+    .vid-text {
+        margin-top: 0px;
+    }
     .portfolio-col {
         width: 100%;
         text-align: center;
@@ -1077,6 +1079,9 @@ textarea {
     }
     .portfolio-item {
         padding: 45px 21px 66px
+    }
+    .portfolio-item iframe {
+        margin-bottom: 20px;
     }
     .portfolio-item img {
         margin-bottom: 20px;
@@ -1338,4 +1343,36 @@ body {
     min-width: 320px;
 }
 
+
+#info-small p,
+#info-small a {
+    color: #444;
+    margin-top: 10px;
+    line-height: 20px;
+    text-decoration: none;
+}
 /* #00o8ff */
+
+.thin-300 {
+    font-weight: 300 !important;
+}
+
+.thin-400 {
+    font-weight: 400 !important;
+}
+
+#taglines {
+    margin: 40px 0px;
+}
+#taglines p {
+    color: #fff;
+    line-height: 26px;
+    /* padding: 0px; */
+}
+
+.projects p {
+    line-height: 26px;
+    font-size: 14px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
