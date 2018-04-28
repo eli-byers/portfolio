@@ -100,7 +100,8 @@ section {
 }
 
 body {
-    line-height: 1
+    line-height: 1;
+    min-width: 320px;
 }
 
 ol,
@@ -175,14 +176,16 @@ table {
     width: 55px;
 }
 
-.default .eb-svg {
+.eb-svg {
     width: 55px;
     height: 55px;
+    transition-property: height, width;
+    transition-duration: 0.5s;
 }
 
-.eb-svg {
+.nav-fixed .eb-svg {
     width: 37px;
-    width: 37px;
+    height: 37px;
 }
 
 .default #logo img {
@@ -307,7 +310,7 @@ h3 a {
 }
 
 .default {
-    position: relative!important
+    position: fixed !important
 }
 
 #services {
@@ -348,12 +351,13 @@ h3 a {
     right: 0;
     left: 0;
     position: absolute;
-    /* margin: 20px 30px 30px; */
     margin-top: 40px;
     display: none;
     border-top: 1px solid #333;
     border-bottom: 1px solid #333;
-    /* border-radius: 3px */
+    z-index: -1;
+    /* margin: 20px 30px 30px;
+    border-radius: 3px */
 }
 
 #dropdown ul li {
@@ -424,7 +428,8 @@ h3 a {
     padding-top: 9px;
     padding-bottom: 8px;
     background: #fff !important;
-    border-bottom: 1px solid #f5f5f5
+    border-bottom: 1px solid #f5f5f5;
+    height: 57px !important;
 }
 
 #header.nav-fixed .container {
@@ -439,11 +444,14 @@ h3 a {
 #header.nav-fixed .name,
 #header.nav-fixed .title,
 #header.nav-fixed li a {
-    color: #333 !important
+    color: #333 !important;
 }
 
-.index #header {
-    background: 0 0
+#header {
+    background: 0 0;
+    height: 114px;
+    transition-property: background, height, padding, border;
+    transition-duration: 0.5s;
 }
 
 #header .container {
@@ -455,10 +463,10 @@ h3 a {
 }
 
 #header .info {
-    display: inline-block;
     float: left;
     text-align: left !important;
     margin-top: 3px;
+    transition: margin 0.5s;
 }
 
 .nav-fixed .default .info {
@@ -474,38 +482,39 @@ h3 a {
     margin-top: 9px !important
 } */
 
-.default .name {
-    font-size: 34px;
+#header.nav-fixed .name {
+    font-size: 29.5px;
+    transition-property: font-size, color;
+    transition-duration: 0.5s;
 }
 
 
-.name {
+
+#header .name {
     font-weight: 800;
-    font-size: 21px;
+    font-size: 34px;
     padding-bottom: 2px;
     /* font-size: 17px;
     padding-bottom: 5px; */
     font-family: open sans;
     letter-spacing: 1px;
-    color: #000
-}
-
-.brand {
-    width: 243px
-}
-
-.index .name {
-    color: #fff
+    color: #fff;
+    transition-property: font-size, color;
+    transition-duration: 0.5s;
 }
 
 #header .title {
     font-size: 14px;
     letter-spacing: 1px;
     padding-left: 2px;
+    color: #fff;
+    transition-property: font-size, color;
+    transition-duration: 0.5s;
 }
-
-.title {
-    color: #6f6464
+#header.nav-fixed .title {
+    font-size: 12px;
+    transition-property: font-size, color;
+    transition-duration: 0.5s;
 }
 
 .screenshot {
@@ -531,9 +540,6 @@ h3 a {
     z-index: 3000
 }
 
-.index .title {
-    color: #fff
-}
 
 .nav-fixed #nav {
     margin-top: 12px
@@ -565,12 +571,13 @@ a.button:hover {
     display: inline-block
 }
 
+#header li a {
+    color: #eee;
+}
 #nav .nav-default li a {
     text-decoration: none;
-    font-weight: 800;
-    color: #000;
     font-size: 15px;
-    padding: 93px 32px 20px
+    padding: 93px 32px 25px
 }
 
 .nav-fixed a {
@@ -580,10 +587,6 @@ a.button:hover {
 
 #nav ul {
     font-size: 0
-}
-
-.index #nav li a {
-    color: #fff
 }
 
 .details {
@@ -785,11 +788,12 @@ iframe {
 
 .hamburger i {
     color: white;
-    /* border: 1px solid white; */
     border-radius: 3px;
     padding: 2px 5px 1px 5px;
     display: none;
+    transition: color 0.5s;
     /* width: 36px;
+    border: 1px solid white;
     height: 30px;
     background: url(../images/hamburger.png) */
 }
@@ -966,9 +970,8 @@ textarea {
 
 #links {
     padding: 65px 0 62px;
-    background: #f3f3f3;
     font-size: 11px;
-    color: #818181;
+    color: #eee;
     font-family: open sans, sans-serif;
     clear: both
 }
@@ -979,7 +982,7 @@ textarea {
 }
 
 #links li a {
-    color: #818181;
+    color: #eee;
     -webkit-transition: .2s;
     transition: .2s
 }
@@ -1134,9 +1137,6 @@ textarea {
         border-color: #eee;
         color: #333;
     }
-    #header.default li a {
-        color: #eee !important
-    }
     .nav-fixed a {
         padding-bottom: 2px !important;
     }
@@ -1186,7 +1186,7 @@ textarea {
         top: -200px;
     }
     #header {
-        text-align: center!important;
+        text-align: center !important;
         padding-bottom: 28px
     }
     .brand {
@@ -1210,7 +1210,7 @@ textarea {
         margin-top: -65px
     }
     h1 {
-        font-size: 27px
+        font-size: 40px
     }
     #hero p {
         font-size: 16px
@@ -1223,6 +1223,9 @@ textarea {
     }
     h3 {
         font-size: 25px
+    }
+    h1 {
+        font-size: 27px
     }
     .btn {
         padding-right: 10px;
@@ -1376,3 +1379,83 @@ body {
     padding-top: 25px;
     padding-bottom: 25px;
 }
+
+
+
+/* All css bellow is for cover */
+
+#cover .eb-svg {
+    width: 100px;
+    height: 100px;
+}
+#cover {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    overflow-y:hidden;
+    top:0;
+    left: 0;
+    z-index:9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(/static/images/mast.jpg);
+    background-size: cover;
+}
+
+.lds-ellipsis {
+    margin: auto;
+    position: relative;
+    width: 64px;
+    height: 64px;
+}
+.lds-ellipsis div {
+    position: absolute;
+    top: 27px;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: #fff;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+    left: 6px;
+    animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+    left: 6px;
+    animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+    left: 26px;
+    animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+    left: 45px;
+    animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+}
+@keyframes lds-ellipsis3 {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+}
+@keyframes lds-ellipsis2 {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(19px, 0);
+    }
+}
+  

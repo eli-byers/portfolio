@@ -1,85 +1,90 @@
 $(document).ready(function() {
 
+    let header = $("#header")
+    let projects = $("#projects")
+    let projectsOffset = projects.offset()
+    let mapCanvasOffset = $("#map-canvas").offset()
+    let burger = $("#hamburger");
+    let drop = $("#dropdown");
+
+    function getDomElevents(){
+        header = $("#header")
+        projects = $("#projects")
+        projectsOffset = projects.offset()
+        mapCanvasOffset = $("#map-canvas").offset()
+
+        burger = $("#hamburger");
+        drop = $("#dropdown");
+    }
+
     //==========================================
-    // mobild nav                               
+    // loading cover
     //==========================================
-    var burger = $("#hamburger")                
-    var drop = $("#dropdown");                  
+    window.onscroll = function () { window.scrollTo(0, 0); };
+    $('#page').hide();
+    $(window).on('load', function() {
+        window.onscroll = setNav
+        $('#page').show(function(){
+            $(document).scrollTop(0)
+            $("#cover").fadeOut(200);
+            getDomElevents();
+        });
+    });
+
+    //==========================================
+    // mobile nav
+    //==========================================
     
     burger.on('click', function(e) {
-        e.preventDefault()                   
+        e.preventDefault();
         burger.data('open', !drop.attr('open'));
-        drop.slideToggle("fast")                
-    })                                          
+        drop.slideToggle("fast");
+    });
     
-    drop.find("a").on("click", function(e) {     
+    drop.find("a").on("click", function(e) {
         burger.data('open', false)
-        drop.slideToggle()                   
-    })                                          
+        drop.slideToggle(); 
+    });
 
     function hideDropdown(){
         if (burger.data('open')){
-            burger.data('open', false)
-            drop.slideToggle()  
+            burger.data('open', false);
+            drop.slideUp();
         }
     }
-    //==========================================//
-
-    // hero = $("#row-hero")
-    // clients = $("#clients")
-    // clientsOffset = clients.offset()
-    // contactOffset = $("#contact").offset()
-    
+    //==========================================
+    // Hero / Nav
+    //==========================================
     function setHeroHeight(params) {
         windowHeight = $(window).height();
         headerContainerHeight = $("header").height();
-        
         height = windowHeight - headerContainerHeight > 410 ? windowHeight - headerContainerHeight : 410;
         $('#row-hero').css('height', height);
     }
     setHeroHeight();
-
-    header = $("#header")
-    projects = $("#projects")
-    projectsOffset = projects.offset()
-    mapCanvasOffset = $("#map-canvas").offset()
-
-    // heightDifference = $(window).height() - (hero.outerHeight() + header.outerHeight() + clients.outerHeight())
     
-    $(window).scroll(function() {
+    function setNav(){
         hideDropdown()
-
         let scrollTop = $(this).scrollTop()
-        // if (!header.fixed) {
-        //     header.fixed = true
-        //     header.toggleClass('default', 50).toggleClass('nav-fixed', 50);
-        //     console.log("asdf")
-        // }
-
-        // if bellow header
+        // down the page
         if (scrollTop >= 60){
-
-            if (header.hasClass("default")){
-                header.hide().removeClass("default").addClass("nav-fixed").fadeIn()
-            }
- 
+            header.addClass("nav-fixed")
             if (scrollTop <= projectsOffset.top - 200) {
-                activateNav("home")
+                activateNav("home");
             } 
-            
-            if (scrollTop > projectsOffset.top - 200 && scrollTop <= mapCanvasOffset.top - 200 ){
-                activateNav("projects")
+            else if (scrollTop <= mapCanvasOffset.top - 200 ){
+                activateNav("projects");
             } 
-            
-            if (scrollTop > mapCanvasOffset.top - 200){
-                activateNav("contact")
+            else {
+                activateNav("contact");
             }
         } 
         // in the header
-        else if(header.hasClass("nav-fixed")){
-            header.removeClass("nav-fixed").addClass("default")
+        else {
+            header.removeClass("nav-fixed")
         }
-    })
+    }
+    setNav();
     
     function activateNav(str){
         let nav = header.find("[data-nav='"+str+"']")
@@ -97,8 +102,9 @@ $(document).ready(function() {
         if (dest.length) {
             $('html, body').animate({
                 scrollTop: $(dest).offset().top - offset
-            }, 'slow');
-            if (dest == '#contact') $("#field1").focus()
+            }, 'slow', function(){
+                if (dest == '#contact') $("#field1").focus()
+            });
         } else {
             window.location.replace('/'+$(this).attr('href'));
         }
@@ -135,8 +141,10 @@ $(document).ready(function() {
         });
     })
 
+
     console.log("Eli Byers - Software Engineer")
     console.log("");
     console.log("Thank you for ckecking out my portfolio.")
     console.log("Please reach out if you want to know more!")
 });
+
