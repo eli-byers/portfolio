@@ -3,6 +3,7 @@ from flask import Flask, render_template, redirect, request, jsonify
 from dotenv import load_dotenv
 from flask_mail import Mail, Message
 
+
 app = Flask(__name__, static_url_path='/static')
 
 dotenv_path = os.path.join(os.path.dirname(__file__), '.env')
@@ -22,7 +23,6 @@ mail = Mail(app)
 
 @app.route('/')
 def index():
-    print "Test"
     return render_template('index.html')
 
 @app.route('/contact', methods=['post'])
@@ -46,7 +46,7 @@ def contact():
         return jsonify({'status':False})
 
 
-if __name__ == "__main__":
-    app.run(host='0.0.0.0', debug=True, port=8000)
+# if __name__ == "__main__":
+#     app.run(host='0.0.0.0', debug=True, port=8000)
 
     # app.run(host='0.0.0.0', debug=True)
