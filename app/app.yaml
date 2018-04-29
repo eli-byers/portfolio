@@ -2,8 +2,16 @@ runtime: python27
 api_version: 1
 threadsafe: true
 
+env_variables:
+   PYTHONHTTPSVERIFY: 1
+
+libraries:
+- name: ssl
+  version: latest
+
 handlers:
 - url: /static
   static_dir: static
 - url: /.*
   script: main.app
+  secure: always

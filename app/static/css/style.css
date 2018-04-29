@@ -814,10 +814,6 @@ a.btn:hover {
     width: 100%
 }
 
-#contact-form {
-    margin-bottom: 40px
-}
-
 input[type=email],
 input[type=text] {
     width: 30%
@@ -894,7 +890,7 @@ textarea {
     background: 0 0;
     text-align: center;
     color: #fff;
-    padding: 9px 31px;
+    padding: 8px 31px;
     text-transform: uppercase;
     border: 1px solid #fff;
     font-size: 12px;
@@ -1239,7 +1235,7 @@ textarea {
 }
 
 #err { 
-    background: #80000042
+    background: #ff000024
 }
 
 .response {
