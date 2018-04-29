@@ -21,13 +21,12 @@ $(document).ready(function() {
     // loading cover
     //==========================================
     window.onscroll = function () { window.scrollTo(0, 0); };
-    $('#page').hide();
     $(window).on('load', function() {
         window.onscroll = setNav
         $('#page').show(function(){
+            getDomElevents();
             $(document).scrollTop(0)
             $("#cover").fadeOut(200);
-            getDomElevents();
         });
     });
 
@@ -38,18 +37,18 @@ $(document).ready(function() {
     burger.on('click', function(e) {
         e.preventDefault();
         burger.data('open', !drop.attr('open'));
-        drop.slideToggle("fast");
+        drop.toggle();
     });
     
     drop.find("a").on("click", function(e) {
         burger.data('open', false)
-        drop.slideToggle(); 
+        drop.toggle(); 
     });
 
     function hideDropdown(){
         if (burger.data('open')){
             burger.data('open', false);
-            drop.slideUp();
+            drop.hide();
         }
     }
     //==========================================

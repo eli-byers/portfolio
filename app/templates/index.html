@@ -24,15 +24,20 @@
     <meta name="msapplication-wide310x150logo" content="static/favicon/mstile-310x150.png?v=2" />
     <meta name="msapplication-square310x310logo" content="static/favicon/mstile-310x310.png?v=2" />
 
+    <link rel="manifest" href="static/manifest.json">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Eli Byers">
+    <meta name="msapplication-starturl" content="/">
+    <meta name=description content="I am a software Engineer based out of the Bay Area, specializing in custom web solutions and iOS applications in swift.">
+    <meta name=keywords content="bay area software engineer, bay area software engineering, bay area web development, san jose web development, san jose software engineering">
+
     <meta charset=UTF-8>
     <title>Eli Byers | Software Engineer</title>
-    <meta content="Software Engineer based out of San Jose, California - specializing in custom web solutions and iOS applications in swift."
-        name=description>
-    <meta content="san jose web development, san jose software engineering" name=keywords>
-    <meta content="width=device-width,user-scalable=no" name=viewport>
 
     <link href=static/css/style.css rel=stylesheet>
-    <script src="https://use.fontawesome.com/b59847f86f.js"></script>
+    <script src="https://use.fontawesome.com/b59847f86f.js" defer></script>
 </head>
 
 <body class="cf index" id=top>
@@ -43,7 +48,7 @@
         </div>
     </div>
 
-    <div id='page'>
+    <div id='page' style='display:none'>
 
         <header class=header-container>
             <div alt=bg style="background-image: url(static/images/mast.jpg); background-size: cover;" id=bg-cover></div>
@@ -52,7 +57,7 @@
                     <div class=brand>
                         <a href=/>
                         <div id=logo>
-                            <svg class='eb-svg' version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 640 640" width="640" height="640"><defs><path d="M40 480L310 640L580 480L580 160L310 0L40 160L40 480Z" id="i5bRRjna3"></path><path d="M70 465L310 610L550 465L550 175L310 30L70 175L70 465Z" id="a3522MI2AL"></path><path d="M361.32 496.27L361.32 395.93L320 374.39L319.59 570L501.65 462.74L463.35 442.97L361.32 496.27Z" id="a1Dey7VYIN"></path><path d="M140 425L140 259.24L300 347.2L300 300.29L100 190L100 450L300 570L300 520L140 425Z" id="k3tzsFhDqb"></path><path d="M362.29 321.87L520 237.5L519.6 190L319.18 300.99L319.18 351.17L520 453.74L519.18 400.49L362.29 321.87Z" id="f5JePU5COu"></path><path d="M300 119.61L300 70L122.11 176.73L161.74 199.54L300 119.61Z" id="aLmEV70A6"></path><path d="M361.73 143.73L361.73 257.57L320 280.17L320 70L503.15 179.89L463.83 202.76L361.73 143.73Z" id="a8IsamsaUx"></path></defs><g><g><g><use xlink:href="#i5bRRjna3" opacity="1" fill="#f44336" fill-opacity="1"></use><g><use xlink:href="#i5bRRjna3" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="1" stroke-opacity="0"></use></g></g><g><use xlink:href="#a3522MI2AL" opacity="1" fill="#333333" fill-opacity="1"></use><g><use xlink:href="#a3522MI2AL" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="1" stroke-opacity="0"></use></g></g><g><use xlink:href="#a1Dey7VYIN" opacity="1" fill="#707070" fill-opacity="1"></use><g><use xlink:href="#a1Dey7VYIN" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="1" stroke-opacity="0"></use></g></g><g><use xlink:href="#k3tzsFhDqb" opacity="1" fill="#aaaaaa" fill-opacity="1"></use><g><use xlink:href="#k3tzsFhDqb" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="1" stroke-opacity="0"></use></g></g><g><use xlink:href="#f5JePU5COu" opacity="1" fill="#707070" fill-opacity="1"></use><g><use xlink:href="#f5JePU5COu" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="1" stroke-opacity="0"></use></g></g><g><use xlink:href="#aLmEV70A6" opacity="1" fill="#ffffff" fill-opacity="1"></use><g><use xlink:href="#aLmEV70A6" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="1" stroke-opacity="0"></use></g></g><g><use xlink:href="#a8IsamsaUx" opacity="1" fill="#ffffff" fill-opacity="1"></use><g><use xlink:href="#a8IsamsaUx" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="1" stroke-opacity="0"></use></g></g></g></g></svg>
+                            <svg class='eb-svg' version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 640 640" width="55" height="55"><defs><path d="M40 480L310 640L580 480L580 160L310 0L40 160L40 480Z" id="i5bRRjna3"></path><path d="M70 465L310 610L550 465L550 175L310 30L70 175L70 465Z" id="a3522MI2AL"></path><path d="M361.32 496.27L361.32 395.93L320 374.39L319.59 570L501.65 462.74L463.35 442.97L361.32 496.27Z" id="a1Dey7VYIN"></path><path d="M140 425L140 259.24L300 347.2L300 300.29L100 190L100 450L300 570L300 520L140 425Z" id="k3tzsFhDqb"></path><path d="M362.29 321.87L520 237.5L519.6 190L319.18 300.99L319.18 351.17L520 453.74L519.18 400.49L362.29 321.87Z" id="f5JePU5COu"></path><path d="M300 119.61L300 70L122.11 176.73L161.74 199.54L300 119.61Z" id="aLmEV70A6"></path><path d="M361.73 143.73L361.73 257.57L320 280.17L320 70L503.15 179.89L463.83 202.76L361.73 143.73Z" id="a8IsamsaUx"></path></defs><g><g><g><use xlink:href="#i5bRRjna3" opacity="1" fill="#f44336" fill-opacity="1"></use><g><use xlink:href="#i5bRRjna3" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="1" stroke-opacity="0"></use></g></g><g><use xlink:href="#a3522MI2AL" opacity="1" fill="#333333" fill-opacity="1"></use><g><use xlink:href="#a3522MI2AL" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="1" stroke-opacity="0"></use></g></g><g><use xlink:href="#a1Dey7VYIN" opacity="1" fill="#707070" fill-opacity="1"></use><g><use xlink:href="#a1Dey7VYIN" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="1" stroke-opacity="0"></use></g></g><g><use xlink:href="#k3tzsFhDqb" opacity="1" fill="#aaaaaa" fill-opacity="1"></use><g><use xlink:href="#k3tzsFhDqb" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="1" stroke-opacity="0"></use></g></g><g><use xlink:href="#f5JePU5COu" opacity="1" fill="#707070" fill-opacity="1"></use><g><use xlink:href="#f5JePU5COu" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="1" stroke-opacity="0"></use></g></g><g><use xlink:href="#aLmEV70A6" opacity="1" fill="#ffffff" fill-opacity="1"></use><g><use xlink:href="#aLmEV70A6" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="1" stroke-opacity="0"></use></g></g><g><use xlink:href="#a8IsamsaUx" opacity="1" fill="#ffffff" fill-opacity="1"></use><g><use xlink:href="#a8IsamsaUx" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="1" stroke-opacity="0"></use></g></g></g></g></svg>
                         </div>
                         <div class=info>
                             <div class='name thin-300'>ELI BYERS</div>
@@ -67,7 +72,7 @@
                                 <li><a href=#projects class=thin-300 data-nav=projects>PROJECTS</a></li>
                                 <li><a href=#contact class=thin-300 data-nav=contact>CONTACT</a></li>
                             </ul>
-                            <a href=# id=hamburger class=hamburger data-open=false><i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+                            <a href='' id=hamburger class=hamburger data-open=false><i class="fa fa-bars fa-2x" aria-hidden="true"></i>
                             </a>
                         </nav>
                         <!-- mobile nav -->
@@ -90,11 +95,11 @@
                 <div class=container>
                     <div class=buffer-top id=hero>
                         <h1 class='fadein-fast thin-300'>Software Engineer</h1>
-                        <div id=social>
-                            <a href=https://github.com/eli-byers target=_blank>
+                        <div class=social>
+                            <a href=https://github.com/eli-byers target=_blank rel=noopener>
                                 <i class="fa fa-github" aria-hidden="true"></i>
                             </a>
-                            <a href=https://www.linkedin.com/in/elibyers/ target=_blank>
+                            <a href=https://www.linkedin.com/in/elibyers/ target=_blank rel=noopener>
                                 <i class="fa fa-linkedin-square" aria-hidden="true"></i>
                             </a>
                             <a href=skype:eli.byers?chat>
@@ -113,7 +118,7 @@
                             <a href=#contact data-nav=contact class="btn btn-freelance thin-300">Get In Touch
                                 <i class="fa fa-level-down" aria-hidden="true"></i>
                             </a>
-                            <a href=/static/Resume_Eli_Byers.pdf target="_blank" class="btn btn-hire thin-300">Resume  
+                            <a href=/static/Resume_Eli_Byers.pdf target="_blank"  rel=noopener class="btn btn-hire thin-300">Resume  
                                 <i class="fa fa-file-text" aria-hidden="true"></i>
                             </a>
                         </div>
@@ -137,15 +142,15 @@
                     <div class="container">
                         <div class="cf portfolio-item">
                             <div class="portfolio-col screenshot">
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/n1UbexCqCKM?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                                <!-- <a href=https://techcrunch.com/2016/09/11/thehighflyers-helps-you-join-the-mile-high-chat-club/ target=_blank>
+                                    <iframe width="560" height="315" src='' data-src="https://www.youtube.com/embed/n1UbexCqCKM?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                <!-- <a href=https://techcrunch.com/2016/09/11/thehighflyers-helps-you-join-the-mile-high-chat-club/ target=_blank rel=noopener>
                                     <img alt="Techcrunch Disrupt" src='static/images/projects/techcrunch_disrupt.png'>
                                 </a> -->
-                                <!-- <a href=https://github.com/eli-byers/corkboard target=_blank><i class="fa fa-github" aria-hidden="true"></i></a> -->
+                                <!-- <a href=https://github.com/eli-byers/corkboard target=_blank rel=noopener><i class="fa fa-github" aria-hidden="true"></i></a> -->
                             </div>
                             <div class="portfolio-col description-container vid-text">
                                 <h3>
-                                    <a href=https://techcrunch.com/2016/09/11/thehighflyers-helps-you-join-the-mile-high-chat-club/ target=_blank class=thin-300>High Fliers Club</a>
+                                    <a href=https://techcrunch.com/2016/09/11/thehighflyers-helps-you-join-the-mile-high-chat-club/ target=_blank rel=noopener class=thin-300>High Fliers Club</a>
                                 </h3>
                                 <p class=description><span style="font-weight: bold !important;">TechCrunch Disrupt: Best .club domain</span><br>See when you’re passing cool stuff outside of the plane and chat with other people on the flight.</p>
                                 <p class=roles>Technologies</p>
@@ -166,14 +171,14 @@
                     <div class="container">
                         <div class="cf portfolio-item">
                             <div class="portfolio-col screenshot">
-                                <a href=http://blog.angelhack.com/2016/10/17/hacking-for-good-tech-museum target=_blank>
-                                    <img alt="Angelhack" src='static/images/projects/angelhack.jpg'>
+                                <a href=http://blog.angelhack.com/2016/10/17/hacking-for-good-tech-museum target=_blank rel=noopener>
+                                    <img id='anglehack' alt="Angelhack" src=''>
                                 </a>
                             </div>
                             <div class="portfolio-col description-container">
                                 <h3>
-                                    <a href=http://blog.angelhack.com/2016/10/17/hacking-for-good-tech-museum target=_blank class=thin-300>Cork Board</a>
-                                    <!-- <a href=https://github.com/eli-byers/corkboard target=_blank><i class="fa fa-github" aria-hidden="true"></i></a> -->
+                                    <a href=http://blog.angelhack.com/2016/10/17/hacking-for-good-tech-museum target=_blank rel=noopener class=thin-300>Cork Board</a>
+                                    <!-- <a href=https://github.com/eli-byers/corkboard target=_blank rel=noopener><i class="fa fa-github" aria-hidden="true"></i></a> -->
                                 </h3>
                                 <p class=description><span style="font-weight: bold !important;">Angelhack: Top 3</span><br>Location based posting platform to help people find their family or search for notes left by
                                     their family.</p>
@@ -204,13 +209,13 @@
                     <div class="container">
                         <div class="cf portfolio-item">
                             <div class="portfolio-col screenshot">
-                                <a href=http://campuscoatcheck.com/ target=_blank>
-                                    <img alt="Nearby" src='static/images/projects/campuscoatcheck.png'>
+                                <a href=http://campuscoatcheck.com/ target=_blank rel=noopener>
+                                    <img id=campuscoatcheck alt="CampusCoatCheck" src=''>
                                 </a>
                             </div>
                             <div class="portfolio-col description-container">
                                 <h3>
-                                    <a href=http://campuscoatcheck.com/ target=_blank class=thin-300>Campus Coat Check</a>
+                                    <a href=http://campuscoatcheck.com/ target=_blank rel=noopener class=thin-300>Campus Coat Check</a>
                                 </h3>
                                 <p class=description>A coat check management and analytics platform.</p>
                                 <p class=roles>Technologies</p>
@@ -232,13 +237,38 @@
                     <div class="container">
                         <div class="cf portfolio-item">
                             <div class="portfolio-col screenshot">
-                                <a href=https://www.fortmcmurrayrelieffund.com/ target=_blank>
-                                    <img alt='Fort McMurray Relief Fund' src='static/images/projects/mcmurray.png'>
+                                <a href=http://nearby.rocks/ target=_blank rel=noopener>
+                                    <img id='nearby' alt="Nearby" src=''>
                                 </a>
                             </div>
                             <div class="portfolio-col description-container">
                                 <h3>
-                                    <a href=https://www.fortmcmurrayrelieffund.com/ target=_blank class=thin-300>Fort McMurray Relief Fund</a>
+                                    <a href=http://nearby.rocks/ target=_blank rel=noopener class=thin-300>Nearby</a>
+                                </h3>
+                                <p class=description>Relational Search Engine powered by google maps.</p>
+                                <p class=roles>Technologies</p>
+                                <ul class=skills>
+                                    <li>Codeigniter</li>
+                                    <li>Materialize</li>
+                                    <li>Google Maps API</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="separator"></div>
+                </div>
+                
+                <div class="row">
+                    <div class="container">
+                        <div class="cf portfolio-item">
+                            <div class="portfolio-col screenshot">
+                                <a href=https://www.fortmcmurrayrelieffund.com/ target=_blank rel=noopener>
+                                    <img id='fmrf' alt='Fort McMurray Relief Fund' src=''>
+                                </a>
+                            </div>
+                            <div class="portfolio-col description-container">
+                                <h3>
+                                    <a href=https://www.fortmcmurrayrelieffund.com/ target=_blank rel=noopener class=thin-300>Fort McMurray Relief Fund</a>
                                 </h3>
                                 <p class=description>Charity Auction to support the victims of the Fort McMurray Fire.</p>
                                 <p class=roles>Technologies</p>
@@ -253,36 +283,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="separator"></div>
-                </div>
-    
-                <div class="row">
-                    <div class="container">
-                        <div class="cf portfolio-item">
-                            <div class="portfolio-col screenshot">
-                                <a href=http://nearby.rocks/ target=_blank>
-                                    <img alt="Nearby" src='static/images/projects/nearby.png'>
-                                </a>
-                            </div>
-                            <div class="portfolio-col description-container">
-                                <h3>
-                                    <a href=http://nearby.rocks/ target=_blank class=thin-300>Nearby</a>
-                                </h3>
-                                <p class=description>Relational Search Engine powered by google maps.</p>
-                                <p class=roles>Technologies</p>
-                                <ul class=skills>
-                                    <li>Codeigniter</li>
-                                    <li>Materialize</li>
-                                    <li>Google Maps API</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
                     <!-- <div class="separator"></div> -->
                 </div>
-    
-    
-                
     
                 <div class=row id=map-canvas>
                     <div id=map class=map-offset></div>
@@ -296,16 +298,16 @@
             <div class=row>
                 <div class=container>
                     <div class="center span4">
-                        <img alt=profile src=static/images/avatar.png style="max-width: 130px;border-radius: 50%;border: 2px solid white;">
+                        <img id=profile alt=profile src='' style="max-width: 130px;border-radius: 50%;border: 2px solid white;">
                         <div id=info-small>
                             <p>Eli Byers</p>
                             <a href=mailto:contact@elibyers.com>contact@elibyers.com</a>
                         </div>
-                        <div id=social>
-                            <a href=https://github.com/eli-byers target=_blank>
+                        <div class=social>
+                            <a href=https://github.com/eli-byers target=_blank  rel=noopener>
                                 <i class="fa fa-github" aria-hidden="true"></i>
                             </a>
-                            <a href=https://www.linkedin.com/in/elibyers/ target=_blank>
+                            <a href=https://www.linkedin.com/in/elibyers/ target=_blank rel=noopener>
                                 <i class="fa fa-linkedin-square" aria-hidden="true"></i>
                             </a>
                             <a href=skype:eli.byers?chat>
@@ -321,7 +323,7 @@
                             <div class=buffer-bottom>
                                 <input type=text name=name placeholder=Name autocomplete='name' required id=field1>
                                 <input type=email name=email placeholder=Email autocomplete='email' required>
-                                <input type=text name=phone placeholder=Phone autocomplete='tel-national' required>
+                                <input type=text name=phone placeholder=Phone autocomplete='tel-national'>
                             </div>
                             <div class=buffer-bottom>
                                 <textarea class=message name=message placeholder=Message required rows=6></textarea>
@@ -347,10 +349,7 @@
             <ul>
                 <li>&copy; ELIBYERS.COM 2018 </li>
                 <li>
-                    <a href=http://github.com/eli-byers target=_blank>GITHUB</a>
-                </li>
-                <li>
-                    <a href=https://www.linkedin.com/in/elibyers/ target=_blank>LINKEDIN</a>
+                    Built with Python Flask
                 </li>
             </ul>
         </div>
@@ -360,10 +359,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <!-- google maps -->
+    <script src=static/js/scripts.js></script>
+    <script src=static/js/lazyload.js defer async></script>
     <script src=static/js/map.js></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTTYpPrfqclVZai2wi3PjtjD2GYBtZyVA&callback=initMap" async defer></script>
     <!-- custom scripts -->
-    <script src=static/js/scripts.js></script>
     
 </body>
 

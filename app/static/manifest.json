@@ -1,0 +1,8 @@
+{
+    "name": "Eli Byers | Software Engineer",
+    "short_name": "Eli Byers",
+    "description": "This is my portfolio website. Check out some of the projects I have built!",
+    "lang": "en-US",
+    "start_url": "/",
+    "display": "standalone"
+}
