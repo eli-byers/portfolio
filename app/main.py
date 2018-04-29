@@ -27,7 +27,6 @@ def index():
 
 @app.route('/contact', methods=['post'])
 def contact():
-    print "This is only a test post"
     name = request.form['name']
     email = request.form['email']
     phone = request.form['phone']
@@ -38,6 +37,7 @@ def contact():
     msgStr='{}<br>{}<br>{}<br><br>{}'.format(name, email, phone, message)
 
     msg = Message(sender=email, reply_to=email, subject=subject, html=msgStr, recipients=[me])
+    print msg
     try:
         mail.send(msg)
         return jsonify({'status':True})
