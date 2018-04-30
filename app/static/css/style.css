@@ -814,10 +814,6 @@ a.btn:hover {
     width: 100%
 }
 
-#contact-form {
-    margin-bottom: 40px
-}
-
 input[type=email],
 input[type=text] {
     width: 30%
