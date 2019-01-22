@@ -68,9 +68,9 @@
                     <div class=pull-right>
                         <nav id=nav>
                             <ul class=nav-default>
-                                <li><a href=#top class='active thin-300' data-nav=home>HOME</a></li>
+                                <li><a href=#hacks class=thin-300 data-nav=hacks>HACKS</a></li>
                                 <li><a href=#projects class=thin-300 data-nav=projects>PROJECTS</a></li>
-                                <li><a href=#contact class=thin-300 data-nav=contact>CONTACT</a></li>
+                                <li><a href=/arcade class=thin-300 data-nav=arcade>ARCADE</a></li>
                             </ul>
                             <a href='' id=hamburger class=hamburger data-open=false><i class="fa fa-bars fa-2x" aria-hidden="true"></i>
                             </a>
@@ -78,9 +78,9 @@
                         <!-- mobile nav -->
                         <nav id=dropdown>
                             <ul class=nav-default>
-                                <li><a href=#top class='active thin-300' data-nav=home>HOME</a></li>
+                                <li><a href=#hacks class=thin-300 data-nav=hacks>HACKS</a></li>
                                 <li><a href=#projects class=thin-300 data-nav=projects>PROJECTS</a></li>
-                                <li><a href=#contact class=thin-300 data-nav=contact>CONTACT</a></li>
+                                <li><a href=/arcade class=thin-300 data-nav=arcade>ARCADE</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -94,6 +94,8 @@
             <div id=row-hero>
                 <div class=container>
                     <div class=buffer-top id=hero>
+
+
                         <h1 class='fadein-fast thin-300'>Software Engineer</h1>
                         <div class=social>
                             <a href=https://github.com/eli-byers target=_blank rel=noopener>
@@ -109,24 +111,28 @@
                                 <i class="fa fa-envelope" aria-hidden="true"></i>
                             </a>
                         </div>
+
+
                         <div id=taglines class=fadein-fast>
-                            <p>Based out of the Bay Area, CA.</p>
-                            <p>Specializing in custom web and iOS applications.</p>
-                            <p>Contact me for rates and availability.</p>
+                            <p>Building full stack web and iOS applications</p>
+                            <p>Experiance with embeded systems and robotics</p>
+                            <p>Searching for important problems that require creative solutions</p>
+                            <p>Contact me for rates and availability</p>
                         </div>
                         <div class=callToAction>
-                            <a href=#contact data-nav=contact class="btn btn-freelance thin-300">Get In Touch
-                                <i class="fa fa-level-down" aria-hidden="true"></i>
+                            <a href=/static/Resume_Eli_Byers.pdf target="_blank"  rel=noopener class="btn btn-hire thin-300">
+                                Download Resume <i class="fa fa-download" aria-hidden="true"></i>
                             </a>
-                            <a href=/static/Resume_Eli_Byers.pdf target="_blank"  rel=noopener class="btn btn-hire thin-300">Resume  
-                                <i class="fa fa-file-text" aria-hidden="true"></i>
+                            <a href=/arcade data-nav=contact class="btn btn-freelance thin-300">
+                                Ready <i class="fa fa-gamepad" aria-hidden="true"></i>
                             </a>
                         </div>
                     </div>
                 </div>
-            </div> <!-- end row-hero -->
+            </div> 
+            <!-- end row-hero -->
     
-            <div id='projects'>
+            <div id='hacks'>
     
                 <div class="row hack" style="padding-top:45px;">
                     <div class="container">
@@ -192,9 +198,12 @@
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="separator"></div> -->
                 </div>
-    
+            </div> 
+            <!-- end hacks -->
+
+            <div id='projects'>
+
                 <div class="row hack" style="padding-top:45px;">
                     <div class="container">
                         <div class="center">
@@ -283,67 +292,12 @@
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="separator"></div> -->
                 </div>
     
-                <div class=row id=map-canvas>
-                    <div id=map class=map-offset></div>
-                    <div id=map-cover></div>
-                </div>
-    
-            </div> <!-- end projects -->
+            </div> 
+            <!-- end projects -->
+
         </main>
-    
-        <div id=footer>
-            <div class=row>
-                <div class=container>
-                    <div class="center span4">
-                        <img id=profile alt=profile src='' style="max-width: 130px;border-radius: 50%;border: 2px solid white;">
-                        <div id=info-small>
-                            <p>Eli Byers</p>
-                            <a href=mailto:contact@elibyers.com>contact@elibyers.com</a>
-                        </div>
-                        <div class=social>
-                            <a href=https://github.com/eli-byers target=_blank  rel=noopener>
-                                <i class="fa fa-github" aria-hidden="true"></i>
-                            </a>
-                            <a href=https://www.linkedin.com/in/elibyers/ target=_blank rel=noopener>
-                                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-                            </a>
-                            <a href=skype:eli.byers?chat>
-                                <i class="fa fa-skype" aria-hidden="true"></i>
-                            </a>
-                            <a href=mailto:elibyers.dev@gmail.com>
-                                <i class="fa fa-envelope" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class=span8 id=contact>
-                        <form action=/contact id=contact-form method=post name=contact-form>
-                            <div class=buffer-bottom>
-                                <input type=text name=name placeholder=Name autocomplete='name' required id=field1>
-                                <input type=email name=email placeholder=Email autocomplete='email' required>
-                                <input type=text name=phone placeholder=Phone autocomplete='tel-national'>
-                            </div>
-                            <div class=buffer-bottom>
-                                <textarea class=message name=message placeholder=Message required rows=6></textarea>
-                            </div>
-                            <span id=submit-response></span>
-                            <div class=pull-right>
-                                <button id=sendbtn  class=button>Send</button>
-                                <!-- <input id=sendbtn type=submit class=button value=send> -->
-                            </div>
-                            <div id=success class=response>
-                                Thank you!
-                            </div>
-                            <div id=err class=response>
-                                Mailer Failed
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div> <!-- end footer -->
     
         <div class=center id=links>
             <ul>
@@ -361,8 +315,6 @@
     <!-- google maps -->
     <script src=static/js/scripts.js></script>
     <script src=static/js/lazyload.js defer async></script>
-    <script src=static/js/map.js></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5KX1vgzWInxKQRhRlrUfJ_Q-ctuaVRB0&callback=initMap" async defer></script>
     <!-- custom scripts -->
     
 </body>

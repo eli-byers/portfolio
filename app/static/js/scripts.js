@@ -1,21 +1,20 @@
 $(document).ready(function() {
 
-    let header = $("#header")
-    let projects = $("#projects")
-    let projectsOffset = projects.offset()
-    let mapCanvasOffset = $("#map-canvas").offset()
-    let burger = $("#hamburger");
-    let drop = $("#dropdown");
+    let header, hacks, projects, hacksOffset, projectsOffset, burger, drop
 
-    function getDomElevents(){
+    function getDomElements(){
         header = $("#header")
+        hacks = $("#hacks")
         projects = $("#projects")
+
+        hacksOffset = hacks.offset()
         projectsOffset = projects.offset()
-        mapCanvasOffset = $("#map-canvas").offset()
 
         burger = $("#hamburger");
         drop = $("#dropdown");
     }
+
+    getDomElements()
 
     //==========================================
     // loading cover
@@ -24,7 +23,7 @@ $(document).ready(function() {
     $(window).on('load', function() {
         window.onscroll = setNav
         $('#page').show(function(){
-            getDomElevents();
+            getDomElements();
             $(document).scrollTop(0)
             $("#cover").fadeOut(200);
         });
@@ -65,17 +64,18 @@ $(document).ready(function() {
     function setNav(){
         hideDropdown()
         let scrollTop = $(this).scrollTop()
+        let preset = 200
         // down the page
         if (scrollTop >= 60){
+            
             header.addClass("nav-fixed")
-            if (scrollTop <= projectsOffset.top - 200) {
-                activateNav("home");
+            if (scrollTop <= hacksOffset.top - preset) {
+                activateNav();
             } 
-            else if (scrollTop <= mapCanvasOffset.top - 200 ){
+            else if (scrollTop <= projectsOffset.top - preset){
+                activateNav("hacks");
+            } else {
                 activateNav("projects");
-            } 
-            else {
-                activateNav("contact");
             }
         } 
         // in the header
@@ -86,10 +86,12 @@ $(document).ready(function() {
     setNav();
     
     function activateNav(str){
-        let nav = header.find("[data-nav='"+str+"']")
-        if (!nav.hasClass('active')) {
-            header.find(".active").removeClass("active")
-            header.find("[data-nav='"+str+"']").addClass("active")
+        header.find(".active").removeClass("active")
+        console.log(str);
+        
+        if (str) {
+            nav = "[data-nav='"+str+"']"
+            header.find(nav).addClass("active")
         }
     }
 
@@ -97,7 +99,7 @@ $(document).ready(function() {
     $("a[href^='#']").on('click', function(e) {
         e.preventDefault();
         var dest = $.attr(this, "href")
-        var offset = dest == '#projects' ? 55 : 0
+        var offset = 55
         if (dest.length) {
             $('html, body').animate({
                 scrollTop: $(dest).offset().top - offset
@@ -117,28 +119,6 @@ $(document).ready(function() {
         }
         setHeroHeight()
     });
-
-    // AJAX Form
-    $('#contact-form').submit(function(e){
-        e.preventDefault();
-        $('#err').hide();
-        $('#success').hide();
-        $('#sendbtn').html("Sending")
-
-        const url = $(this).attr('action');
-        const data = $(this).serialize();
-        $.post(url, data, function(data, status){
-            $('#sendbtn').html("Send")
-            if (data && data.status){
-                $("#contact-form")[0].reset();
-                $('#err').hide();
-                $('#success').show();
-            } else {
-                $('#success').hide();
-                $('#err').show();
-            }
-        });
-    })
 
 
     console.log("Eli Byers - Software Engineer")
