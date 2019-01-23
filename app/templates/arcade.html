@@ -36,25 +36,39 @@
     <meta charset=UTF-8>
     <title>Eli Byers | Arcade</title>
 
+    <link type="text/css" rel="stylesheet" href="static/lightslider/css/lightslider.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link href=static/css/arcade.css rel=stylesheet>
+
+    
     <script src="https://use.fontawesome.com/b59847f86f.js" defer></script>
+    <script src=https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js></script>
+    <script src=static/js/arcade.js></script>
+    <script src=static/lightslider/js/lightslider.js></script>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    
 </head>
 
 <body>
+    <div alt=bg style="background-image: url(static/images/mast.jpg); background-size: cover;" id=bg-cover></div>
 
-    <header class=header-container>
-        <div alt=bg style="background-image: url(static/images/mast.jpg); background-size: cover;" id=bg-cover></div>
+    <header class=header-contain>
         <div class=default id=header>
-            <div class="container container-top">
+
+            
+            <div class="contain">
                 <div class=brand>
-                    <a href=/>
-                    <div id=logo>
-                        <svg class='eb-svg' version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 640 640" width="55" height="55"><defs><path d="M40 480L310 640L580 480L580 160L310 0L40 160L40 480Z" id="i5bRRjna3"></path><path d="M70 465L310 610L550 465L550 175L310 30L70 175L70 465Z" id="a3522MI2AL"></path><path d="M361.32 496.27L361.32 395.93L320 374.39L319.59 570L501.65 462.74L463.35 442.97L361.32 496.27Z" id="a1Dey7VYIN"></path><path d="M140 425L140 259.24L300 347.2L300 300.29L100 190L100 450L300 570L300 520L140 425Z" id="k3tzsFhDqb"></path><path d="M362.29 321.87L520 237.5L519.6 190L319.18 300.99L319.18 351.17L520 453.74L519.18 400.49L362.29 321.87Z" id="f5JePU5COu"></path><path d="M300 119.61L300 70L122.11 176.73L161.74 199.54L300 119.61Z" id="aLmEV70A6"></path><path d="M361.73 143.73L361.73 257.57L320 280.17L320 70L503.15 179.89L463.83 202.76L361.73 143.73Z" id="a8IsamsaUx"></path></defs><g><g><g><use xlink:href="#i5bRRjna3" opacity="1" fill="#f44336" fill-opacity="1"></use><g><use xlink:href="#i5bRRjna3" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="1" stroke-opacity="0"></use></g></g><g><use xlink:href="#a3522MI2AL" opacity="1" fill="#333333" fill-opacity="1"></use><g><use xlink:href="#a3522MI2AL" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="1" stroke-opacity="0"></use></g></g><g><use xlink:href="#a1Dey7VYIN" opacity="1" fill="#707070" fill-opacity="1"></use><g><use xlink:href="#a1Dey7VYIN" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="1" stroke-opacity="0"></use></g></g><g><use xlink:href="#k3tzsFhDqb" opacity="1" fill="#aaaaaa" fill-opacity="1"></use><g><use xlink:href="#k3tzsFhDqb" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="1" stroke-opacity="0"></use></g></g><g><use xlink:href="#f5JePU5COu" opacity="1" fill="#707070" fill-opacity="1"></use><g><use xlink:href="#f5JePU5COu" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="1" stroke-opacity="0"></use></g></g><g><use xlink:href="#aLmEV70A6" opacity="1" fill="#ffffff" fill-opacity="1"></use><g><use xlink:href="#aLmEV70A6" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="1" stroke-opacity="0"></use></g></g><g><use xlink:href="#a8IsamsaUx" opacity="1" fill="#ffffff" fill-opacity="1"></use><g><use xlink:href="#a8IsamsaUx" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="1" stroke-opacity="0"></use></g></g></g></g></svg>
-                    </div>
-                    <div class=info>
-                        <div class='name thin-300'>ELI ARCADE</div>
-                        <div class='title thin-300'>FUN BUILT IN JAVASCRIPT</div>
-                    </div>
+                    <a href="/">
+                        <div id=logo>
+                            <svg class='eb-svg' version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 640 640" width="55" height="55"><defs><path d="M40 480L310 640L580 480L580 160L310 0L40 160L40 480Z" id="i5bRRjna3"></path><path d="M70 465L310 610L550 465L550 175L310 30L70 175L70 465Z" id="a3522MI2AL"></path><path d="M361.32 496.27L361.32 395.93L320 374.39L319.59 570L501.65 462.74L463.35 442.97L361.32 496.27Z" id="a1Dey7VYIN"></path><path d="M140 425L140 259.24L300 347.2L300 300.29L100 190L100 450L300 570L300 520L140 425Z" id="k3tzsFhDqb"></path><path d="M362.29 321.87L520 237.5L519.6 190L319.18 300.99L319.18 351.17L520 453.74L519.18 400.49L362.29 321.87Z" id="f5JePU5COu"></path><path d="M300 119.61L300 70L122.11 176.73L161.74 199.54L300 119.61Z" id="aLmEV70A6"></path><path d="M361.73 143.73L361.73 257.57L320 280.17L320 70L503.15 179.89L463.83 202.76L361.73 143.73Z" id="a8IsamsaUx"></path></defs><g><g><g><use xlink:href="#i5bRRjna3" opacity="1" fill="#f44336" fill-opacity="1"></use><g><use xlink:href="#i5bRRjna3" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="1" stroke-opacity="0"></use></g></g><g><use xlink:href="#a3522MI2AL" opacity="1" fill="#333333" fill-opacity="1"></use><g><use xlink:href="#a3522MI2AL" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="1" stroke-opacity="0"></use></g></g><g><use xlink:href="#a1Dey7VYIN" opacity="1" fill="#707070" fill-opacity="1"></use><g><use xlink:href="#a1Dey7VYIN" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="1" stroke-opacity="0"></use></g></g><g><use xlink:href="#k3tzsFhDqb" opacity="1" fill="#aaaaaa" fill-opacity="1"></use><g><use xlink:href="#k3tzsFhDqb" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="1" stroke-opacity="0"></use></g></g><g><use xlink:href="#f5JePU5COu" opacity="1" fill="#707070" fill-opacity="1"></use><g><use xlink:href="#f5JePU5COu" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="1" stroke-opacity="0"></use></g></g><g><use xlink:href="#aLmEV70A6" opacity="1" fill="#ffffff" fill-opacity="1"></use><g><use xlink:href="#aLmEV70A6" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="1" stroke-opacity="0"></use></g></g><g><use xlink:href="#a8IsamsaUx" opacity="1" fill="#ffffff" fill-opacity="1"></use><g><use xlink:href="#a8IsamsaUx" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="1" stroke-opacity="0"></use></g></g></g></g></svg>
+                        </div>
+                        <div class=info>
+                            <div class='name thin-300'>ELI ARCADE</div>
+                            <div class='title thin-300'>FUN BUILT IN JAVASCRIPT</div>
+                        </div>
                     </a>
                 </div>
                 <div class=pull-right>
@@ -73,22 +87,84 @@
     </header>
 
     <main>
-    
-        <div id=row-hero>
-            <div class=container>
-                
-                
-                stuff
 
+        <div class="contain">
 
+            <div class="row game">
+                <div class="col-12 col-sm-4">
+                    <img src="static/images/games/pacman.png" alt="pacman" width="100%">
+                </div>
+                <div class="col-12 col-sm-8">
+                    <a href="/" class=pull-right>
+                        <i class="fa fa-github fa-2x" aria-hidden="true"></i>
+                    </a>
+                    <h3 class=thin-300>Pacman</h3>
+                    <ul>
+                        <li>Dynamic map rendering</li>
+                        <li>Programatic animations</li>
+                        <li>Qnique path finding</li>
+                    </ul>
+                </div>
             </div>
-        </div> 
-        <!-- end row-hero -->
+
+            <div class="row game">
+                <div class="col-12 col-sm-4">
+                    <img src="static/images/games/robots.png" alt="robots" width="100%">
+                </div>
+                <div class="col-12 col-sm-8">
+                    <a href="/" class=pull-right>
+                        <i class="fa fa-github fa-2x" aria-hidden="true"></i>
+                    </a>
+                    <h3 class=thin-300>Ricochet Robots</h3>
+                    <ul>
+                        <li><span>●</span> Dynamic map rendering</li>
+                        <li><span>●</span> Player move recording</li>
+                        <li><span>●</span> Move rewinding</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row game">
+                <div class="col-12 col-sm-4">
+                    <img src="static/images/games/simon.png" alt="simon" width="100%">
+                </div>
+                <div class="col-12 col-sm-8">
+                    <a href="/" class=pull-right>
+                        <i class="fa fa-github fa-2x" aria-hidden="true"></i>
+                    </a>
+                    <h3 class=thin-300>Simon</h3>
+                    <ul>
+                        <li><span>●</span> State machine</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row game">
+                <div class="col-12 col-sm-4">
+                    <img src="static/images/games/snake.png" alt="snake" width="100%">
+                </div>
+                <div class="col-12 col-sm-8">
+                    <a href="/" class=pull-right>
+                        <i class="fa fa-github fa-2x" aria-hidden="true"></i>
+                    </a>
+                    <h3 class=thin-300>Snake</h3>
+                    <ul>
+                        <li><span>●</span> Playing</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
 
     </main>
+
+    <div class=center id=links>
+        <ul>
+            <li>&copy; ELIBYERS.COM 2019 </li>
+            <li>contact@elibyers.com</li>
+        </ul>
+    </div>
     
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src=static/js/arcade.js></script>
 </body>
 
 </html>

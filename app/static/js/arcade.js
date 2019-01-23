@@ -4,17 +4,23 @@ $(document).ready(function() {
     //==========================================
     // Hero / Nav
     //==========================================
-    function setHeroHeight(params) {
-        windowHeight = $(window).height();
-        headerContainerHeight = $("header").height();
-        height = windowHeight - headerContainerHeight > 410 ? windowHeight - headerContainerHeight : 410;
-        $('#row-hero').css('height', height);
-    }
-    setHeroHeight();
+    function setNav(){
+        let header = $('#header')
+        let scrollTop = $(this).scrollTop()
 
-    // window resize
-    $(window).resize(function() {
-        setHeroHeight()
-    });
+        if (!header) return
+
+        // down the page
+        if (scrollTop < 40){
+            header.removeClass("nav-fixed")
+        } 
+        // in the header
+        else {
+            header.addClass("nav-fixed")
+        }
+    }
+    setNav();
+    window.onscroll = setNav
+
 });
 
