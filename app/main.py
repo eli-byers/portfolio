@@ -11,5 +11,10 @@ load_dotenv(dotenv_path)
 def index():
     return render_template('index.html')
 
+@app.route('/arcade')
+def arcade():
+    return render_template('arcade.html')
+
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True, port=80)
