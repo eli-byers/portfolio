@@ -1,6 +1,14 @@
 $(document).ready(function() {
 
-    let header, hacks, projects, hacksOffset, projectsOffset, burger, drop
+    let header = $("#header")
+    let hacks = $("#hacks")
+    let projects = $("#projects")
+
+    let hacksOffset = hacks.offset()
+    let projectsOffset = projects.offset()
+
+    let burger = $("#hamburger");
+    let drop = $("#dropdown");
 
     function getDomElements(){
         header = $("#header")
@@ -14,7 +22,15 @@ $(document).ready(function() {
         drop = $("#dropdown");
     }
 
-    getDomElements()
+    //==========================================
+    // hode arcade on mobile
+    //==========================================
+    function isMobileDevice() {
+        return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+    };
+    if (isMobileDevice()){
+        $('.arcade-btn').remove();
+    }
 
     //==========================================
     // loading cover
@@ -45,7 +61,7 @@ $(document).ready(function() {
     });
 
     function hideDropdown(){
-        if (burger.data('open')){
+        if (burger && burger.data('open')){
             burger.data('open', false);
             drop.hide();
         }
@@ -62,6 +78,8 @@ $(document).ready(function() {
     setHeroHeight();
     
     function setNav(){
+        if (!header) return
+
         hideDropdown()
         let scrollTop = $(this).scrollTop()
         let preset = 200
@@ -87,8 +105,6 @@ $(document).ready(function() {
     
     function activateNav(str){
         header.find(".active").removeClass("active")
-        console.log(str);
-        
         if (str) {
             nav = "[data-nav='"+str+"']"
             header.find(nav).addClass("active")
