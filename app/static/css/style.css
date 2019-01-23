@@ -223,8 +223,22 @@ em {
     height: 700px;
 }
 
-#hero img {
-    margin-bottom: -53px
+#profile {
+    max-width: 110px;
+    border-radius: 50%;
+    display: block;
+}
+
+#title div {
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+}
+
+#titleLabel {
+    margin-left: 20px;
+    height: 110px;
+    line-height: 110px;
 }
 
 h3 a {
@@ -339,7 +353,7 @@ h3 a {
 
 .social {
     font-size: 0;
-    margin-top: 24px
+    margin-top: 10px;
 }
 
 .social a {
@@ -1007,6 +1021,20 @@ textarea {
     #contact-form .button {
         width: 100%
     }
+    #title div {
+        display: block;
+    }
+    #titleLabel {
+        margin-left: 0px;
+        height: 80px;
+        line-height: 80px;
+    }
+    .social {
+        margin-bottom: 20px;
+    }
+    #profile {
+        display: unset;
+    }
     .container {
         padding: 0 30px;
         text-align: center;
@@ -1069,6 +1097,10 @@ textarea {
     #nav ul.nav-default,
     .separator {
         display: none
+    }
+    #titleLabel {
+        height: 60px;
+        line-height: 60px;
     }
     .nav-fixed #dropdown {
         background: #fff;
@@ -1158,6 +1190,10 @@ textarea {
 @media (max-width:480px) {
     .container {
         padding: 0 20px
+    }
+    #titleLabel {
+        height: 40px;
+        line-height: 40px;
     }
     h3 {
         font-size: 25px
@@ -1268,7 +1304,7 @@ textarea {
 }
 
 #taglines {
-    margin: 40px 0px;
+    margin: 30px 0px;
 }
 
 #taglines p {
