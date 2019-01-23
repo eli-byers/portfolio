@@ -155,11 +155,37 @@ main {
     padding: 20px 10px;
     border-radius: 5px;
     margin-bottom: 15px;
+    font-weight: 300;
+}
+
+.game .play {
+    position: absolute;
+    bottom: 0px;
+    right: 15px;
+}
+
+.game .play img {
+    width: 100px;
 }
 
 .game h3 {
-    margin-bottom: 20px;
+    margin-top: 25px;
+    margin-bottom: 35px;
+    font-size: xx-large;
 }
+
+.game li {
+    padding-bottom: 10px;
+}
+.game li:last-child {
+    padding-bottom: 0px;
+}
+
+.game ul {
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
 
 .game li span {
     color: #333;
@@ -376,7 +402,7 @@ a.button:hover {
 }
 
 @media (max-width:575px) {
-    .game img {
+    .game-pic {
         margin-bottom: 20px;
     }
 }
@@ -385,11 +411,15 @@ a.button:hover {
     #nav ul.nav-default {
         display: none;
     }
+    .nav-fixed .hamburger i {
+        margin-top: -10px;
+        color: #333;
+    }
     .hamburger i {
         display: inline-block;
     }
     .header-contain {
-        height: 140px;
+        /* height: 140px; */
     }
     #header {
         text-align: center!important;
