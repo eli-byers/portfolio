@@ -40,7 +40,10 @@
     <link href=static/css/arcade.css rel=stylesheet>
     <link href=static/css/game.css rel=stylesheet>
 
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-Bx4pytHkyTDy3aJKjGkGoHPt3tvv6zlwwjc3iqN7ktaiEMLDPqLSZYts2OjKcBx1" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-Bx4pytHkyTDy3aJKjGkGoHPt3tvv6zlwwjc3iqN7ktaiEMLDPqLSZYts2OjKcBx1" crossorigin="anonymous"> -->
+    <script defer src="https://pro.fontawesome.com/releases/v5.8.1/js/all.js" integrity="sha384-GBwm0s/0wYcqnK/JmrCoRqWYIWzFiGEucsfFqkB76Ouii5+d4R31vWHPQtfhv55b" crossorigin="anonymous"></script>
+
+
     <script src=https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js></script>
     <script src=static/js/arcade.js></script>
 
@@ -55,7 +58,6 @@
 
     <header class=header-contain>
         <div class=default id=header>
-
 
             <div class="contain">
                 <div class=brand>
@@ -81,6 +83,7 @@
                 </div>
 
             </div>
+
         </div>
     </header>
 
@@ -88,28 +91,30 @@
 
         <div class="contain">
 
+            <!-- disclaimer -->
             <div class="row">
                 <div class="col-12">
                     <div class="disclaimer">
-                        <h4>The Arcade</h4>
-                        <p>The following is a collection of classic video games I recreated from scratch in Javascript. All were made in my spare time, my first year after learning to code. All are incomplete, buggy, and the quality of the code is ... lacking. With that being said, all were very enjoyable to build and taught me more about programing then my real work.</p>
-                        <h6>Enjoy!</h6>
+                        <h4><i class="fas fa-exclamation-triangle mr-3"></i>Disclaimer<i class="fas fa-exclamation-triangle ml-3"></i></h4>
+                        <p class=mb-3>The following is a collection of classic video games I recreated from scratch in Javascript. All were made in my spare time, my first year after learning to code. All are incomplete, buggy, and the quality of the code is... lacking. With that being said, all were very enjoyable to build and taught me more about programing then my real work. So if you are brave enough, please enjoy!</p>
                     </div>
                 </div>
-            </div>
+            </div><!-- end disclaimer -->
 
+            <!-- game cards -->
             <div class="row">
 
-                <div class="col-6 game-card">
-                    <div class="game-body hover -container" style="background-image: url('/static/images/games/robots.png')">
+                <div class="col-4 game-card">
+                    <div class="game-body hover-container" style="background-image: url('/static/images/games/robots.png')">
 
                         <div class="hover-show">
                             <div class="game-header">
-                                <h4>Ricochet Robots</h4>
-                                <a class="option" href="https://github.com/eli-byers/RicochetRobots" target="_blank">
-                                    <i class="fab fa-github fa-lg"></i>
+                                <a class="option icons git" href="https://github.com/eli-byers/RicochetRobots" target="_blank">
+                                    <i class="fab fa-github fa-lg icon-default" data-fa-transform="shrink-1" data-fa-mask="fas fa-circle"></i>
+                                    <i class="fab fa-github fa-lg icon-hover"></i>
                                 </a>
-                                <a class="option play icons" data-toggle="modal" data-target="#modalRR">
+                                <h4>Robots</h4>
+                                <a class="option icons" data-toggle="modal" data-target="#modalRR">
                                     <i class="fal fa-play fa-lg icon-default"></i>
                                     <i class="fas fa-play fa-lg icon-hover"></i>
                                 </a>
@@ -125,14 +130,174 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="modal fade" id="modalRR" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg" role="document">
+
+                                <!--Content-->
+                                <div class="modal-content">
+
+                                    <!--Body-->
+                                    <div class="modal-body mb-0 p-0">
+                                        <iframe class='screen' src="/static/games/ricochet_robots/index.html" frameborder="0"></iframe>
+                                    </div>
+
+                                    <!--Footer-->
+                                    <div class="modal-footer justify-content-center">
+                                        <span class="mr-4">Check it out on Github!</span>
+
+                                        <button type="button" class="btn btn-outline-primary btn-rounded btn-md ml-4"
+                                            data-dismiss="modal">Close</button>
+
+                                    </div>
+
+                                </div>
+                                <!--/.Content-->
+
+                            </div>
+                    </div>
                 </div>
 
-            </div>
+                <div class="col-4 game-card">
+                    <div class="game-body hover-container" style="background-image: url('/static/images/games/pacman.png')">
 
+                        <div class="hover-show">
+                            <div class="game-header">
+                                <a class="option icons git" href="https://github.com/eli-byers/Pac-Man" target="_blank">
+                                    <i class="fab fa-github fa-lg icon-default" data-fa-transform="shrink-1"
+                                        data-fa-mask="fas fa-circle"></i>
+                                    <i class="fab fa-github fa-lg icon-hover"></i>
+                                </a>
+                                <h4>PacMan</h4>
+                                <a class="option icons" data-toggle="modal" data-target="#modalRR">
+                                    <i class="fal fa-play fa-lg icon-default"></i>
+                                    <i class="fas fa-play fa-lg icon-hover"></i>
+                                </a>
+                            </div>
 
+                            <div class="game-info">
+                                <p>Interesting Bits</p>
+                                <ul>
+                                    <li>Programmatic map rendering</li>
+                                    <li>Programmatic animations</li>
+                                    <li>Unique path finding for each ghost</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-        </div>
+                <div class="col-4 game-card">
+                    <div class="game-body hover-container" style="background-image: url('/static/images/games/invaders.png')">
 
+                        <div class="hover-show">
+                            <div class="game-header">
+                                <a class="option icons git" href="https://github.com/eli-byers/SpaceInvaders" target="_blank">
+                                    <i class="fab fa-github fa-lg icon-default" data-fa-transform="shrink-1"
+                                        data-fa-mask="fas fa-circle"></i>
+                                    <i class="fab fa-github fa-lg icon-hover"></i>
+                                </a>
+                                <h4>Invaders</h4>
+                                <a class="option icons" data-toggle="modal" data-target="#modalRR">
+                                    <i class="fal fa-play fa-lg icon-default"></i>
+                                    <i class="fas fa-play fa-lg icon-hover"></i>
+                                </a>
+                            </div>
+
+                            <div class="game-info">
+                                <p>Interesting Bits</p>
+                                <ul>
+                                    <li>Programmatic animations</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-4 game-card">
+                    <div class="game-body hover-container" style="background-image: url('/static/images/games/astroids.png')">
+
+                        <div class="hover-show">
+                            <div class="game-header">
+                                <a class="option icons git" href="https://github.com/eli-byers/Astroids" target="_blank">
+                                    <i class="fab fa-github fa-lg icon-default" data-fa-transform="shrink-1"
+                                        data-fa-mask="fas fa-circle"></i>
+                                    <i class="fab fa-github fa-lg icon-hover"></i>
+                                </a>
+                                <h4>Asteroids</h4>
+                                <a class="option icons" data-toggle="modal" data-target="#modalRR">
+                                    <i class="fal fa-play fa-lg icon-default"></i>
+                                    <i class="fas fa-play fa-lg icon-hover"></i>
+                                </a>
+                            </div>
+
+                            <div class="game-info">
+                                <p>Interesting Bits</p>
+                                <ul>
+                                    <li>Space Physics</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-4 game-card">
+                    <div class="game-body hover-container" style="background-image: url('/static/images/games/simon.png')">
+
+                        <div class="hover-show">
+                            <div class="game-header">
+                                <a class="option icons git" href="https://github.com/eli-byers/simon" target="_blank">
+                                    <i class="fab fa-github fa-lg icon-default" data-fa-transform="shrink-1"
+                                        data-fa-mask="fas fa-circle"></i>
+                                    <i class="fab fa-github fa-lg icon-hover"></i>
+                                </a>
+                                <h4>Simon</h4>
+                                <a class="option icons" data-toggle="modal" data-target="#modalRR">
+                                    <i class="fal fa-play fa-lg icon-default"></i>
+                                    <i class="fas fa-play fa-lg icon-hover"></i>
+                                </a>
+                            </div>
+
+                            <div class="game-info">
+                                <p>Interesting Bits</p>
+                                <ul>
+                                    <li>State machine</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-4 game-card">
+                    <div class="game-body hover-container" style="background-image: url('/static/images/games/snake.png')">
+
+                        <div class="hover-show">
+                            <div class="game-header">
+                                <a class="option icons git" href="https://github.com/eli-byers/js_snake" target="_blank">
+                                    <i class="fab fa-github fa-lg icon-default" data-fa-transform="shrink-1"
+                                        data-fa-mask="fas fa-circle"></i>
+                                    <i class="fab fa-github fa-lg icon-hover"></i>
+                                </a>
+                                <h4>Snake</h4>
+                                <a class="option icons" data-toggle="modal" data-target="#modalRR">
+                                    <i class="fal fa-play fa-lg icon-default"></i>
+                                    <i class="fas fa-play fa-lg icon-hover"></i>
+                                </a>
+                            </div>
+
+                            <div class="game-info">
+                                <p>Interesting Bits</p>
+                                <ul>
+                                    <li>Built in one evening</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div> <!-- end game cards -->
+
+        </div> <!-- end contain -->
     </main>
 
     <div class=center id=links>
