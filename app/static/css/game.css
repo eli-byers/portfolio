@@ -1,0 +1,95 @@
+/* font awesome  */
+.hover-container:hover>.hover-hide,
+.hover-container>.hover-show {
+    display: none;
+}
+.hover-container:hover>.hover-show {
+    display: inline-block;
+}
+
+.game .screen {
+    width: 100%;
+    height: 80vh;
+}
+
+.game-card .game-body {
+    border-radius: 5px;
+    height: 400px;
+    background-size: cover;
+    overflow: hidden;
+    color: white;
+    font-weight: 300;
+}
+
+.game-info {
+    float: left;
+    background-color: rgba(10,10,10,0.95);
+    padding: 20px;
+    width: 100%;
+    height: 400px;
+    flex-direction: column;
+}
+.game-info li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.game-header {
+    float: left;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(108,30,24,1) 65%, rgba(191,54,44,1) 100%);
+    border-bottom: 1px solid rgba(108,30,24,1);
+    display:table;
+    width: 100%;
+    margin: 0;
+}
+.game-header h4 {
+    display:table-cell;
+    padding: 20px;
+    width: auto;
+}
+.game-header a {
+    text-decoration: none;
+}
+
+.option:hover {
+    box-shadow: -3px 0 15px rgba(0,0,0,0.5);
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.5);
+}
+.option {
+    padding: 15px 25px;
+    display:table-cell;
+    width: 21px;
+    transition: box-shadow 0.3s, opacity 0.3s;
+}
+.option i {
+    color: black;
+}
+
+.play {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    line-height: 100%;
+    width: 65px;
+    position: relative;
+    transition: box-shadow 0.3s, opacity 0.3s;
+}
+
+.icons {
+    transition: box-shadow 0.3s, opacity 0.3s;
+    padding: 27px;
+}
+.icons>i {
+    position: absolute;
+}
+
+/* font awesome  */
+.icons:hover>.icon-default,
+.icons>.icon-hover {
+    transition: opacity 0.3s;
+    opacity: 0;
+}
+.icons:hover>.icon-hover {
+    transition: opacity 0.3s;
+    opacity: 1;
+}

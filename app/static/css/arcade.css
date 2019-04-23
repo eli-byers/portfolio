@@ -1,88 +1,3 @@
-abbr,
-acronym,
-address,
-applet,
-article,
-aside,
-audio,
-b,
-big,
-body,
-canvas,
-caption,
-center,
-cite,
-code,
-dd,
-del,
-details,
-dfn,
-div,
-dl,
-dt,
-em,
-embed,
-fieldset,
-figcaption,
-figure,
-footer,
-form,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-header,
-hgroup,
-html,
-i,
-iframe,
-img,
-ins,
-kbd,
-label,
-legend,
-li,
-mark,
-menu,
-nav,
-object,
-ol,
-output,
-p,
-pre,
-ruby,
-s,
-samp,
-section,
-small,
-span,
-strike,
-strong,
-sub,
-summary,
-sup,
-table,
-tbody,
-td,
-tfoot,
-th,
-thead,
-time,
-tr,
-tt,
-u,
-ul,
-var,
-video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font: inherit;
-    vertical-align: baseline
-}
-
 article,
 aside,
 details,
@@ -149,81 +64,22 @@ main {
     transition-duration: 0.5s;
 }
 
-.game {
-    background: rgba(0,0,0,0.8);
-    color: white;
-    padding: 20px;
+.disclaimer {
+    background-color: rgba(0,0,0,0.6);
     border-radius: 5px;
-    margin-bottom: 15px;
-    font-weight: 300;
+    color: #eee;
+    text-align: center;
+    padding: 25px;
+    margin-bottom: 50px;
 }
 
-.game h3 {
-    margin-top: 25px;
-    margin-bottom: 35px;
-    font-size: xx-large;
+.disclaimer h3 {
+    margin-bottom: 1.5rem;
 }
-
-.game li {
-    padding-bottom: 10px;
-}
-.game li:last-child {
-    padding-bottom: 0px;
-}
-
-.game ul {
-    padding-top: 10px;
-    padding-left: 20px;
-}
-
-
-.game li span {
-    color: #333;
-}
-
-.game .option {
-    float: right;
-    color: white;
-    padding: 0;
-    background: none;
-    border: none;
-}
-
-.game .option:not(:last-child) {
-    margin-left: 20px;
-}
-
-.game .foot {
-    position: absolute;
-    bottom: -20px;
-    right: -20px;
-    border-top-left-radius: 5px;
-    padding: 20px;
-    background: #ffffff0d;
-}
-
-/* font awesome  */
-.fa-hover:hover .fa-hover-hide,
-.fa-hover .fa-hover-show {
-    display: none;
-}
-.fa-hover:hover .fa-hover-show {
-    display: inline;
-}
-
-.play {
-    cursor: pointer;
-}
-.play:hover {
-    color: #F44336;
-}
-
-.git:hover {
-    color: #3659f4;
-}
-
-.option i {
-    color: inherit;
+.disclaimer p {
+    margin:  25px;
+    font-size: 25px;
+    font: icon;
 }
 
 .contain {
