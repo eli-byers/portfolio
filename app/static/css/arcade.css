@@ -152,20 +152,10 @@ main {
 .game {
     background: rgba(0,0,0,0.8);
     color: white;
-    padding: 20px 10px;
+    padding: 20px;
     border-radius: 5px;
     margin-bottom: 15px;
     font-weight: 300;
-}
-
-.game .play {
-    position: absolute;
-    bottom: 0px;
-    right: 15px;
-}
-
-.game .play img {
-    width: 100px;
 }
 
 .game h3 {
@@ -191,8 +181,49 @@ main {
     color: #333;
 }
 
-.fa {
+.game .option {
+    float: right;
     color: white;
+    padding: 0;
+    background: none;
+    border: none;
+}
+
+.game .option:not(:last-child) {
+    margin-left: 20px;
+}
+
+.game .foot {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    border-top-left-radius: 5px;
+    padding: 20px;
+    background: #ffffff0d;
+}
+
+/* font awesome  */
+.fa-hover:hover .fa-hover-hide,
+.fa-hover .fa-hover-show {
+    display: none;
+}
+.fa-hover:hover .fa-hover-show {
+    display: inline;
+}
+
+.play {
+    cursor: pointer;
+}
+.play:hover {
+    color: #F44336;
+}
+
+.git:hover {
+    color: #3659f4;
+}
+
+.option i {
+    color: inherit;
 }
 
 .contain {
@@ -316,6 +347,11 @@ main {
     margin-top: 7px;
 }
 
+#nav li a:hover {
+    color: #F44336;
+    transition: color 0.3s;
+}
+
 a.button {
     padding: 11px 44px;
     color: #F44336;
@@ -347,7 +383,7 @@ a.button:hover {
 
 .nav-fixed a {
     padding-bottom: 16px !important
-}       
+}
 .nav-fixed .eb-svg {
     width: 37px;
     height: 37px;
@@ -359,7 +395,6 @@ a.button:hover {
 }
 
 .hamburger i {
-    color: white;
     border-radius: 3px;
     padding: 2px 5px 1px 5px;
     display: none;

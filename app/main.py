@@ -1,11 +1,9 @@
 import os
 from flask import Flask, render_template, redirect, request, jsonify
-from dotenv import load_dotenv
+from flask_request_params import bind_request_params
 
 app = Flask(__name__, static_url_path='/static')
-
-dotenv_path = os.path.join(os.path.dirname(__file__), '.env')
-load_dotenv(dotenv_path)
+app.before_request(bind_request_params)
 
 @app.route('/')
 def index():

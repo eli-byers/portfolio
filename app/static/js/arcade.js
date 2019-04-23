@@ -1,5 +1,12 @@
 $(document).ready(function() {
 
+    // $('.game-pic').hover(function(e){
+    //     let src = $(this).attr('src')
+    //     let alt_src = $(this).data('alt-src')
+    //     $(this).attr('src', alt_src)
+    //     $(this).data('alt-src', src)
+    //     console.log(index);
+    // })
 
     //==========================================
     // Hero / Nav
@@ -13,7 +20,7 @@ $(document).ready(function() {
         // down the page
         if (scrollTop < 40){
             header.removeClass("nav-fixed")
-        } 
+        }
         // in the header
         else {
             header.addClass("nav-fixed")
