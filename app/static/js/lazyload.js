@@ -1,8 +1,8 @@
 $(window).on('load', function() {
-    
+
     loadIframes();
     loadImages();
-    
+
     function loadImages(){
         $('#anglehack').attr('src', 'static/images/projects/angelhack.jpg')
         $('#campuscoatcheck').attr('src', 'static/images/projects/campuscoatcheck.png')
@@ -16,7 +16,7 @@ $(window).on('load', function() {
         for (var i=0; i<vidDefer.length; i++) {
             if(vidDefer[i].getAttribute('data-src')) {
                 vidDefer[i].setAttribute('src',vidDefer[i].getAttribute('data-src'));
-            } 
+            }
         }
     }
 });

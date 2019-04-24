@@ -38,6 +38,8 @@
 
     <link href=static/css/style.css rel=stylesheet>
     <script src="https://use.fontawesome.com/b59847f86f.js" defer></script>
+    <link rel="stylesheet" href="static/css/font-awesome-animation.min.css">
+
 </head>
 
 <body class="cf index" id=top>
@@ -85,19 +87,18 @@
                             </ul>
                         </nav>
                     </div>
-    
+
                 </div>
             </div>
         </header>
-    
+
         <main>
-    
+
             <div id=row-hero>
                 <div class=container>
                     <div class=buffer-top id=hero>
 
                         <div id=title>
-                            
                             <div>
                                 <img id=profile alt=profile src=''>
                                 <div class=social>
@@ -114,36 +115,35 @@
                                         <i class="fa fa-envelope" aria-hidden="true"></i>
                                     </a>
                                 </div>
-
                             </div>
 
                             <div id=titleLabel>
                                 <h1 class='thin-300'>Software Engineer</h1>
+                                <p>Searching for important problems that require creative solutions</p>
                             </div>
                         </div>
 
                         <div id=taglines>
                             <p>Building full stack web and iOS applications</p>
-                            <p>Experiance with embeded systems and robotics</p>
-                            <p>Searching for important problems that require creative solutions</p>
+                            <p>Experience with embedded systems and robotics</p>
                         </div>
 
                         <div class=callToAction>
                             <a href=/static/Resume_Eli_Byers.pdf target="_blank"  rel=noopener class="btn btn-hire thin-300">
                                 Download Resume <i class="fa fa-download" aria-hidden="true"></i>
                             </a>
-                            <a href=/arcade data-nav=contact class="btn btn-freelance thin-300 arcade-btn">
-                                Ready <i class="fa fa-gamepad" aria-hidden="true"></i>
+                            <a href=/arcade data-nav=contact class="btn btn-freelance thin-300 arcade-btn faa-parent animated-hover">
+                                Ready <i class="fa fa-gamepad faa-pulse" aria-hidden="true"></i>
                             </a>
                         </div>
 
                     </div>
                 </div>
-            </div> 
+            </div>
             <!-- end row-hero -->
-    
+
             <div id='hacks'>
-    
+
                 <div class="row hack" style="padding-top:45px;">
                     <div class="container">
                         <div class="center">
@@ -153,7 +153,7 @@
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="row">
                     <div class="container">
                         <div class="cf portfolio-item">
@@ -164,13 +164,19 @@
                                 </a> -->
                                 <!-- <a href=https://github.com/eli-byers/corkboard target=_blank rel=noopener><i class="fa fa-github" aria-hidden="true"></i></a> -->
                             </div>
-                            <div class="portfolio-col description-container vid-text">
-                                <h3>
-                                    <a href=https://techcrunch.com/2016/09/11/thehighflyers-helps-you-join-the-mile-high-chat-club/ target=_blank rel=noopener class=thin-300>High Flyers Club</a>
-                                </h3>
-                                <p class=description><span style="font-weight: bold !important;">TechCrunch Disrupt: Best .club domain</span><br>See when you’re passing cool stuff outside of the plane and chat with other people on the flight.</p>
+                            <div class="portfolio-col description-container">
+                                <h3><a href=https://techcrunch.com/2016/09/11/thehighflyers-helps-you-join-the-mile-high-chat-club/ target=_blank rel=noopener class=thin-300>
+                                    TechCrunch Disrupt
+                                </a></h3>
+                                <h4>2016 Best .club Domain</h4>
+                                <p class=description>
+                                    <span style="font-weight: bold !important;">High Flyers Club</span>
+                                    <br>
+                                    Chat with other people on your flight and see when you’re flying over beautiful landmarks
+                                </p>
                                 <p class=roles>Technologies</p>
                                 <ul class=skills>
+                                    <li>Javascript</li>
                                     <li>Node.js</li>
                                     <li>Express</li>
                                     <li>MySQL</li>
@@ -182,7 +188,7 @@
                     </div>
                     <div class="separator"></div>
                 </div>
-    
+
                 <div class="row">
                     <div class="container">
                         <div class="cf portfolio-item">
@@ -193,13 +199,20 @@
                             </div>
                             <div class="portfolio-col description-container">
                                 <h3>
-                                    <a href=http://blog.angelhack.com/2016/10/17/hacking-for-good-tech-museum target=_blank rel=noopener class=thin-300>Cork Board</a>
+                                    <a href=http://blog.angelhack.com/2016/10/17/hacking-for-good-tech-museum target=_blank rel=noopener class=thin-300>
+                                        Angelhack
+                                    </a>
                                     <!-- <a href=https://github.com/eli-byers/corkboard target=_blank rel=noopener><i class="fa fa-github" aria-hidden="true"></i></a> -->
                                 </h3>
-                                <p class=description><span style="font-weight: bold !important;">Angelhack: Top 3</span><br>Location based posting platform to help people find their family or search for notes left by
-                                    their family.</p>
+                                <h4>Top 3 Teams</h4>
+                                <p class=description>
+                                    <span style="font-weight: bold !important;">Cork Board</span>
+                                    <br>
+                                    A public, location based post board to help homeless people reconnect with their families
+                                </p>
                                 <p class=roles>Technologies</p>
                                 <ul class=skills>
+                                    <li>Javascript</li>
                                     <li>Node.js</li>
                                     <li>Express</li>
                                     <li>MySQL</li>
@@ -209,7 +222,7 @@
                         </div>
                     </div>
                 </div>
-            </div> 
+            </div>
             <!-- end hacks -->
 
             <div id='projects'>
@@ -223,7 +236,7 @@
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="row">
                     <div class="container">
                         <div class="cf portfolio-item">
@@ -236,22 +249,62 @@
                                 <h3>
                                     <a href=http://campuscoatcheck.com/ target=_blank rel=noopener class=thin-300>Campus Coat Check</a>
                                 </h3>
-                                <p class=description>A coat check management and analytics platform.</p>
+                                <p class=description>
+                                    <span style="font-weight: bold !important;">Event Management and Analytics</span><br>
+                                    A startup created at Colgate University that manage the coat check at college and local events
+                                </p>
                                 <p class=roles>Technologies</p>
                                 <ul class=skills>
+                                    <li>Javascript</li>
                                     <li>Node.js</li>
                                     <li>Express</li>
                                     <li>MySQL</li>
                                     <li>Chart.js</li>
                                     <li>Nodemailer</li>
                                     <li>Twilio</li>
+                                    <li>AWS</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <div class="separator"></div>
                 </div>
-    
+
+
+                <div class="row">
+                        <div class="container">
+                            <div class="cf portfolio-item">
+                                <div class="portfolio-col screenshot">
+                                    <a href=https://www.fortmcmurrayrelieffund.com/ target=_blank rel=noopener>
+                                        <img id='fmrf' alt='Fort McMurray Relief Fund' src=''>
+                                    </a>
+                                </div>
+                                <div class="portfolio-col description-container">
+                                    <h3>
+                                        <a href=https://www.fortmcmurrayrelieffund.com/ target=_blank rel=noopener class=thin-300>Fort McMurray<br>Relief Fund</a>
+                                    </h3>
+                                    <p class=description>
+                                        <span style="font-weight: bold !important;">Charity Auction</span><br>
+                                        We raised nearly 5k to help support the families affected buy the 2016 Fort McMurray Fire
+                                    </p>
+                                    <p class=roles>Technologies</p>
+                                    <ul class=skills>
+                                        <li>Javascript</li>
+                                        <li>Node.js</li>
+                                        <li>Express</li>
+                                        <li>PHP</li>
+                                        <li>Codeigniter</li>
+                                        <li>MySQL</li>
+                                        <li>Socket.io</li>
+                                        <li>Stripe</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="separator"></div>
+
+                        </div>
+                    </div>
+
                 <div class="row">
                     <div class="container">
                         <div class="cf portfolio-item">
@@ -264,67 +317,45 @@
                                 <h3>
                                     <a href=http://nearby.rocks/ target=_blank rel=noopener class=thin-300>Nearby</a>
                                 </h3>
-                                <p class=description>Relational Search Engine powered by google maps.</p>
+                                <p class=description>
+                                    <span style="font-weight: bold !important;">Find all X with Y nearby</span><br>
+                                    A relational Search Engine powered by google maps
+                                </p>
                                 <p class=roles>Technologies</p>
                                 <ul class=skills>
+                                    <li>PHP</li>
                                     <li>Codeigniter</li>
-                                    <li>Materialize</li>
+                                    <li>Javascript</li>
                                     <li>Google Maps API</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="separator"></div>
-                </div>
-                
-                <div class="row">
-                    <div class="container">
-                        <div class="cf portfolio-item">
-                            <div class="portfolio-col screenshot">
-                                <a href=https://www.fortmcmurrayrelieffund.com/ target=_blank rel=noopener>
-                                    <img id='fmrf' alt='Fort McMurray Relief Fund' src=''>
-                                </a>
-                            </div>
-                            <div class="portfolio-col description-container">
-                                <h3>
-                                    <a href=https://www.fortmcmurrayrelieffund.com/ target=_blank rel=noopener class=thin-300>Fort McMurray Relief Fund</a>
-                                </h3>
-                                <p class=description>Charity Auction to support the victims of the Fort McMurray Fire.</p>
-                                <p class=roles>Technologies</p>
-                                <ul class=skills>
-                                    <li>Node.js</li>
-                                    <li>Express</li>
-                                    <li>Socket.io</li>
-                                    <li>Stripe</li>
-                                    <li>Codeigniter</li>
-                                    <li>MySQL</li>
+                                    <li>Materialize</li>
+                                    <li>GreenGeeks</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-    
-            </div> 
+
+            </div>
             <!-- end projects -->
 
         </main>
-    
+
         <div class=center id=links>
             <ul>
                 <li>&copy; ELIBYERS.COM 2019 </li>
                 <li>contact@elibyers.com</li>
             </ul>
         </div>
-       
+
     </div>
-    
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <!-- google maps -->
     <script src=static/js/scripts.js></script>
     <script src=static/js/lazyload.js defer async></script>
     <!-- custom scripts -->
-    
+
 </body>
 
 </html>

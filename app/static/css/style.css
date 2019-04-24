@@ -76,10 +76,12 @@ u,
 ul,
 var,
 video {
+    font-family: Open Sans, sans-serif;
+    font-weight: 300 !important;
     margin: 0;
     padding: 0;
     border: 0;
-    font: inherit;
+    /* font: inherit; */
     vertical-align: baseline
 }
 
@@ -258,10 +260,16 @@ h3 a {
 .description {
     color: #555;
     line-height: 26px;
-    font-size: 14px;
     padding-top: 25px;
     padding-bottom: 25px;
     line-height: 26px;
+}
+.description p {
+    font-size: 14px;
+}
+.description-container h4 {
+    margin-top: 10px;
+    font-weight: 600px;
 }
 
 .project-title {
@@ -721,13 +729,13 @@ h2 a:hover {
     margin-bottom: -70px
 }
 
-.vid-text {
-    margin-top: 30px;
-}
-
 iframe {
     background-image: '/static/images/projects/techcrunch_disrupt.png';
 }
+.portfolio-col {
+    vertical-align: middle;
+}
+
 .portfolio-col,
 .span4,
 .span8 {
@@ -751,7 +759,7 @@ iframe {
 }
 
 .portfolio-item .portfolio-col:first-of-type {
-    float: left
+    /* float: left */
 }
 
 .hamburger i {
@@ -1049,9 +1057,6 @@ textarea {
     .brand {
         display: block
     }
-    .vid-text {
-        margin-top: 0px;
-    }
     .portfolio-col {
         width: 100%;
         text-align: center;
@@ -1266,11 +1271,11 @@ textarea {
 
 /*  for the form */
 
-#success { 
+#success {
     background: #00800042
 }
 
-#err { 
+#err {
     background: #80000042
 }
 
@@ -1390,4 +1395,3 @@ textarea {
       transform: translate(19px, 0);
     }
 }
-  
