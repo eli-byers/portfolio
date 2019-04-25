@@ -132,11 +132,6 @@ table {
     zoom: 1
 }
 
-#row-hero a:hover {
-    color: #e0e0e0;
-    transition: all .4s ease
-}
-
 #bg-cover {
     position: fixed;
     top: 0;
@@ -148,7 +143,6 @@ table {
 }
 
 #logo {
-    display: inline-block;
     float: left;
     margin-right: 10px
 }
@@ -176,7 +170,7 @@ table {
 
 .container {
     font-family: Open Sans, sans-serif;
-    width: 900px;
+    width: 1000px;
     margin: 0 auto
 }
 
@@ -185,10 +179,6 @@ table {
     padding-bottom: 130px;
     display: block;
     border-bottom: 1px solid #e0e0e0
-}
-
-.container:last-of-type .portfolio-item {
-    border-bottom: none
 }
 
 #clients {
@@ -234,13 +224,26 @@ em {
 #title div {
     display: inline-block;
     vertical-align: top;
+}
+
+#avatar {
     text-align: center;
 }
 
 #titleLabel {
     margin-left: 20px;
     height: 110px;
-    line-height: 110px;
+    /* line-height: 110px; */
+}
+
+h1 {
+    font-size: 60px;
+}
+
+#titleLabel p {
+    color: white;
+    margin-top: 15px;
+    /* margin-left: 16px; */
 }
 
 h3 a {
@@ -250,11 +253,6 @@ h3 a {
 .row {
     background: #fff;
     height: 100%
-}
-
-#footer {
-    background: #fff;
-    padding-top: 30px
 }
 
 .description {
@@ -361,7 +359,7 @@ h3 a {
 
 .social {
     font-size: 0;
-    margin-top: 10px;
+    margin-top: 100px;
 }
 
 .social a {
@@ -385,8 +383,14 @@ h3 a {
 }
 
 .separator {
+    background: url(/static/images/separator.png)
+}
+.separator-up {
+    background: url(/static/images/separator-up.png)
+}
+.separator,
+.separator-up {
     margin: 0 auto;
-    background: url(../images/separator.png);
     height: 9px;
     width: 576px
 }
@@ -686,9 +690,14 @@ h3 a:hover {
     width: 100%
 }
 
+.transparent {
+    background: transparent;
+    color: white;
+}
+
 .close-icon {
     float: right;
-    background: url(../img/close.png) no-repeat;
+    background: url(/static/img/close.png) no-repeat;
     height: 16px;
     width: 16px;
     cursor: pointer;
@@ -715,7 +724,6 @@ h2 a {
     text-decoration: none
 }
 
-#links a:hover,
 h2 a:hover {
     color: #d84663
 }
@@ -758,24 +766,12 @@ iframe {
     padding: 0 50px
 }
 
-.portfolio-item .portfolio-col:first-of-type {
-    /* float: left */
-}
-
-.hamburger i {
+.hamburger svg {
     color: white;
     border-radius: 3px;
     padding: 2px 5px 1px 5px;
     display: none;
     transition: color 0.5s;
-    /* width: 36px;
-    border: 1px solid white;
-    height: 30px;
-    background: url(../images/hamburger.png) */
-}
-
-.btn i {
-    margin-left: 10px;
 }
 
 .btn {
@@ -791,7 +787,7 @@ iframe {
 .icon-chevron-right {
     height: 17px;
     width: 10px;
-    background: url(../images/chevron-right.png);
+    background: url(/static/images/chevron-right.png);
     display: inline-block;
     float: right;
     margin-left: 25px
@@ -803,17 +799,29 @@ a.btn:hover {
 
 .btn.btn-freelance , .btn.btn-hire {
     background: rgba(0,0,0,0.7);
-    font-weight: bold;
 }
 
-.btn.btn-freelance:hover , .btn.btn-hire:hover{
+.callToAction svg {
+    margin-left: 10px;
+}
+
+.btn.btn-freelance:hover, .btn.btn-hire:hover{
     color: #F44336 !important;
 }
 
-.hack {
-    padding-bottom: 40px;
+#page {
+    display: none;
+}
+
+.section-title {
+    padding: 40px 0px;
     border-bottom: 1px solid #eee;
     border-top: 1px solid #eee;
+    color: black;
+}
+
+.bb-0 {
+    border-bottom: 0;
 }
 
 #contact {
@@ -940,7 +948,14 @@ textarea {
     outline: 0
 }
 
-#links {
+.hide-on-small {
+    display: block;
+}
+.hide-on-large {
+    display: none;
+}
+
+#footer {
     padding: 65px 0 62px;
     font-size: 11px;
     color: #eee;
@@ -948,12 +963,12 @@ textarea {
     clear: both
 }
 
-#links li {
+#footer li {
     display: inline-block;
     margin: 0 15px
 }
 
-#links li a {
+#footer li a {
     color: #eee;
     -webkit-transition: .2s;
     transition: .2s
@@ -1023,11 +1038,17 @@ textarea {
     .client {
         width: 48%
     }
-}
-
-@media (max-width:1072px) {
-    #contact-form .button {
-        width: 100%
+    .hide-on-small {
+        display: none;
+    }
+    .hide-on-large {
+        display: block;
+    }
+    .portfolio-item .screenshot {
+        margin-top: 45px;
+    }
+    #taglines {
+        font-size: 13px
     }
     #title div {
         display: block;
@@ -1070,7 +1091,6 @@ textarea {
         margin-bottom: 20px;
     }
     .portfolio-item img {
-        margin-bottom: 20px;
         width: 65%
     }
     h3 {
@@ -1083,12 +1103,6 @@ textarea {
         margin-left: 0px;
         margin-right: 0px;
         width: 100%;
-    }
-}
-
-@media (max-width:800px) {
-    .nav-fixed {
-        /* position: relative!important */
     }
 }
 
@@ -1125,11 +1139,11 @@ textarea {
     .active {
         border-bottom: 2px solid #F44336;
     }
-    .nav-fixed .hamburger i {
+    .nav-fixed .hamburger svg {
         margin-top: -10px;
         color: #333;
     }
-    .hamburger i {
+    .hamburger svg {
         display: inline-block
     }
     #hero {
@@ -1177,18 +1191,14 @@ textarea {
     .client {
         width: 100%
     }
-    .row {
-        padding-top: 0;
-        text-align: center
-    }
     .contact .row {
         margin-top: -65px
     }
     h1 {
         font-size: 40px
     }
-    #hero p {
-        font-size: 16px
+    #taglines {
+        font-size: 13px
     }
 }
 
@@ -1209,7 +1219,6 @@ textarea {
     .btn {
         padding-right: 10px;
         padding-left: 10px;
-        font-size: 12px;
         margin-right: 0
     }
     .icon-chevron-right {
@@ -1231,6 +1240,9 @@ textarea {
     #nav .nav-default li a {
         width: 25%
     }
+    #taglines {
+        font-size: 11px
+    }
     .nav-fix {
         padding-bottom: 0
     }
@@ -1246,8 +1258,8 @@ textarea {
 
 @font-face {
     font-family: fontello;
-    src: url(../font/fontello.eot?66648078);
-    src: url(../font/fontello.eot?66648078#iefix) format('embedded-opentype'), url(../font/fontello.woff?66648078) format('woff'), url(../font/fontello.ttf?66648078) format('truetype'), url(../font/fontello.svg?66648078#fontello) format('svg');
+    src: url(/static/font/fontello.eot?66648078);
+    src: url(/static/font/fontello.eot?66648078#iefix) format('embedded-opentype'), url(/static/font/fontello.woff?66648078) format('woff'), url(/static/font/fontello.ttf?66648078) format('truetype'), url(/static/font/fontello.svg?66648078#fontello) format('svg');
     font-weight: 400;
     font-style: normal
 }
@@ -1309,89 +1321,10 @@ textarea {
 }
 
 #taglines {
-    margin: 30px 0px;
+    margin: 10px 0px;
 }
 
 #taglines p {
     color: #fff;
     line-height: 26px;
-}
-
-
-
-
-/* All css bellow is for cover */
-
-#cover .eb-svg {
-    width: 100px;
-    height: 100px;
-}
-#cover {
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    overflow-y:hidden;
-    top:0;
-    left: 0;
-    z-index:9999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #333
-}
-
-.lds-ellipsis {
-    margin: auto;
-    position: relative;
-    width: 64px;
-    height: 64px;
-}
-.lds-ellipsis div {
-    position: absolute;
-    top: 27px;
-    width: 11px;
-    height: 11px;
-    border-radius: 50%;
-    background: #aaa;
-    animation-timing-function: cubic-bezier(0, 1, 1, 0);
-}
-.lds-ellipsis div:nth-child(1) {
-    left: 6px;
-    animation: lds-ellipsis1 0.6s infinite;
-}
-.lds-ellipsis div:nth-child(2) {
-    left: 6px;
-    animation: lds-ellipsis2 0.6s infinite;
-}
-.lds-ellipsis div:nth-child(3) {
-    left: 26px;
-    animation: lds-ellipsis2 0.6s infinite;
-}
-.lds-ellipsis div:nth-child(4) {
-    left: 45px;
-    animation: lds-ellipsis3 0.6s infinite;
-}
-@keyframes lds-ellipsis1 {
-    0% {
-      transform: scale(0);
-    }
-    100% {
-      transform: scale(1);
-    }
-}
-@keyframes lds-ellipsis3 {
-    0% {
-      transform: scale(1);
-    }
-    100% {
-      transform: scale(0);
-    }
-}
-@keyframes lds-ellipsis2 {
-    0% {
-      transform: translate(0, 0);
-    }
-    100% {
-      transform: translate(19px, 0);
-    }
 }

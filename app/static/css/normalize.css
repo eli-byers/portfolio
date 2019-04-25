@@ -1,0 +1,76 @@
+
+acronym,
+body,
+canvas,
+caption,
+center,
+code,
+dfn,
+div,
+embed,
+figcaption,
+footer,
+h1,
+h3,
+h4,
+header,
+html,
+i,
+iframe,
+img,
+ins,
+legend,
+li,
+menu,
+nav,
+p,
+section,
+span,
+strong,
+time,
+ul,
+var,
+video {
+    font-family: Open Sans, sans-serif;
+    font-weight: 300 !important;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline
+}
+
+figcaption,
+footer,
+header,
+menu,
+nav,
+section {
+    display: block
+}
+
+body {
+    line-height: 1;
+    min-width: 320px;
+}
+
+ul {
+    list-style: none
+}
+
+* {
+    box-sizing: border-box
+}
+
+.cf:after,
+.cf:before {
+    content: '';
+    display: table
+}
+
+.cf:after {
+    clear: both
+}
+
+.cf {
+    zoom: 1
+}

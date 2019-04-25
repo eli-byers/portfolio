@@ -33,7 +33,7 @@ table {
 
 main {
     position: relative;
-    top: 146px;
+    /* top: 146px; */
     margin-bottom: 146px;
 }
 
@@ -269,18 +269,3 @@ a.button:hover {
     display: inline-block;
     margin: 0 15px;
 }
-
-.center {
-    text-align: center;
-    width: 100%;
-}
-
-.thin-300 {
-    font-weight: 300!important;
-}
-
-
-
-
-
-

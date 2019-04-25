@@ -23,13 +23,14 @@ $(document).ready(function() {
     }
 
     //==========================================
-    // hode arcade on mobile
+    // hide arcade on mobile
     //==========================================
     function isMobileDevice() {
         return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
     };
     if (isMobileDevice()){
         $('.arcade-btn').remove();
+        $('.arcade');
     }
 
     //==========================================
@@ -48,16 +49,16 @@ $(document).ready(function() {
     //==========================================
     // mobile nav
     //==========================================
-    
+
     burger.on('click', function(e) {
         e.preventDefault();
         burger.data('open', !drop.attr('open'));
         drop.toggle();
     });
-    
+
     drop.find("a").on("click", function(e) {
         burger.data('open', false)
-        drop.toggle(); 
+        drop.toggle();
     });
 
     function hideDropdown(){
@@ -76,33 +77,32 @@ $(document).ready(function() {
         $('#row-hero').css('height', height);
     }
     setHeroHeight();
-    
+
     function setNav(){
         if (!header) return
 
         hideDropdown()
         let scrollTop = $(this).scrollTop()
-        let preset = 200
+        let preset = -58
+        // in the header
+        if (scrollTop < 60){
+            header.removeClass("nav-fixed")
+        }
         // down the page
-        if (scrollTop >= 60){
-            
+        else {
             header.addClass("nav-fixed")
-            if (scrollTop <= hacksOffset.top - preset) {
+            if (scrollTop <= hacksOffset.top + preset) {
                 activateNav();
-            } 
-            else if (scrollTop <= projectsOffset.top - preset){
+            }
+            else if (scrollTop <= projectsOffset.top + preset){
                 activateNav("hacks");
             } else {
                 activateNav("projects");
             }
-        } 
-        // in the header
-        else {
-            header.removeClass("nav-fixed")
         }
     }
     setNav();
-    
+
     function activateNav(str){
         header.find(".active").removeClass("active")
         if (str) {
