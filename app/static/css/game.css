@@ -18,6 +18,7 @@
     color: white;
     font-weight: 300;
     margin-bottom: 30px;
+    box-sizing: border-box;
 }
 .game-body:hover {
     transition: box-shadow 0.2s, border 0.2s;

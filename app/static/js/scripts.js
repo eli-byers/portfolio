@@ -1,22 +1,25 @@
 $(document).ready(function() {
 
-    let header = $("#header")
-    let hacks = $("#hacks")
-    let projects = $("#projects")
+    let header = $("#header");
+    let hacks = $("#hacks");
+    let projects = $("#projects");
+    let arcade = $("#arcade");
 
-    let hacksOffset = hacks.offset()
-    let projectsOffset = projects.offset()
+    let hacksOffset = hacks.offset();
+    let projectsOffset = projects.offset();
+    let arcadeOffset = arcade.offset();
 
     let burger = $("#hamburger");
     let drop = $("#dropdown");
 
     function getDomElements(){
-        header = $("#header")
-        hacks = $("#hacks")
-        projects = $("#projects")
+        header = $("#header");
+        hacks = $("#hacks");
+        projects = $("#projects");
 
-        hacksOffset = hacks.offset()
-        projectsOffset = projects.offset()
+        hacksOffset = hacks.offset();
+        projectsOffset = projects.offset();
+        arcadeOffset = arcade.offset();
 
         burger = $("#hamburger");
         drop = $("#dropdown");
@@ -29,8 +32,7 @@ $(document).ready(function() {
         return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
     };
     if (isMobileDevice()){
-        $('.arcade-btn').remove();
-        $('.arcade');
+        $('.arcade-content').remove();
     }
 
     //==========================================
@@ -41,7 +43,7 @@ $(document).ready(function() {
         window.onscroll = setNav
         $('#page').show(function(){
             getDomElements();
-            $(document).scrollTop(0)
+            $(document).scrollTop(0);
             $("#cover").fadeOut(200);
         });
     });
@@ -57,7 +59,7 @@ $(document).ready(function() {
     });
 
     drop.find("a").on("click", function(e) {
-        burger.data('open', false)
+        burger.data('open', false);
         drop.toggle();
     });
 
@@ -81,46 +83,47 @@ $(document).ready(function() {
     function setNav(){
         if (!header) return
 
-        hideDropdown()
-        let scrollTop = $(this).scrollTop()
+        hideDropdown();
+        let scrollTop = $(this).scrollTop();
         let preset = -58
         // in the header
         if (scrollTop < 60){
-            header.removeClass("nav-fixed")
+            header.removeClass("nav-fixed");
         }
         // down the page
         else {
-            header.addClass("nav-fixed")
+            header.addClass("nav-fixed");
             if (scrollTop <= hacksOffset.top + preset) {
                 activateNav();
-            }
-            else if (scrollTop <= projectsOffset.top + preset){
+            } else if (scrollTop <= projectsOffset.top + preset){
                 activateNav("hacks");
-            } else {
+            } else if (scrollTop <= arcadeOffset.top + preset){
                 activateNav("projects");
+            } else {
+                activateNav("arcade");
             }
         }
     }
     setNav();
 
     function activateNav(str){
-        header.find(".active").removeClass("active")
+        header.find(".active").removeClass("active");
         if (str) {
             nav = "[data-nav='"+str+"']"
-            header.find(nav).addClass("active")
+            header.find(nav).addClass("active");
         }
     }
 
     // scroll to element with #id
     $("a[href^='#']").on('click', function(e) {
         e.preventDefault();
-        var dest = $.attr(this, "href")
+        var dest = $.attr(this, "href");
         var offset = 55
         if (dest.length) {
             $('html, body').animate({
                 scrollTop: $(dest).offset().top - offset
             }, 'slow', function(){
-                if (dest == '#contact') $("#field1").focus()
+                if (dest == '#contact') $("#field1").focus();
             });
         } else {
             window.location.replace('/'+$(this).attr('href'));
@@ -130,16 +133,16 @@ $(document).ready(function() {
     // window resize
     $(window).resize(function() {
         if ($(this).width() >= 691) {
-            burger.data('open', false)
-            drop.css('display', 'none')
+            burger.data('open', false);
+            drop.css('display', 'none');
         }
-        setHeroHeight()
+        setHeroHeight();
     });
 
 
-    console.log("Eli Byers - Software Engineer")
+    console.log("Eli Byers - Software Engineer");
     console.log("");
-    console.log("Thank you for ckecking out my portfolio.")
-    console.log("Please reach out if you want to know more!")
+    console.log("Thank you for ckecking out my portfolio.");
+    console.log("Please reach out if you want to know more!");
 });
 

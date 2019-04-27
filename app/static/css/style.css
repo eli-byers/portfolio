@@ -181,6 +181,10 @@ table {
     border-bottom: 1px solid #e0e0e0
 }
 
+.bb-0 {
+    border-bottom: none;
+}
+
 #clients {
     z-index: 1;
     position: relative;
@@ -665,7 +669,7 @@ h3 a:hover {
 
 .transparent {
     background: transparent;
-    color: white;
+    color: white !important;
 }
 
 .disclaimer {
@@ -674,7 +678,7 @@ h3 a:hover {
     color: #eee;
     text-align: center;
     padding: 25px;
-    margin: 50px;
+    margin: 40px 0px;
 }
 
 .disclaimer h3 {
@@ -772,14 +776,17 @@ a.btn:hover {
 }
 
 .section-title {
+    display: block;
     padding: 40px 0px;
     border-bottom: 1px solid #eee;
     border-top: 1px solid #eee;
     color: black;
+    margin: 0;
 }
 
-.bb-0 {
-    border-bottom: 0;
+#arcade-title {
+    border-bottom: 1px solid #F44336;
+    border-top: none;
 }
 
 #contact {
@@ -1064,7 +1071,7 @@ textarea {
     }
 }
 
-@media (max-width:690px) {
+@media (max-width:770px) {
     .service {
         display: block;
         width: 100%;
