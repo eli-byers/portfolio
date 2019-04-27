@@ -1,25 +1,18 @@
 $(document).ready(function() {
 
     let header = $("#header");
-    let hacks = $("#hacks");
-    let projects = $("#projects");
-    let arcade = $("#arcade");
-
-    let hacksOffset = hacks.offset();
-    let projectsOffset = projects.offset();
-    let arcadeOffset = arcade.offset();
-
+    let hacksOffset = $("#hacks").offset();
+    let projectsOffset = $("#projects").offset();
+    let arcadeOffset = $("#arcade").offset();
     let burger = $("#hamburger");
     let drop = $("#dropdown");
 
     function getDomElements(){
         header = $("#header");
-        hacks = $("#hacks");
-        projects = $("#projects");
 
-        hacksOffset = hacks.offset();
-        projectsOffset = projects.offset();
-        arcadeOffset = arcade.offset();
+        hacksOffset = $("#hacks").offset();
+        projectsOffset = $("#projects").offset();
+        arcadeOffset = $("#arcade").offset();
 
         burger = $("#hamburger");
         drop = $("#dropdown");
@@ -29,7 +22,7 @@ $(document).ready(function() {
     // hide arcade on mobile
     //==========================================
     function isMobileDevice() {
-        return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+        return true || (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
     };
     if (isMobileDevice()){
         $('.arcade-content').remove();
@@ -97,7 +90,7 @@ $(document).ready(function() {
                 activateNav();
             } else if (scrollTop <= projectsOffset.top + preset){
                 activateNav("hacks");
-            } else if (scrollTop <= arcadeOffset.top + preset){
+            } else if (isMobileDevice() || scrollTop <= arcadeOffset.top + preset){
                 activateNav("projects");
             } else {
                 activateNav("arcade");
