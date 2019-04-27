@@ -60,17 +60,3 @@ ul {
 * {
     box-sizing: border-box
 }
-
-.cf:after,
-.cf:before {
-    content: '';
-    display: table
-}
-
-.cf:after {
-    clear: both
-}
-
-.cf {
-    zoom: 1
-}

@@ -1,123 +1,3 @@
-abbr,
-acronym,
-address,
-applet,
-article,
-aside,
-audio,
-b,
-big,
-body,
-canvas,
-caption,
-center,
-cite,
-code,
-dd,
-del,
-details,
-dfn,
-div,
-dl,
-dt,
-em,
-embed,
-fieldset,
-figcaption,
-figure,
-footer,
-form,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-header,
-hgroup,
-html,
-i,
-iframe,
-img,
-ins,
-kbd,
-label,
-legend,
-li,
-mark,
-menu,
-nav,
-object,
-ol,
-output,
-p,
-pre,
-ruby,
-s,
-samp,
-section,
-small,
-span,
-strike,
-strong,
-sub,
-summary,
-sup,
-table,
-tbody,
-td,
-tfoot,
-th,
-thead,
-time,
-tr,
-tt,
-u,
-ul,
-var,
-video {
-    font-family: Open Sans, sans-serif;
-    font-weight: 300 !important;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    /* font: inherit; */
-    vertical-align: baseline
-}
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-    display: block
-}
-
-body {
-    line-height: 1;
-    min-width: 320px;
-}
-
-ol,
-ul {
-    list-style: none
-}
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0
-}
-
-* {
-    box-sizing: border-box
-}
-
 .cf:after,
 .cf:before {
     content: '';
@@ -165,7 +45,6 @@ table {
 
 .default #logo img {
     width: 80px;
-    margin-left: -10px;
 }
 
 .container {
@@ -235,9 +114,8 @@ em {
 }
 
 #titleLabel {
-    margin-left: 20px;
     height: 110px;
-    /* line-height: 110px; */
+    margin-left: 20px;
 }
 
 h1 {
@@ -246,8 +124,7 @@ h1 {
 
 #titleLabel p {
     color: white;
-    margin-top: 15px;
-    /* margin-left: 16px; */
+    margin-top: 10px;
 }
 
 h3 a {
@@ -270,8 +147,7 @@ h3 a {
     font-size: 14px;
 }
 .description-container h4 {
-    margin-top: 10px;
-    font-weight: 600px;
+    font-size: 1.2rem
 }
 
 .project-title {
@@ -614,7 +490,7 @@ h1 {
 }
 
 h1 {
-    font-size: 55px
+    font-size: 58px
 }
 
 h3 {
@@ -628,7 +504,8 @@ h3 a {
 }
 
 h3 a:hover {
-    color: #F44336
+    color: #F44336;
+    text-decoration: none;
 }
 
 .buffer-top {
@@ -664,7 +541,7 @@ h3 a:hover {
 }
 .center {
     text-align: center;
-    width: 100%
+    /* width: 100% */
 }
 
 .transparent {
@@ -740,7 +617,7 @@ h3 a:hover {
     font-size: 16px;
     color: #fff;
     text-decoration: none;
-    padding: 18px 26px;
+    padding: 13px 26px;
     border-radius: 3px;
     margin-right: 10px;
     display: inline-block
@@ -752,7 +629,6 @@ h3 a:hover {
     background: url(/static/images/chevron-right.png);
     display: inline-block;
     float: right;
-    margin-left: 25px
 }
 
 a.btn:hover {
@@ -830,7 +706,6 @@ textarea {
 
 input[type=text]:first-of-type,
 textarea[type=text]:first-of-type {
-    margin-left: 0
 }
 
 input[type=text]:last-of-type {
@@ -942,7 +817,6 @@ textarea {
 .external-icon {
     position: absolute;
     margin-top: -11px;
-    margin-left: 10px
 }
 
 .fadein-slow {
@@ -1019,9 +893,10 @@ textarea {
         display: block;
     }
     #titleLabel {
-        margin-left: 0px;
         height: 80px;
-        line-height: 80px;
+        /* line-height: 80px; */
+        margin-left: 0px;
+        margin-top: 10px;
     }
     .social {
         margin-bottom: 20px;
@@ -1065,7 +940,6 @@ textarea {
         width: 100%
     }
     .message {
-        margin-left: 0px;
         margin-right: 0px;
         width: 100%;
     }
@@ -1084,7 +958,7 @@ textarea {
     }
     #titleLabel {
         height: 60px;
-        line-height: 60px;
+        /* line-height: 60px; */
     }
     .nav-fixed #dropdown {
         background: #fff;
@@ -1173,7 +1047,7 @@ textarea {
     }
     #titleLabel {
         height: 40px;
-        line-height: 40px;
+        /* line-height: 40px; */
     }
     h3 {
         font-size: 25px
@@ -1187,7 +1061,6 @@ textarea {
         margin-right: 0
     }
     .icon-chevron-right {
-        margin-left: 8px
     }
     .description {
         font-size: 15px
@@ -1243,7 +1116,6 @@ textarea {
     font-variant: normal;
     text-transform: none;
     line-height: 1em;
-    margin-left: .2em
 }
 
 /*  for the form */
