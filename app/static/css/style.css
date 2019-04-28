@@ -16,8 +16,8 @@
     position: fixed;
     top: 0;
     left: 0;
-    min-width: 100%;
-    min-height: 100%;
+    min-width: 100vw;
+    min-height: 100vh;
     z-index: -100;
     background-color: #333;
 }
@@ -75,6 +75,10 @@
 .client {
     display: inline-block;
     width: 220px
+}
+
+main {
+    overflow-x: hidden;
 }
 
 em {
@@ -287,7 +291,7 @@ h3 a {
 
 #header {
     padding-top: 32px;
-    width: 100%;
+    width: 100vw;
     text-align: left;
     font-family: Open Sans, sans-serif;
     position: relative;
@@ -1076,6 +1080,9 @@ textarea {
     }
     #taglines {
         font-size: 11px
+    }
+    #profile {
+        max-width: 140px;
     }
     .nav-fix {
         padding-bottom: 0
