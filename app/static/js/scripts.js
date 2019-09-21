@@ -18,15 +18,9 @@ $(document).ready(function() {
         drop = $("#dropdown");
     }
 
-    //==========================================
-    // hide arcade on mobile
-    //==========================================
     function isMobileDevice() {
         return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
     };
-    if (isMobileDevice()){
-        $('.arcade-content').remove();
-    }
 
     //==========================================
     // loading cover
@@ -86,12 +80,12 @@ $(document).ready(function() {
         // down the page
         else {
             header.addClass("nav-fixed");
-            if (scrollTop <= hacksOffset.top + preset) {
+            if (scrollTop <= projectsOffset.top + preset) {
                 activateNav();
-            } else if (scrollTop <= projectsOffset.top + preset){
-                activateNav("hacks");
-            } else if (isMobileDevice() || scrollTop <= arcadeOffset.top + preset){
+            } else if (scrollTop <= hacksOffset.top + preset){
                 activateNav("projects");
+            } else if (isMobileDevice() || scrollTop <= arcadeOffset.top + preset){
+                activateNav("hacks");
             } else {
                 activateNav("arcade");
             }
@@ -133,9 +127,7 @@ $(document).ready(function() {
     });
 
 
+    console.log("Thank you for visiting my portfolio!");
     console.log("Eli Byers - Software Engineer");
-    console.log("");
-    console.log("Thank you for ckecking out my portfolio.");
-    console.log("Please reach out if you want to know more!");
 });
 
