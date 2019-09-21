@@ -1,3 +1,7 @@
+body {
+    min-width: 320px;
+}
+
 .cf:after,
 .cf:before {
     content: '';
@@ -16,8 +20,9 @@
     position: fixed;
     top: 0;
     left: 0;
-    min-width: 100vw;
-    min-height: 100vh;
+    width: 100vw;
+    height: 100vh;
+    min-width: 320px;
     z-index: -100;
     background-color: #333;
 }
@@ -79,6 +84,7 @@
 
 main {
     overflow-x: hidden;
+    overflow-y: visible;
 }
 
 em {
@@ -99,7 +105,6 @@ em {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 700px;
 }
 
 #profile {
@@ -118,7 +123,7 @@ em {
 }
 
 #titleLabel {
-    height: 110px;
+    /* height: 110px; */
     margin-left: 20px;
 }
 
@@ -248,7 +253,7 @@ h3 a {
 
 .social {
     font-size: 0;
-    margin-top: 100px;
+    margin-top: 60px;
 }
 
 .social a {
@@ -515,7 +520,7 @@ h3 a:hover {
 }
 
 .buffer-top {
-    margin-top: 10px
+   margin-top: 10px
 }
 
 .buffer-bottom {
@@ -895,13 +900,10 @@ textarea {
         display: block;
     }
     #titleLabel {
-        height: 80px;
+        /* height: 80px; */
         /* line-height: 80px; */
         margin-left: 0px;
         margin-top: 10px;
-    }
-    .social {
-        margin-bottom: 20px;
     }
     #profile {
         display: unset;
@@ -958,9 +960,8 @@ textarea {
     .separator {
         display: none
     }
-    #titleLabel {
-        height: 60px;
-        /* line-height: 60px; */
+    .social {
+        margin-top: 40px;
     }
     .nav-fixed #dropdown {
         background: #fff;
@@ -1003,9 +1004,6 @@ textarea {
     .header-container {
         height: 140px
     }
-    #row-hero {
-        padding: 30px 0 100px
-    }
     .span4 {
         width: 100%
     }
@@ -1044,12 +1042,8 @@ textarea {
 }
 
 @media (max-width:480px) {
-    .container {
-        padding: 0 20px
-    }
-    #titleLabel {
-        height: 40px;
-        /* line-height: 40px; */
+    .social {
+        margin-top: 20px;
     }
     h3 {
         font-size: 25px

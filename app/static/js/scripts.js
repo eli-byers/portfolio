@@ -22,7 +22,7 @@ $(document).ready(function() {
     // hide arcade on mobile
     //==========================================
     function isMobileDevice() {
-        return true || (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+        return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
     };
     if (isMobileDevice()){
         $('.arcade-content').remove();
@@ -65,11 +65,11 @@ $(document).ready(function() {
     //==========================================
     // Hero / Nav
     //==========================================
-    function setHeroHeight(params) {
+    function setHeroHeight() {
         windowHeight = $(window).height();
         headerContainerHeight = $("header").height();
-        height = windowHeight - headerContainerHeight > 410 ? windowHeight - headerContainerHeight : 410;
-        $('#row-hero').css('height', height);
+        heroHeight = windowHeight - headerContainerHeight;
+        $('#row-hero').css('height', heroHeight);
     }
     setHeroHeight();
 
