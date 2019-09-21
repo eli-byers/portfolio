@@ -2,174 +2,578 @@
 <html lang=en>
 
 <head>
-    <link rel="shortcut icon" href="static/favicon/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="static/favicon/apple-touch-icon-57x57.png?v=2" />
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="static/favicon/apple-touch-icon-114x114.png?v=2" />
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="static/favicon/apple-touch-icon-72x72.png?v=2" />
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="static/favicon/apple-touch-icon-144x144.png?v=2" />
-    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="static/favicon/apple-touch-icon-60x60.png?v=2" />
-    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="static/favicon/apple-touch-icon-120x120.png?v=2" />
-    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="static/favicon/apple-touch-icon-76x76.png?v=2" />
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="static/favicon/apple-touch-icon-152x152.png?v=2" />
-    <link rel="icon" type="image/png" href="static/favicon/favicon-196x196.png?v=2" sizes="196x196" />
-    <link rel="icon" type="image/png" href="static/favicon/favicon-96x96.png?v=2" sizes="96x96" />
-    <link rel="icon" type="image/png" href="static/favicon/favicon-32x32.png?v=2" sizes="32x32" />
-    <link rel="icon" type="image/png" href="static/favicon/favicon-16x16.png?v=2" sizes="16x16" />
-    <link rel="icon" type="image/png" href="static/favicon/favicon-128.png?v=2" sizes="128x128" />
-    <meta name="application-name" content="Eli Byers"/>
+    <link rel="shortcut icon" href="/static/favicon/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/static/favicon/apple-touch-icon-57x57.png?v=2" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/static/favicon/apple-touch-icon-114x114.png?v=2" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/static/favicon/apple-touch-icon-72x72.png?v=2" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/static/favicon/apple-touch-icon-144x144.png?v=2" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/static/favicon/apple-touch-icon-60x60.png?v=2" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/static/favicon/apple-touch-icon-120x120.png?v=2" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/static/favicon/apple-touch-icon-76x76.png?v=2" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/static/favicon/apple-touch-icon-152x152.png?v=2" />
+    <link rel="icon" type="image/png" href="/static/favicon/favicon-196x196.png?v=2" sizes="196x196" />
+    <link rel="icon" type="image/png" href="/static/favicon/favicon-96x96.png?v=2" sizes="96x96" />
+    <link rel="icon" type="image/png" href="/static/favicon/favicon-32x32.png?v=2" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/static/favicon/favicon-16x16.png?v=2" sizes="16x16" />
+    <link rel="icon" type="image/png" href="/static/favicon/favicon-128.png?v=2" sizes="128x128" />
+    <meta name="application-name" content="Eli Byers" />
     <meta name="msapplication-TileColor" content="#FFFFFF" />
-    <meta name="msapplication-TileImage" content="static/favicon/mstile-144x144.png?v=2" />
-    <meta name="msapplication-square70x70logo" content="static/favicon/mstile-70x70.png?v=2" />
-    <meta name="msapplication-square150x150logo" content="static/favicon/mstile-150x150.png?v=2" />
-    <meta name="msapplication-wide310x150logo" content="static/favicon/mstile-310x150.png?v=2" />
-    <meta name="msapplication-square310x310logo" content="static/favicon/mstile-310x310.png?v=2" />
+    <meta name="msapplication-TileImage" content="/static/favicon/mstile-144x144.png?v=2" />
+    <meta name="msapplication-square70x70logo" content="/static/favicon/mstile-70x70.png?v=2" />
+    <meta name="msapplication-square150x150logo" content="/static/favicon/mstile-150x150.png?v=2" />
+    <meta name="msapplication-wide310x150logo" content="/static/favicon/mstile-310x150.png?v=2" />
+    <meta name="msapplication-square310x310logo" content="/static/favicon/mstile-310x310.png?v=2" />
 
-    <link rel="manifest" href="static/manifest.json">
+    <link rel="manifest" href="/static/manifest.json">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Eli Byers">
     <meta name="msapplication-starturl" content="/">
-    <meta name=description content="I am a software Engineer based out of the Bay Area, specializing in custom web solutions and iOS applications in swift.">
-    <meta name=keywords content="bay area software engineer, bay area software engineering, bay area web development, san jose web development, san jose software engineering">
+    <meta name=description
+        content="I am a software Engineer based out of the Bay Area, specializing in custom web solutions and iOS applications in swift.">
+    <meta name=keywords
+        content="bay area software engineer, bay area software engineering, bay area web development, san jose web development, san jose software engineering">
 
     <meta charset=UTF-8>
     <title>Eli Byers | Software Engineer</title>
 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href=static/css/normalize.css rel=stylesheet>
+    <link href=static/css/cover.css rel=stylesheet>
     <link href=static/css/style.css rel=stylesheet>
-    <script src="https://use.fontawesome.com/b59847f86f.js" defer></script>
+    <link href=static/css/game.css rel=stylesheet>
+
+    <link rel="stylesheet" href="/static/css/font-awesome-animation.min.css">
+
 </head>
 
 <body class="cf index" id=top>
+
+    <!-- loading screen -->
     <div id="cover">
         <div>
-            <svg class='eb-svg' version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 640 640" width="100" height="100"><defs><path d="M40 480L310 640L580 480L580 160L310 0L40 160L40 480Z" id="i5bRRjna3"></path><path d="M70 465L310 610L550 465L550 175L310 30L70 175L70 465Z" id="a3522MI2AL"></path><path d="M361.32 496.27L361.32 395.93L320 374.39L319.59 570L501.65 462.74L463.35 442.97L361.32 496.27Z" id="a1Dey7VYIN"></path><path d="M140 425L140 259.24L300 347.2L300 300.29L100 190L100 450L300 570L300 520L140 425Z" id="k3tzsFhDqb"></path><path d="M362.29 321.87L520 237.5L519.6 190L319.18 300.99L319.18 351.17L520 453.74L519.18 400.49L362.29 321.87Z" id="f5JePU5COu"></path><path d="M300 119.61L300 70L122.11 176.73L161.74 199.54L300 119.61Z" id="aLmEV70A6"></path><path d="M361.73 143.73L361.73 257.57L320 280.17L320 70L503.15 179.89L463.83 202.76L361.73 143.73Z" id="a8IsamsaUx"></path></defs><g><g><g><use xlink:href="#i5bRRjna3" opacity="1" fill="#f44336" fill-opacity="1"></use><g><use xlink:href="#i5bRRjna3" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="1" stroke-opacity="0"></use></g></g><g><use xlink:href="#a3522MI2AL" opacity="1" fill="#333333" fill-opacity="1"></use><g><use xlink:href="#a3522MI2AL" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="1" stroke-opacity="0"></use></g></g><g><use xlink:href="#a1Dey7VYIN" opacity="1" fill="#707070" fill-opacity="1"></use><g><use xlink:href="#a1Dey7VYIN" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="1" stroke-opacity="0"></use></g></g><g><use xlink:href="#k3tzsFhDqb" opacity="1" fill="#aaaaaa" fill-opacity="1"></use><g><use xlink:href="#k3tzsFhDqb" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="1" stroke-opacity="0"></use></g></g><g><use xlink:href="#f5JePU5COu" opacity="1" fill="#707070" fill-opacity="1"></use><g><use xlink:href="#f5JePU5COu" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="1" stroke-opacity="0"></use></g></g><g><use xlink:href="#aLmEV70A6" opacity="1" fill="#ffffff" fill-opacity="1"></use><g><use xlink:href="#aLmEV70A6" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="1" stroke-opacity="0"></use></g></g><g><use xlink:href="#a8IsamsaUx" opacity="1" fill="#ffffff" fill-opacity="1"></use><g><use xlink:href="#a8IsamsaUx" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="1" stroke-opacity="0"></use></g></g></g></g></svg>
-            <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+            <svg class='eb-svg' version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 640 640"
+                width="100" height="100">
+                <defs>
+                    <path d="M40 480L310 640L580 480L580 160L310 0L40 160L40 480Z" id="i5bRRjna3"></path>
+                    <path d="M70 465L310 610L550 465L550 175L310 30L70 175L70 465Z" id="a3522MI2AL"></path>
+                    <path
+                        d="M361.32 496.27L361.32 395.93L320 374.39L319.59 570L501.65 462.74L463.35 442.97L361.32 496.27Z"
+                        id="a1Dey7VYIN"></path>
+                    <path d="M140 425L140 259.24L300 347.2L300 300.29L100 190L100 450L300 570L300 520L140 425Z"
+                        id="k3tzsFhDqb"></path>
+                    <path
+                        d="M362.29 321.87L520 237.5L519.6 190L319.18 300.99L319.18 351.17L520 453.74L519.18 400.49L362.29 321.87Z"
+                        id="f5JePU5COu"></path>
+                    <path d="M300 119.61L300 70L122.11 176.73L161.74 199.54L300 119.61Z" id="aLmEV70A6"></path>
+                    <path d="M361.73 143.73L361.73 257.57L320 280.17L320 70L503.15 179.89L463.83 202.76L361.73 143.73Z"
+                        id="a8IsamsaUx"></path>
+                </defs>
+                <g>
+                    <g>
+                        <g>
+                            <use xlink:href="#i5bRRjna3" opacity="1" fill="#f44336" fill-opacity="1"></use>
+                            <g>
+                                <use xlink:href="#i5bRRjna3" opacity="1" fill-opacity="0" stroke="#000000"
+                                    stroke-width="1" stroke-opacity="0"></use>
+                            </g>
+                        </g>
+                        <g>
+                            <use xlink:href="#a3522MI2AL" opacity="1" fill="#333333" fill-opacity="1"></use>
+                            <g>
+                                <use xlink:href="#a3522MI2AL" opacity="1" fill-opacity="0" stroke="#000000"
+                                    stroke-width="1" stroke-opacity="0"></use>
+                            </g>
+                        </g>
+                        <g>
+                            <use xlink:href="#a1Dey7VYIN" opacity="1" fill="#707070" fill-opacity="1"></use>
+                            <g>
+                                <use xlink:href="#a1Dey7VYIN" opacity="1" fill-opacity="0" stroke="#000000"
+                                    stroke-width="1" stroke-opacity="0"></use>
+                            </g>
+                        </g>
+                        <g>
+                            <use xlink:href="#k3tzsFhDqb" opacity="1" fill="#aaaaaa" fill-opacity="1"></use>
+                            <g>
+                                <use xlink:href="#k3tzsFhDqb" opacity="1" fill-opacity="0" stroke="#000000"
+                                    stroke-width="1" stroke-opacity="0"></use>
+                            </g>
+                        </g>
+                        <g>
+                            <use xlink:href="#f5JePU5COu" opacity="1" fill="#707070" fill-opacity="1"></use>
+                            <g>
+                                <use xlink:href="#f5JePU5COu" opacity="1" fill-opacity="0" stroke="#000000"
+                                    stroke-width="1" stroke-opacity="0"></use>
+                            </g>
+                        </g>
+                        <g>
+                            <use xlink:href="#aLmEV70A6" opacity="1" fill="#ffffff" fill-opacity="1"></use>
+                            <g>
+                                <use xlink:href="#aLmEV70A6" opacity="1" fill-opacity="0" stroke="#000000"
+                                    stroke-width="1" stroke-opacity="0"></use>
+                            </g>
+                        </g>
+                        <g>
+                            <use xlink:href="#a8IsamsaUx" opacity="1" fill="#ffffff" fill-opacity="1"></use>
+                            <g>
+                                <use xlink:href="#a8IsamsaUx" opacity="1" fill-opacity="0" stroke="#000000"
+                                    stroke-width="1" stroke-opacity="0"></use>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+            <div class="lds-ellipsis">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
         </div>
     </div>
 
-    <div id='page' style='display:none'>
+    <div id='page'>
 
+        <!-- nav -->
         <header class=header-container>
-            <div alt=bg style="background-image: url(static/images/mast.jpg); background-size: cover;" id=bg-cover></div>
+            <div alt=bg style="background-image: url(static/images/mast.jpg); background-size: cover;" id=bg-cover>
+            </div>
             <div class=default id=header>
                 <div class="container container-top">
                     <div class=brand>
-                        <a href=/>
+                        <a href= />
                         <div id=logo>
-                            <svg class='eb-svg' version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 640 640" width="55" height="55"><defs><path d="M40 480L310 640L580 480L580 160L310 0L40 160L40 480Z" id="i5bRRjna3"></path><path d="M70 465L310 610L550 465L550 175L310 30L70 175L70 465Z" id="a3522MI2AL"></path><path d="M361.32 496.27L361.32 395.93L320 374.39L319.59 570L501.65 462.74L463.35 442.97L361.32 496.27Z" id="a1Dey7VYIN"></path><path d="M140 425L140 259.24L300 347.2L300 300.29L100 190L100 450L300 570L300 520L140 425Z" id="k3tzsFhDqb"></path><path d="M362.29 321.87L520 237.5L519.6 190L319.18 300.99L319.18 351.17L520 453.74L519.18 400.49L362.29 321.87Z" id="f5JePU5COu"></path><path d="M300 119.61L300 70L122.11 176.73L161.74 199.54L300 119.61Z" id="aLmEV70A6"></path><path d="M361.73 143.73L361.73 257.57L320 280.17L320 70L503.15 179.89L463.83 202.76L361.73 143.73Z" id="a8IsamsaUx"></path></defs><g><g><g><use xlink:href="#i5bRRjna3" opacity="1" fill="#f44336" fill-opacity="1"></use><g><use xlink:href="#i5bRRjna3" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="1" stroke-opacity="0"></use></g></g><g><use xlink:href="#a3522MI2AL" opacity="1" fill="#333333" fill-opacity="1"></use><g><use xlink:href="#a3522MI2AL" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="1" stroke-opacity="0"></use></g></g><g><use xlink:href="#a1Dey7VYIN" opacity="1" fill="#707070" fill-opacity="1"></use><g><use xlink:href="#a1Dey7VYIN" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="1" stroke-opacity="0"></use></g></g><g><use xlink:href="#k3tzsFhDqb" opacity="1" fill="#aaaaaa" fill-opacity="1"></use><g><use xlink:href="#k3tzsFhDqb" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="1" stroke-opacity="0"></use></g></g><g><use xlink:href="#f5JePU5COu" opacity="1" fill="#707070" fill-opacity="1"></use><g><use xlink:href="#f5JePU5COu" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="1" stroke-opacity="0"></use></g></g><g><use xlink:href="#aLmEV70A6" opacity="1" fill="#ffffff" fill-opacity="1"></use><g><use xlink:href="#aLmEV70A6" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="1" stroke-opacity="0"></use></g></g><g><use xlink:href="#a8IsamsaUx" opacity="1" fill="#ffffff" fill-opacity="1"></use><g><use xlink:href="#a8IsamsaUx" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="1" stroke-opacity="0"></use></g></g></g></g></svg>
+                            <svg class='eb-svg' version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet"
+                                viewBox="0 0 640 640" width="55" height="55">
+                                <defs>
+                                    <path d="M40 480L310 640L580 480L580 160L310 0L40 160L40 480Z" id="i5bRRjna3">
+                                    </path>
+                                    <path d="M70 465L310 610L550 465L550 175L310 30L70 175L70 465Z" id="a3522MI2AL">
+                                    </path>
+                                    <path
+                                        d="M361.32 496.27L361.32 395.93L320 374.39L319.59 570L501.65 462.74L463.35 442.97L361.32 496.27Z"
+                                        id="a1Dey7VYIN"></path>
+                                    <path
+                                        d="M140 425L140 259.24L300 347.2L300 300.29L100 190L100 450L300 570L300 520L140 425Z"
+                                        id="k3tzsFhDqb"></path>
+                                    <path
+                                        d="M362.29 321.87L520 237.5L519.6 190L319.18 300.99L319.18 351.17L520 453.74L519.18 400.49L362.29 321.87Z"
+                                        id="f5JePU5COu"></path>
+                                    <path d="M300 119.61L300 70L122.11 176.73L161.74 199.54L300 119.61Z" id="aLmEV70A6">
+                                    </path>
+                                    <path
+                                        d="M361.73 143.73L361.73 257.57L320 280.17L320 70L503.15 179.89L463.83 202.76L361.73 143.73Z"
+                                        id="a8IsamsaUx"></path>
+                                </defs>
+                                <g>
+                                    <g>
+                                        <g>
+                                            <use xlink:href="#i5bRRjna3" opacity="1" fill="#f44336" fill-opacity="1">
+                                            </use>
+                                            <g>
+                                                <use xlink:href="#i5bRRjna3" opacity="1" fill-opacity="0"
+                                                    stroke="#000000" stroke-width="1" stroke-opacity="0"></use>
+                                            </g>
+                                        </g>
+                                        <g>
+                                            <use xlink:href="#a3522MI2AL" opacity="1" fill="#333333" fill-opacity="1">
+                                            </use>
+                                            <g>
+                                                <use xlink:href="#a3522MI2AL" opacity="1" fill-opacity="0"
+                                                    stroke="#000000" stroke-width="1" stroke-opacity="0"></use>
+                                            </g>
+                                        </g>
+                                        <g>
+                                            <use xlink:href="#a1Dey7VYIN" opacity="1" fill="#707070" fill-opacity="1">
+                                            </use>
+                                            <g>
+                                                <use xlink:href="#a1Dey7VYIN" opacity="1" fill-opacity="0"
+                                                    stroke="#000000" stroke-width="1" stroke-opacity="0"></use>
+                                            </g>
+                                        </g>
+                                        <g>
+                                            <use xlink:href="#k3tzsFhDqb" opacity="1" fill="#aaaaaa" fill-opacity="1">
+                                            </use>
+                                            <g>
+                                                <use xlink:href="#k3tzsFhDqb" opacity="1" fill-opacity="0"
+                                                    stroke="#000000" stroke-width="1" stroke-opacity="0"></use>
+                                            </g>
+                                        </g>
+                                        <g>
+                                            <use xlink:href="#f5JePU5COu" opacity="1" fill="#707070" fill-opacity="1">
+                                            </use>
+                                            <g>
+                                                <use xlink:href="#f5JePU5COu" opacity="1" fill-opacity="0"
+                                                    stroke="#000000" stroke-width="1" stroke-opacity="0"></use>
+                                            </g>
+                                        </g>
+                                        <g>
+                                            <use xlink:href="#aLmEV70A6" opacity="1" fill="#ffffff" fill-opacity="1">
+                                            </use>
+                                            <g>
+                                                <use xlink:href="#aLmEV70A6" opacity="1" fill-opacity="0"
+                                                    stroke="#000000" stroke-width="1" stroke-opacity="0"></use>
+                                            </g>
+                                        </g>
+                                        <g>
+                                            <use xlink:href="#a8IsamsaUx" opacity="1" fill="#ffffff" fill-opacity="1">
+                                            </use>
+                                            <g>
+                                                <use xlink:href="#a8IsamsaUx" opacity="1" fill-opacity="0"
+                                                    stroke="#000000" stroke-width="1" stroke-opacity="0"></use>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
                         </div>
                         <div class=info>
-                            <div class='name thin-300'>ELI BYERS</div>
-                            <div class='title thin-300'>SOFTWARE ENGINEER</div>
+                            <div class='name'>ELI BYERS</div>
+                            <div class='title'>SOFTWARE ENGINEER</div>
                         </div>
                         </a>
                     </div>
                     <div class=pull-right>
                         <nav id=nav>
                             <ul class=nav-default>
-                                <li><a href=#hacks class=thin-300 data-nav=hacks>HACKS</a></li>
-                                <li><a href=#projects class=thin-300 data-nav=projects>PROJECTS</a></li>
-                                <li><a href=/arcade class=thin-300 data-nav=arcade>ARCADE</a></li>
+                                <li><a href=#projects data-nav=projects>PROJECTS</a></li>
+                                <li><a href=#hacks data-nav=hacks>HACKS</a></li>
+                                <li class=arcade-content>
+                                    <a href=#arcade data-nav=arcade>ARCADE</a>
+                                </li>
                             </ul>
-                            <a href='' id=hamburger class=hamburger data-open=false><i class="fa fa-bars fa-2x" aria-hidden="true"></i>
-                            </a>
+                            <a href='' id=hamburger class=hamburger data-open=false><i class="fa fa-bars fa-2x"
+                                    aria-hidden="true"></i></a>
                         </nav>
                         <!-- mobile nav -->
                         <nav id=dropdown>
                             <ul class=nav-default>
-                                <li><a href=#hacks class=thin-300 data-nav=hacks>HACKS</a></li>
-                                <li><a href=#projects class=thin-300 data-nav=projects>PROJECTS</a></li>
-                                <li><a href=/arcade class=thin-300 data-nav=arcade>ARCADE</a></li>
+                                <li><a href=#projects data-nav=projects>PROJECTS</a></li>
+                                <li><a href=#hacks data-nav=hacks>HACKS</a></li>
+                                <li class=arcade-content>
+                                    <a href=#arcade data-nav=arcade>ARCADE</a>
+                                </li>
                             </ul>
                         </nav>
                     </div>
-    
+
                 </div>
             </div>
         </header>
-    
+
         <main>
-    
+
+            <!-- mast -->
             <div id=row-hero>
                 <div class=container>
-                    <div class=buffer-top id=hero>
+                    <div id=hero>
 
                         <div id=title>
-                            
-                            <div>
-                                <img id=profile alt=profile src=''>
-                                <div class=social>
-                                    <a href=https://github.com/eli-byers target=_blank rel=noopener>
-                                        <i class="fa fa-github" aria-hidden="true"></i>
-                                    </a>
-                                    <a href=https://www.linkedin.com/in/elibyers/ target=_blank rel=noopener>
-                                        <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-                                    </a>
-                                    <a href=skype:eli.byers?chat>
-                                        <i class="fa fa-skype" aria-hidden="true"></i>
-                                    </a>
-                                    <a href=mailto:elibyers.dev@gmail.com>
-                                        <i class="fa fa-envelope" aria-hidden="true"></i>
-                                    </a>
-                                </div>
-
+                            <div id='avatar'>
+                                <img id=profile alt=profile src='/static/images/avatar.png'>
                             </div>
-
                             <div id=titleLabel>
-                                <h1 class='thin-300'>Software Engineer</h1>
+                                <h1>Software Engineer</h1>
                             </div>
+                        </div>
+
+                        <div class=social>
+                            <a href=https://github.com/eli-byers target=_blank rel=noopener>
+                                <i class="fab fa-github" aria-hidden="true"></i>
+                            </a>
+                            <a href=https://www.linkedin.com/in/elibyers/ target=_blank rel=noopener>
+                                <i class="fab fa-linkedin" aria-hidden="true"></i>
+                            </a>
+                            <a href=skype:eli.byers?chat>
+                                <i class="fab fa-skype" aria-hidden="true"></i>
+                            </a>
+                            <a href=mailto:elibyers.dev@gmail.com>
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </a>
                         </div>
 
                         <div id=taglines>
-                            <p>Building full stack web and iOS applications</p>
-                            <p>Experiance with embeded systems and robotics</p>
-                            <p>Searching for important problems that require creative solutions</p>
+                            <p>Working passionatly with those around me</p>
+                            <p>Delivering full stack, enterprise, web applications</p>
+                            <p>Experience with iOS, embedded systems, robotics</p>
                         </div>
 
                         <div class=callToAction>
-                            <a href=/static/Resume_Eli_Byers.pdf target="_blank"  rel=noopener class="btn btn-hire thin-300">
+                            <a href=/static/Resume_Eli_Byers.pdf target="_blank" rel=noopener class="btn btn-hire">
                                 Download Resume <i class="fa fa-download" aria-hidden="true"></i>
                             </a>
-                            <a href=/arcade data-nav=contact class="btn btn-freelance thin-300">
-                                Ready <i class="fa fa-gamepad" aria-hidden="true"></i>
+                            <a href=#arcade data-nav=arcade
+                                class="btn btn-freelance arcade-content faa-parent animated-hover">
+                                Ready Up<i class="fa fa-gamepad faa-pulse" aria-hidden="true"></i>
                             </a>
                         </div>
 
                     </div>
                 </div>
-            </div> 
+            </div>
             <!-- end row-hero -->
-    
-            <div id='hacks'>
-    
-                <div class="row hack" style="padding-top:45px;">
-                    <div class="container">
-                        <div class="center">
-                            <h1 style="color: black" class=thin-400>
-                                Hackathon Wins
-                            </h1>
-                        </div>
-                    </div>
-                </div>
-    
+
+            <!-- projects -->
+            <div id='projects'>
+                <h1 class="row center section-title">Projects</h1>
+
+                <!-- Everchek -->
                 <div class="row">
                     <div class="container">
                         <div class="cf portfolio-item">
+                            <h3 class='hide-on-large'>
+                                <a class='lazy cursor-default' href=http://everchek.com/ target=_blank rel=noopener>Everchek</a>
+                            </h3>
                             <div class="portfolio-col screenshot">
-                                    <iframe width="560" height="315" src='' data-src="https://www.youtube.com/embed/n1UbexCqCKM?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                                <!-- <a href=https://techcrunch.com/2016/09/11/thehighflyers-helps-you-join-the-mile-high-chat-club/ target=_blank rel=noopener>
-                                    <img alt="Techcrunch Disrupt" src='static/images/projects/techcrunch_disrupt.png'>
-                                </a> -->
-                                <!-- <a href=https://github.com/eli-byers/corkboard target=_blank rel=noopener><i class="fa fa-github" aria-hidden="true"></i></a> -->
+                                <!-- <iframe width="560" height="315" src=''
+                                    data-src="https://www.youtube.com/embed/Levcolp-Ctw?rel=0" frameborder="0"
+                                    allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
+                                <a href=# target=_blank rel=noopener>
+                                    <img class='lazy cursor-default' data-src='/static/images/projects/everchek.png'
+                                        alt='Everchek' src=''>
+                                    <noscript><img src='/static/images/projects/everchek.png' alt="Everchek"></noscript>
+                                </a>
                             </div>
-                            <div class="portfolio-col description-container vid-text">
-                                <h3>
-                                    <a href=https://techcrunch.com/2016/09/11/thehighflyers-helps-you-join-the-mile-high-chat-club/ target=_blank rel=noopener class=thin-300>High Flyers Club</a>
+                            <div class="portfolio-col description-container">
+                                <h3 class='hide-on-small'>
+                                    <a class='lazy cursor-default' href=http://everchek.com/ target=_blank rel=noopener>Everchek</a>
                                 </h3>
-                                <p class=description><span style="font-weight: bold !important;">TechCrunch Disrupt: Best .club domain</span><br>See when you’re passing cool stuff outside of the plane and chat with other people on the flight.</p>
+                                <p class=description>
+                                    <span style="font-weight: bold !important;">Event Management SAAS</span><br>
+                                    The Everchek platform optimizes customer experiences through paperless item
+                                    management
+                                </p>
                                 <p class=roles>Technologies</p>
                                 <ul class=skills>
+                                    <li>Javascript</li>
+                                    <li>Node.js</li>
+                                    <li>Express</li>
+                                    <li>Docker</li>
+                                    <li>MySQL</li>
+                                    <li>Sequelize</li>
+                                    <li>Socket.io</li>
+                                    <li>Nodemailer</li>
+                                    <li>Twilio</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="separator"></div>
+                </div>
+
+                <!-- Campus Coat Check -->
+                <div class="row">
+                    <div class="container">
+                        <div class="cf portfolio-item">
+                            <h3 class='hide-on-large'>
+                                <a href=http://campuscoatcheck.com/ target=_blank rel=noopener>Campus Coat Check</a>
+                            </h3>
+                            <div class="portfolio-col screenshot">
+
+
+
+                                <a href=http://campuscoatcheck.com/ target=_blank rel=noopener>
+                                    <img class='lazy' data-src=/static/images/projects/campuscoatcheck.png
+                                        alt="CampusCoatCheck" src=''>
+                                    <noscript><img src='/static/images/projects/campuscoatcheck.png' alt="CampusCoatCheck"></noscript>
+                                </a>
+                            </div>
+                            <div class="portfolio-col description-container">
+                                <h3 class='hide-on-small'>
+                                    <a href=http://campuscoatcheck.com/ target=_blank rel=noopener>Campus Coat Check</a>
+                                </h3>
+                                <p class=description>
+                                    <span style="font-weight: bold !important;">Event Management and Analytics</span><br>
+                                    A startup created at Colgate University that manage the coat check at college and
+                                    local events
+                                </p>
+                                <p class=roles>Technologies</p>
+                                <ul class=skills>
+                                    <li>Javascript</li>
+                                    <li>Node.js</li>
+                                    <li>Express</li>
+                                    <li>MySQL</li>
+                                    <li>Chart.js</li>
+                                    <li>Nodemailer</li>
+                                    <li>Twilio</li>
+                                    <li>AWS</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="separator"></div>
+                </div>
+
+                <!-- SparkIt -->
+                <div class="row">
+                    <div class="container">
+                        <div class="cf portfolio-item">
+                            <h3 class='hide-on-large'>
+                                <a class='cursor-default' href=# target=_blank rel=noopener>SparkIt</a>
+                            </h3>
+                            <div class="portfolio-col screenshot">
+                                    <!-- <iframe width="560" height="315" src=''
+                                    data-src="https://www.youtube.com/embed/NGdXJ5MocqY?rel=0" frameborder="0"
+                                    allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
+                                    <a class='cursor-default' href=# target=_blank rel=noopener>
+                                        <img class='lazy' data-src='/static/images/projects/sparkit.png'
+                                            alt='SparkIt' src=''>
+                                        <noscript><img src='/static/images/projects/sparkit.png'
+                                                alt="Sparkit"></noscript>
+                                    </a>
+                            </div>
+                            <div class="portfolio-col description-container">
+                                <h3 class='hide-on-small'>
+                                    <a class='cursor-default' href=# target=_blank rel=noopener>SparkIt</a>
+                                </h3>
+                                <p class=description>
+                                    <span style="font-weight: bold !important;">Event Social Networking</span><br>
+                                    Facilitates online connections prior to live events through a tinder swipe interface
+                                </p>
+                                <p class=roles>Technologies</p>
+                                <ul class=skills>
+                                    <li>Swift</li>
+                                    <li>iOS</li>
+                                    <li>Javascript</li>
+                                    <li>Node.js</li>
+                                    <li>Express</li>
+                                    <li>Ticketmaster API</li>
+                                    <li>Eventbrite API</li>
+                                    <li>Seatgeek API</li>
+                                    <li>MySQL</li>
+                                    <li>AWS</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="separator"></div>
+                </div>
+
+                <!-- Fort McMurray Relief Fund -->
+                <div class="row">
+                    <div class="container">
+                        <div class="cf portfolio-item">
+                            <h3 class=hide-on-large>
+                                <a href=https://www.fortmcmurrayrelieffund.com/ target=_blank rel=noopener>Fort
+                                    McMurray<br>Relief Fund</a>
+                            </h3>
+                            <div class="portfolio-col screenshot">
+                                <a href=https://www.fortmcmurrayrelieffund.com/ target=_blank rel=noopener>
+                                    <img class='lazy' data-src='/static/images/projects/mcmurray.png'
+                                        alt='Fort McMurray Relief Fund' src=''>
+                                    <noscript><img src='/static/images/projects/mcmurray.png' alt="Fort McMurray Relief Fund"></noscript>
+                                </a>
+                            </div>
+                            <div class="portfolio-col description-container">
+                                <h3 class=hide-on-small>
+                                    <a href=https://www.fortmcmurrayrelieffund.com/ target=_blank rel=noopener>Fort
+                                        McMurray<br>Relief Fund</a>
+                                </h3>
+                                <p class=description>
+                                    <span style="font-weight: bold !important;">Charity Auction</span><br>
+                                    We raised nearly 5k to help support the families affected buy the 2016 Fort McMurray
+                                    Fire
+                                </p>
+                                <p class=roles>Technologies</p>
+                                <ul class=skills>
+                                    <li>Javascript</li>
+                                    <li>Node.js</li>
+                                    <li>Express</li>
+                                    <li>PHP</li>
+                                    <li>Codeigniter</li>
+                                    <li>MySQL</li>
+                                    <li>Socket.io</li>
+                                    <li>Stripe</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="separator"></div>
+                </div>
+
+                <!-- Nearby -->
+                <div class="row">
+                    <div class="container">
+                        <div class="cf portfolio-item bb-0">
+                            <h3 class=hide-on-large>
+                                <a href=http://nearby.rocks/ target=_blank rel=noopener>Nearby</a>
+                            </h3>
+                            <div class="portfolio-col screenshot">
+                                <a href=http://nearby.rocks/ target=_blank rel=noopener>
+                                    <img class='lazy' data-src='/static/images/projects/nearby.png' alt="Nearby" src=''>
+                                    <noscript><img src='/static/images/projects/nearby.png' alt="Nearby"></noscript>
+                                </a>
+                            </div>
+                            <div class="portfolio-col description-container">
+                                <h3 class=hide-on-small>
+                                    <a href=http://nearby.rocks/ target=_blank rel=noopener>Nearby</a>
+                                </h3>
+                                <p class=description>
+                                    <span style="font-weight: bold !important;">Find all X with Y nearby</span><br>
+                                    A relational Search Engine powered by google maps
+                                </p>
+                                <p class=roles>Technologies</p>
+                                <ul class=skills>
+                                    <li>PHP</li>
+                                    <li>Codeigniter</li>
+                                    <li>Javascript</li>
+                                    <li>Google Maps API</li>
+                                    <li>Materialize</li>
+                                    <li>GreenGeeks</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- end projects -->
+
+            <!-- hacks -->
+            <div id='hacks'>
+                <h1 class="row center section-title">Hackathon Wins</h1>
+
+                <!-- TechCrunch Disrupt -->
+                <div class="row">
+                    <div class="container">
+                        <div class="cf portfolio-item">
+
+                            <!-- hide-on-large -->
+                            <div class='hide-on-large'>
+                                <h3><a href=https://techcrunch.com/2016/09/11/thehighflyers-helps-you-join-the-mile-high-chat-club/
+                                        target=_blank rel=noopener>TechCrunch Disrupt</a></h3>
+                                <h4>2016 Best .club Domain</h4>
+                            </div>
+
+                            <!-- image / vid -->
+                            <div class="portfolio-col screenshot">
+                                <iframe id='techcrunch-iframe' width="560" height="315" src=''
+                                    data-src="https://www.youtube.com/embed/n1UbexCqCKM?rel=0" frameborder="0"
+                                    allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                            </div>
+
+                            <div class="portfolio-col description-container">
+
+                                <!-- hide-on-small -->
+                                <div class='hide-on-small'>
+                                    <h3><a href=https://techcrunch.com/2016/09/11/thehighflyers-helps-you-join-the-mile-high-chat-club/
+                                            target=_blank rel=noopener>TechCrunch Disrupt</a></h3>
+                                    <h4>2016 Best .club Domain</h4>
+                                </div>
+
+                                <p class=description>
+                                    <span style="font-weight: bold !important;">High Flyers Club</span>
+                                    <br>
+                                    Chat with other people on your flight and see when you’re flying over beautiful
+                                    landmarks
+                                </p>
+                                <p class=roles>Technologies</p>
+                                <ul class=skills>
+                                    <li>Javascript</li>
                                     <li>Node.js</li>
                                     <li>Express</li>
                                     <li>MySQL</li>
@@ -181,24 +585,44 @@
                     </div>
                     <div class="separator"></div>
                 </div>
-    
+
+                <!-- AngelHack -->
                 <div class="row">
                     <div class="container">
-                        <div class="cf portfolio-item">
+                        <div class="cf portfolio-item bb-0">
+                            <!-- hide-on-large -->
+                            <div class='hide-on-large'>
+                                <h3><a href=https://techcrunch.com/2016/09/11/thehighflyers-helps-you-join-the-mile-high-chat-club/
+                                        target=_blank rel=noopener>Angelhack</a></h3>
+                                <h4>Top 3 Teams</h4>
+                            </div>
                             <div class="portfolio-col screenshot">
-                                <a href=http://blog.angelhack.com/2016/10/17/hacking-for-good-tech-museum target=_blank rel=noopener>
-                                    <img id='anglehack' alt="Angelhack" src=''>
+                                <a href=http://blog.angelhack.com/2016/10/17/hacking-for-good-tech-museum target=_blank
+                                    rel=noopener>
+                                    <img class='lazy' data-src='/static/images/projects/angelhack.jpg' alt="Angelhack"
+                                        src=''>
+                                    <noscript><img src='/static/images/projects/angelhack.jpg'
+                                            alt="Angelhack"></noscript>
                                 </a>
                             </div>
                             <div class="portfolio-col description-container">
-                                <h3>
-                                    <a href=http://blog.angelhack.com/2016/10/17/hacking-for-good-tech-museum target=_blank rel=noopener class=thin-300>Cork Board</a>
+                                <!-- hide-on-large -->
+                                <div class='hide-on-small'>
+                                    <h3><a href=http://blog.angelhack.com/2016/10/17/hacking-for-good-tech-museum
+                                            target=_blank rel=noopener>Angelhack</a></h3>
+                                    <h4>Top 3 Teams</h4>
                                     <!-- <a href=https://github.com/eli-byers/corkboard target=_blank rel=noopener><i class="fa fa-github" aria-hidden="true"></i></a> -->
-                                </h3>
-                                <p class=description><span style="font-weight: bold !important;">Angelhack: Top 3</span><br>Location based posting platform to help people find their family or search for notes left by
-                                    their family.</p>
+                                </div>
+
+                                <p class=description>
+                                    <span style="font-weight: bold !important;">Cork Board</span>
+                                    <br>
+                                    A public, location based post board to help homeless people reconnect with their
+                                    families
+                                </p>
                                 <p class=roles>Technologies</p>
                                 <ul class=skills>
+                                    <li>Javascript</li>
                                     <li>Node.js</li>
                                     <li>Express</li>
                                     <li>MySQL</li>
@@ -208,123 +632,273 @@
                         </div>
                     </div>
                 </div>
-            </div> 
+
+            </div>
             <!-- end hacks -->
 
-            <div id='projects'>
+            <!-- arcade -->
+            <div id='arcade' class='arcade-content'>
+                <div class='row transparent'>
+                    <div class=container>
+                        <h1 id='arcade-title' class="row center section-title transparent">Arcade</h1>
+                    </div>
+                </div>
 
-                <div class="row hack" style="padding-top:45px;">
+                <div class="row transparent">
                     <div class="container">
-                        <div class="center">
-                            <h1 style="color: black" class=thin-400>
-                                Projects
-                            </h1>
+                        <div class='disclaimer'>
+                            <h4>
+                                <i class="fas fa-exclamation-triangle mr-3"></i>
+                                Disclaimer
+                                <i class="fas fa-exclamation-triangle ml-3"></i>
+                            </h4>
+                            <p class=mb-3>The following is a collection of classic video games I recreated from scratch
+                                in Javascript. All were made in my spare time, my first year after learning to code. All
+                                are incomplete, buggy, and the quality of the code is... lacking. With that being said,
+                                all were very enjoyable to build and taught me more about programming than my real work.
+                                So if you are brave enough, please enjoy!</p>
                         </div>
                     </div>
                 </div>
-    
-                <div class="row">
-                    <div class="container">
-                        <div class="cf portfolio-item">
-                            <div class="portfolio-col screenshot">
-                                <a href=http://campuscoatcheck.com/ target=_blank rel=noopener>
-                                    <img id=campuscoatcheck alt="CampusCoatCheck" src=''>
-                                </a>
+
+                <!-- game cards -->
+                <div class='container'>
+                    <div class="row transparent">
+                        <div class="col-sm-12 col-md-6 col-lg-4 game-card">
+                            <div class="game-body hover-container"
+                                style="background-image: url('/static/images/games/robots.png')">
+
+                                <div class="hover-show">
+                                    <div class="game-header">
+                                        <a class="option icons git" href="https://github.com/eli-byers/RicochetRobots"
+                                            target="_blank">
+                                            <i class="fab fa-github fa-lg icon-default" data-fa-transform="shrink-1"
+                                                data-fa-mask="fas fa-circle"></i>
+                                            <i class="fab fa-github fa-lg icon-hover"></i>
+                                        </a>
+                                        <h4>Robots</h4>
+                                        <a class="option icons" data-toggle="modal" data-target="#modalRR">
+                                            <i class="fal fa-play fa-lg icon-default"></i>
+                                            <i class="fas fa-play fa-lg icon-hover"></i>
+                                        </a>
+                                    </div>
+
+                                    <div class="game-info">
+                                        <p>Interesting Bits</p>
+                                        <ul>
+                                            <li>Programmatic map rendering</li>
+                                            <li>Player move tracking</li>
+                                            <li>Turn rewinding</li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="portfolio-col description-container">
-                                <h3>
-                                    <a href=http://campuscoatcheck.com/ target=_blank rel=noopener class=thin-300>Campus Coat Check</a>
-                                </h3>
-                                <p class=description>A coat check management and analytics platform.</p>
-                                <p class=roles>Technologies</p>
-                                <ul class=skills>
-                                    <li>Node.js</li>
-                                    <li>Express</li>
-                                    <li>MySQL</li>
-                                    <li>Chart.js</li>
-                                    <li>Nodemailer</li>
-                                    <li>Twilio</li>
-                                </ul>
+
+                            <div class="modal fade" id="modalRR" tabindex="-1" role="dialog"
+                                aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg" role="document">
+
+                                    <!--Content-->
+                                    <div class="modal-content">
+
+                                        <!--Body-->
+                                        <div class="modal-body mb-0 p-0">
+                                            <iframe class='screen' src="/static/games/ricochet_robots/index.html"
+                                                frameborder="0"></iframe>
+                                        </div>
+
+                                        <!--Footer-->
+                                        <div class="modal-footer justify-content-center">
+                                            <span class="mr-4">Check it out on Github!</span>
+
+                                            <button type="button"
+                                                class="btn btn-outline-primary btn-rounded btn-md ml-4"
+                                                data-dismiss="modal">Close</button>
+
+                                        </div>
+
+                                    </div>
+                                    <!--/.Content-->
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6 col-lg-4 game-card">
+                            <div class="game-body hover-container"
+                                style="background-image: url('/static/images/games/pacman.png')">
+
+                                <div class="hover-show">
+                                    <div class="game-header">
+                                        <a class="option icons git" href="https://github.com/eli-byers/Pac-Man"
+                                            target="_blank">
+                                            <i class="fab fa-github fa-lg icon-default" data-fa-transform="shrink-1"
+                                                data-fa-mask="fas fa-circle"></i>
+                                            <i class="fab fa-github fa-lg icon-hover"></i>
+                                        </a>
+                                        <h4>PacMan</h4>
+                                        <a class="option icons" data-toggle="modal" data-target="#modalRR">
+                                            <i class="fal fa-play fa-lg icon-default"></i>
+                                            <i class="fas fa-play fa-lg icon-hover"></i>
+                                        </a>
+                                    </div>
+
+                                    <div class="game-info">
+                                        <p>Interesting Bits</p>
+                                        <ul>
+                                            <li>Programmatic map rendering</li>
+                                            <li>Programmatic animations</li>
+                                            <li>Unique path finding for each ghost</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6 col-lg-4 game-card">
+                            <div class="game-body hover-container"
+                                style="background-image: url('/static/images/games/invaders.png')">
+
+                                <div class="hover-show">
+                                    <div class="game-header">
+                                        <a class="option icons git" href="https://github.com/eli-byers/SpaceInvaders"
+                                            target="_blank">
+                                            <i class="fab fa-github fa-lg icon-default" data-fa-transform="shrink-1"
+                                                data-fa-mask="fas fa-circle"></i>
+                                            <i class="fab fa-github fa-lg icon-hover"></i>
+                                        </a>
+                                        <h4>Invaders</h4>
+                                        <a class="option icons" data-toggle="modal" data-target="#modalRR">
+                                            <i class="fal fa-play fa-lg icon-default"></i>
+                                            <i class="fas fa-play fa-lg icon-hover"></i>
+                                        </a>
+                                    </div>
+
+                                    <div class="game-info">
+                                        <p>Interesting Bits</p>
+                                        <ul>
+                                            <li>Programmatic animations</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6 col-lg-4 game-card">
+                            <div class="game-body hover-container"
+                                style="background-image: url('/static/images/games/astroids.png')">
+
+                                <div class="hover-show">
+                                    <div class="game-header">
+                                        <a class="option icons git" href="https://github.com/eli-byers/Astroids"
+                                            target="_blank">
+                                            <i class="fab fa-github fa-lg icon-default" data-fa-transform="shrink-1"
+                                                data-fa-mask="fas fa-circle"></i>
+                                            <i class="fab fa-github fa-lg icon-hover"></i>
+                                        </a>
+                                        <h4>Asteroids</h4>
+                                        <a class="option icons" data-toggle="modal" data-target="#modalRR">
+                                            <i class="fal fa-play fa-lg icon-default"></i>
+                                            <i class="fas fa-play fa-lg icon-hover"></i>
+                                        </a>
+                                    </div>
+
+                                    <div class="game-info">
+                                        <p>Interesting Bits</p>
+                                        <ul>
+                                            <li>Space Physics</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6 col-lg-4 game-card">
+                            <div class="game-body hover-container"
+                                style="background-image: url('/static/images/games/simon.png')">
+
+                                <div class="hover-show">
+                                    <div class="game-header">
+                                        <a class="option icons git" href="https://github.com/eli-byers/simon"
+                                            target="_blank">
+                                            <i class="fab fa-github fa-lg icon-default" data-fa-transform="shrink-1"
+                                                data-fa-mask="fas fa-circle"></i>
+                                            <i class="fab fa-github fa-lg icon-hover"></i>
+                                        </a>
+                                        <h4>Simon</h4>
+                                        <a class="option icons" data-toggle="modal" data-target="#modalRR">
+                                            <i class="fal fa-play fa-lg icon-default"></i>
+                                            <i class="fas fa-play fa-lg icon-hover"></i>
+                                        </a>
+                                    </div>
+
+                                    <div class="game-info">
+                                        <p>Interesting Bits</p>
+                                        <ul>
+                                            <li>State machine</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6 col-lg-4 game-card">
+                            <div class="game-body hover-container"
+                                style="background-image: url('/static/images/games/snake.png')">
+
+                                <div class="hover-show">
+                                    <div class="game-header">
+                                        <a class="option icons git" href="https://github.com/eli-byers/js_snake"
+                                            target="_blank">
+                                            <i class="fab fa-github fa-lg icon-default" data-fa-transform="shrink-1"
+                                                data-fa-mask="fas fa-circle"></i>
+                                            <i class="fab fa-github fa-lg icon-hover"></i>
+                                        </a>
+                                        <h4>Snake</h4>
+                                        <a class="option icons" data-toggle="modal" data-target="#modalRR">
+                                            <i class="fal fa-play fa-lg icon-default"></i>
+                                            <i class="fas fa-play fa-lg icon-hover"></i>
+                                        </a>
+                                    </div>
+
+                                    <div class="game-info">
+                                        <p>Interesting Bits</p>
+                                        <ul>
+                                            <li>Built in one evening</li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="separator"></div>
-                </div>
-    
-                <div class="row">
-                    <div class="container">
-                        <div class="cf portfolio-item">
-                            <div class="portfolio-col screenshot">
-                                <a href=http://nearby.rocks/ target=_blank rel=noopener>
-                                    <img id='nearby' alt="Nearby" src=''>
-                                </a>
-                            </div>
-                            <div class="portfolio-col description-container">
-                                <h3>
-                                    <a href=http://nearby.rocks/ target=_blank rel=noopener class=thin-300>Nearby</a>
-                                </h3>
-                                <p class=description>Relational Search Engine powered by google maps.</p>
-                                <p class=roles>Technologies</p>
-                                <ul class=skills>
-                                    <li>Codeigniter</li>
-                                    <li>Materialize</li>
-                                    <li>Google Maps API</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="separator"></div>
-                </div>
-                
-                <div class="row">
-                    <div class="container">
-                        <div class="cf portfolio-item">
-                            <div class="portfolio-col screenshot">
-                                <a href=https://www.fortmcmurrayrelieffund.com/ target=_blank rel=noopener>
-                                    <img id='fmrf' alt='Fort McMurray Relief Fund' src=''>
-                                </a>
-                            </div>
-                            <div class="portfolio-col description-container">
-                                <h3>
-                                    <a href=https://www.fortmcmurrayrelieffund.com/ target=_blank rel=noopener class=thin-300>Fort McMurray Relief Fund</a>
-                                </h3>
-                                <p class=description>Charity Auction to support the victims of the Fort McMurray Fire.</p>
-                                <p class=roles>Technologies</p>
-                                <ul class=skills>
-                                    <li>Node.js</li>
-                                    <li>Express</li>
-                                    <li>Socket.io</li>
-                                    <li>Stripe</li>
-                                    <li>Codeigniter</li>
-                                    <li>MySQL</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-            </div> 
-            <!-- end projects -->
+
+                </div> <!-- end game cards -->
+
+            </div>
+            <!-- end arcade -->
 
         </main>
-    
-        <div class=center id=links>
-            <ul></ul>
+
+        <!-- footer -->
+        <div class="center transparent" id=footer>
+            <ul>
                 <li>&copy; ELIBYERS.COM 2019 </li>
-                <li>Built in Python Flask</li>
                 <li>contact@elibyers.com</li>
             </ul>
         </div>
-       
-    </div>
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <!-- google maps -->
-    <script src=static/js/scripts.js></script>
-    <script src=static/js/lazyload.js defer async></script>
-    <!-- custom scripts -->
-    
+    </div>
+
+    <!-- scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="static/js/scripts.js"> </script>
+    <script src="static/js/lazyload.js" defer async></script>
+
+    <script src="https://pro.fontawesome.com/releases/v5.8.1/js/all.js" integrity="sha384-GBwm0s/0wYcqnK/JmrCoRqWYIWzFiGEucsfFqkB76Ouii5+d4R31vWHPQtfhv55b" crossorigin="anonymous" defer async></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!-- end scripts -->
+
 </body>
 
 </html>

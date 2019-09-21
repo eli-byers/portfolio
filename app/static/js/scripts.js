@@ -1,20 +1,26 @@
 $(document).ready(function() {
 
-    let header, hacks, projects, hacksOffset, projectsOffset, burger, drop
+    let header = $("#header");
+    let hacksOffset = $("#hacks").offset();
+    let projectsOffset = $("#projects").offset();
+    let arcadeOffset = $("#arcade").offset();
+    let burger = $("#hamburger");
+    let drop = $("#dropdown");
 
     function getDomElements(){
-        header = $("#header")
-        hacks = $("#hacks")
-        projects = $("#projects")
+        header = $("#header");
 
-        hacksOffset = hacks.offset()
-        projectsOffset = projects.offset()
+        hacksOffset = $("#hacks").offset();
+        projectsOffset = $("#projects").offset();
+        arcadeOffset = $("#arcade").offset();
 
         burger = $("#hamburger");
         drop = $("#dropdown");
     }
 
-    getDomElements()
+    function isMobileDevice() {
+        return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+    };
 
     //==========================================
     // loading cover
@@ -24,7 +30,7 @@ $(document).ready(function() {
         window.onscroll = setNav
         $('#page').show(function(){
             getDomElements();
-            $(document).scrollTop(0)
+            $(document).scrollTop(0);
             $("#cover").fadeOut(200);
         });
     });
@@ -32,20 +38,20 @@ $(document).ready(function() {
     //==========================================
     // mobile nav
     //==========================================
-    
+
     burger.on('click', function(e) {
         e.preventDefault();
         burger.data('open', !drop.attr('open'));
         drop.toggle();
     });
-    
+
     drop.find("a").on("click", function(e) {
-        burger.data('open', false)
-        drop.toggle(); 
+        burger.data('open', false);
+        drop.toggle();
     });
 
     function hideDropdown(){
-        if (burger.data('open')){
+        if (burger && burger.data('open')){
             burger.data('open', false);
             drop.hide();
         }
@@ -53,58 +59,58 @@ $(document).ready(function() {
     //==========================================
     // Hero / Nav
     //==========================================
-    function setHeroHeight(params) {
+    function setHeroHeight() {
         windowHeight = $(window).height();
         headerContainerHeight = $("header").height();
-        height = windowHeight - headerContainerHeight > 410 ? windowHeight - headerContainerHeight : 410;
-        $('#row-hero').css('height', height);
+        heroHeight = windowHeight - headerContainerHeight;
+        $('#row-hero').css('height', heroHeight);
     }
     setHeroHeight();
-    
+
     function setNav(){
-        hideDropdown()
-        let scrollTop = $(this).scrollTop()
-        let preset = 200
+        if (!header) return
+
+        hideDropdown();
+        let scrollTop = $(this).scrollTop();
+        let preset = -58
+        // in the header
+        if (scrollTop < 60){
+            header.removeClass("nav-fixed");
+        }
         // down the page
-        if (scrollTop >= 60){
-            
-            header.addClass("nav-fixed")
-            if (scrollTop <= hacksOffset.top - preset) {
+        else {
+            header.addClass("nav-fixed");
+            if (scrollTop <= projectsOffset.top + preset) {
                 activateNav();
-            } 
-            else if (scrollTop <= projectsOffset.top - preset){
+            } else if (scrollTop <= hacksOffset.top + preset){
+                activateNav("projects");
+            } else if (isMobileDevice() || scrollTop <= arcadeOffset.top + preset){
                 activateNav("hacks");
             } else {
-                activateNav("projects");
+                activateNav("arcade");
             }
-        } 
-        // in the header
-        else {
-            header.removeClass("nav-fixed")
         }
     }
     setNav();
-    
+
     function activateNav(str){
-        header.find(".active").removeClass("active")
-        console.log(str);
-        
+        header.find(".active").removeClass("active");
         if (str) {
             nav = "[data-nav='"+str+"']"
-            header.find(nav).addClass("active")
+            header.find(nav).addClass("active");
         }
     }
 
     // scroll to element with #id
     $("a[href^='#']").on('click', function(e) {
         e.preventDefault();
-        var dest = $.attr(this, "href")
+        var dest = $.attr(this, "href");
         var offset = 55
         if (dest.length) {
             $('html, body').animate({
                 scrollTop: $(dest).offset().top - offset
             }, 'slow', function(){
-                if (dest == '#contact') $("#field1").focus()
+                if (dest == '#contact') $("#field1").focus();
             });
         } else {
             window.location.replace('/'+$(this).attr('href'));
@@ -114,16 +120,14 @@ $(document).ready(function() {
     // window resize
     $(window).resize(function() {
         if ($(this).width() >= 691) {
-            burger.data('open', false)
-            drop.css('display', 'none')
+            burger.data('open', false);
+            drop.css('display', 'none');
         }
-        setHeroHeight()
+        setHeroHeight();
     });
 
 
-    console.log("Eli Byers - Software Engineer")
-    console.log("");
-    console.log("Thank you for ckecking out my portfolio.")
-    console.log("Please reach out if you want to know more!")
+    console.log("Thank you for visiting my portfolio!");
+    console.log("Eli Byers - Software Engineer");
 });
 
