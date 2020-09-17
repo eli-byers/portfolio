@@ -232,17 +232,17 @@ h3 a {
     z-index: -1;
 }
 
-#dropdown ul li {
+#dropdown ul li a {
+    /* font-weight: 700; */
     display: block;
     padding: 16px 0;
-    font-weight: 700;
     font-size: 17px;
     border-bottom: 1px solid #333;
     color: #fff
 }
 
 #dropdown a:hover {
-    color: #F44336;
+    color: #F44336 !important;
 }
 
 .nav-fixed #dropdown {
@@ -325,7 +325,7 @@ h3 a {
 }
 
 #header.nav-fixed .name, #header.nav-fixed .title, #header.nav-fixed li a {
-    color: #333 !important;
+    color: #333;
 }
 
 #header {
@@ -951,12 +951,12 @@ textarea {
         border: 0px;
         border-radius: 0px;
     }
-    .nav-fixed #dropdown ul li {
+    .nav-fixed #dropdown ul li a {
         border-color: #eee;
         color: #333;
     }
     .nav-fixed a {
-        padding-bottom: 2px !important;
+        /* padding-bottom: 2px !important; */
     }
     .nav-fixed a:hover {
         background: none;
@@ -1140,6 +1140,10 @@ textarea {
     line-height: 26px;
 }
 
-.arcade-content {
-    display: none !important;
+.svg-inline {
+    display: inline-block;
+    font-size: inherit;
+    height: 1em;
+    overflow: visible;
+    vertical-align: -.125em;
 }

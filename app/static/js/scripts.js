@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
   let header = $("#header");
   let hacksOffset = $("#hacks").offset();
   let projectsOffset = $("#projects").offset();
@@ -27,15 +27,20 @@ $(document).ready(function() {
   //==========================================
   // loading cover
   //==========================================
-  window.onscroll = function() {
+  window.onscroll = function () {
     window.scrollTo(0, 0);
   };
-  $(window).on("load", function() {
+  $(window).on("load", function () {
     window.onscroll = setNav;
-    $("#page").show(function() {
+    $("#page").show(function () {
       getDomElements();
       $(document).scrollTop(0);
       $("#cover").fadeOut(200);
+      setGameBodyHeight();
+
+      if (isMobileDevice()) {
+        $(".arcade-content").remove();
+      }
     });
   });
 
@@ -43,13 +48,13 @@ $(document).ready(function() {
   // mobile nav
   //==========================================
 
-  burger.on("click", function(e) {
+  burger.on("click", function (e) {
     e.preventDefault();
     burger.data("open", !drop.attr("open"));
     drop.toggle();
   });
 
-  drop.find("a").on("click", function(e) {
+  drop.find("a").on("click", function (e) {
     burger.data("open", false);
     drop.toggle();
   });
@@ -106,17 +111,19 @@ $(document).ready(function() {
   }
 
   // scroll to element with #id
-  $("a[href^='#']").on("click", function(e) {
+  $("a[href^='#']").on("click", function (e) {
     e.preventDefault();
     var dest = $.attr(this, "href");
+    if (dest == "#") return;
+
     var offset = 55;
     if (dest.length) {
       $("html, body").animate(
         {
-          scrollTop: $(dest).offset().top - offset
+          scrollTop: $(dest).offset().top - offset,
         },
         "slow",
-        function() {
+        function () {
           if (dest == "#contact") $("#field1").focus();
         }
       );
@@ -126,24 +133,44 @@ $(document).ready(function() {
   });
 
   // window resize
-  $(window).resize(function() {
+  $(window).resize(function () {
     if ($(this).width() >= 691) {
       burger.data("open", false);
       drop.css("display", "none");
     }
+    setGameBodyHeight();
     setHeroHeight();
   });
+
+  //==========================================
+  // Arcade
+  //==========================================
+
+  $(".play").click(function (e) {
+    e.preventDefault();
+    console.log($(this));
+
+    let gameSrc = $(this).data("src");
+    console.log("GAME SRC", gameSrc);
+    $("#gameScreen").attr("src", gameSrc);
+  });
+
+  function setGameBodyHeight() {
+    if ($(".game-body").height() != $(".game-body").width()) {
+      $(".game-body").height($(".game-body").width());
+    }
+  }
 
   //==========================================
   // Video Modal
   //==========================================
   var $videoSrc;
-  $(".video-btn").click(function() {
+  $(".video-btn").click(function () {
     $videoSrc = $(this).data("src");
   });
 
   // when the modal is opened autoplay it
-  $("#videoModal").on("shown.bs.modal", function(e) {
+  $("#videoModal").on("shown.bs.modal", function (e) {
     // set the video src to autoplay and not to show related video. Youtube related video is like a box of chocolates... you never know what you're gonna get
     $("#video").attr(
       "src",
@@ -153,7 +180,7 @@ $(document).ready(function() {
   });
 
   // stop playing the youtube video when I close the modal
-  $("#videoModal").on("hide.bs.modal", function(e) {
+  $("#videoModal").on("hide.bs.modal", function (e) {
     // a poor man's stop video
     $("#video").attr("src", "");
   });

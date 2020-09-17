@@ -1,13 +1,14 @@
-.modal-dialog {
-    max-width: 800px;
-    margin: 30px auto;
+#modal .modal-dialog {
+  max-width: 800px;
+  margin: 30px auto;
 }
 
-.modal-body {
-    position: relative;
-    padding: 0px;
+#videoModal .modal-body {
+  position: relative;
+  padding: 0px;
+  background-color: #333;
 }
 
 .video-btn {
-    cursor: pointer;
+  cursor: pointer;
 }

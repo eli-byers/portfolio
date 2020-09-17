@@ -1,107 +1,137 @@
-/* card hover  */
-.hover-container:hover>.hover-hide,
-.hover-container>.hover-show {
-    transition: opacity 0.5;
-    opacity: 0;
+.arcade-content {
+  /* display: none !important; */
 }
+
+#arcade .row {
+  flex-direction: row;
+}
+
+#arcade iframe {
+  width: 100%;
+  height: 100%;
+}
+
+/* card hover  */
+
+.hover-container:hover>.hover-hide, .hover-container>.hover-show {
+  transition: opacity 0.5;
+  opacity: 0;
+  background-color: rgba(10, 10, 10, 0.85);
+  height: inherit;
+}
+
 .hover-container:hover>.hover-show {
-    transition: opacity 0.5;
-    opacity: 1;
+  transition: opacity 0.5;
+  opacity: 1;
 }
 
 .game-card .game-body {
-    border: 0.5px solid black;
-    border-radius: 5px;
-    height: 280px;
-    background-size: cover;
-    overflow: hidden;
-    color: white;
-    font-weight: 300;
-    margin-bottom: 30px;
-    box-sizing: border-box;
+  border: 0.5px solid black;
+  border-radius: 5px;
+  height: 280px;
+  background-size: cover;
+  overflow: hidden;
+  color: white;
+  font-weight: 300;
+  margin-bottom: 30px;
+  box-sizing: border-box;
 }
+
 .game-body:hover {
-    transition: box-shadow 0.2s, border 0.2s;
-    box-shadow: 0 0 5px black;
-    border: 0px !important;
+  transition: box-shadow 0.2s, border 0.2s;
+  box-shadow: 0 0 5px black;
+  border: 0px !important;
 }
 
 .game-info {
-    float: left;
-    background-color: rgba(10,10,10,0.85);
-    padding: 20px;
-    width: 100%;
-    height: 400px;
-    flex-direction: column;
+  /* background-color: rgba(10, 10, 10, 0.85); */
+  /* height: 400px; */
+  padding: 20px;
+  width: 100%;
+  flex-direction: column;
 }
+
+.game-info hr {
+  border-top-color: dimgray;
+}
+
 .game-info li:not(:last-child) {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .game-header {
-    float: left;
-    background: rgb(0,0,0);
-    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(108,30,24,1) 65%, rgba(191,54,44,1) 100%);
-    border-bottom: 1px solid rgba(108,30,24,1);
-    display:table;
-    width: 101%;
-    margin: 0;
-    overflow: hidden;
+  background: rgb(0, 0, 0);
+  background: linear-gradient( 90deg, rgba(0, 0, 0, 1) 0%, rgba(108, 30, 24, 1) 65%, rgba(191, 54, 44, 1) 100%);
+  border-bottom: 1px solid rgba(108, 30, 24, 1);
+  display: table;
+  width: 101%;
+  margin: 0;
+  overflow: hidden;
 }
+
 .game-header h4 {
-    display:table-cell;
-    padding: 20px;
-    width: auto;
-    text-align: center;
+  display: table-cell;
+  padding: 20px;
+  width: auto;
+  text-align: center;
 }
+
 .game-header a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .option:hover {
-    box-shadow: -3px 0 15px #4a1410;
-    box-shadow: 0px 3px 15px #4a1410;
+  box-shadow: -3px 0 15px #4a1410;
+  box-shadow: 0px 3px 15px #4a1410;
 }
+
 .option {
-    width: 65px;
-    padding: 15px 25px;
-    display:table-cell;
-    transition: box-shadow 0.2s, opacity 0.2s;
+  width: 70px;
+  padding: 15px 25px;
+  display: table-cell;
+  transition: box-shadow 0.2s, opacity 0.2s;
 }
+
 .option svg {
-    color: black;
+  color: black;
+  left: 25px;
 }
 
 /* font awesome icon hover toggle */
+
 .icons {
-    padding: 25px;
-    position: relative;
-    background: transparent;
-    line-height: 100%;
-    transition: box-shadow 0.2s, opacity 0.2s;
+  padding: 25px;
+  position: relative;
+  background: transparent;
+  line-height: 100%;
+  transition: box-shadow 0.2s, opacity 0.2s;
 }
+
 .icons>svg {
-    position: absolute;
+  position: absolute;
 }
-.icons:hover>.icon-default,
-.icons>.icon-hover {
-    transition: opacity 0.2s;
-    opacity: 0;
+
+.icons:hover>.icon-default, .icons>.icon-hover {
+  transition: opacity 0.2s;
+  opacity: 0;
 }
+
 .icons:hover>.icon-hover {
-    transition: opacity 0.2s;
-    opacity: 1;
+  transition: opacity 0.2s;
+  opacity: 1;
 }
 
 .git {
-    width: 70px;
+  width: 70px;
 }
+
 .git svg {
-    color: white;
+  color: white;
 }
 
 /* iframe modal */
-.game .screen {
-    width: 100%;
-    height: 80vh;
+
+.game .screen, #arcade .modal-body {
+  width: 100%;
+  height: 80vh;
 }
