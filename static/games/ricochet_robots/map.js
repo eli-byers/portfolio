@@ -4,7 +4,7 @@
 //   2 - Red          2 - Sun       ||   1 - empty space
 //   3 - Blue         3 - Saturn    ||   2 - center
 //   4 - Green        4 - Star      ||
-//            55 - wild             ||
+//   5 - wild                       ||
 //   Ex. 44 - Green Star            ||
 //
 //==========================================================
@@ -528,7 +528,7 @@ function offsetFromDir(dir){
 }
 
 function makeTargetCode(c,s){    
-    var color = ['','Y','R','B','G',''];
+    var color = ['','Y','R','B','G','A'];
     var shape = ['','M','Sn','Sa','St','BH'];
     return color[c]+shape[s];
 }

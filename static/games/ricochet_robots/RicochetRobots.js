@@ -145,15 +145,33 @@ var scene = {
         this.context = this.canvas.getContext("2d");
         document.body.insertBefore(this.canvas, document.body.childNodes[0]);
 
+        $('#newGame').click(function(){
+            startGame();
+        });
+
         $('#timerButton').click(function(){
             // timer
             _this.time = 60;
+            _this.paused = false;
             $('#timer').html(60);
             _this.timer = setInterval(function(){
-                _this.time -= 1;
-                $('#timer').html(_this.time);
-                if (_this.time == 0) clearInterval(_this.timer);
+                if(!_this.paused) {
+                    _this.time -= 1;
+                    $('#timer').html(_this.time);
+                    if (_this.time == 0) clearInterval(_this.timer);
+                }
             }, 1000);
+        });
+
+        $('#pause').click(function(){
+            if (_this.timer) {
+                if (_this.paused) {
+                    $('#pause').html('Pause')
+                } else {
+                    $('#pause').html('Resume')
+                }
+                _this.paused = !_this.paused;
+            }
         });
 
         // reset
@@ -201,7 +219,7 @@ var scene = {
                 var y = event.clientY - rect.top;
 
                 // check if any bot was clicked
-                _this.robots.forEach( function(robot) {
+                for (robot of _this.robots) {
                     if (robot.inTileContaining(x, y)){
                         // select new bot and clear previous bot & target
                         if (_this.selectedBot) _this.selectedBot.selected = false;
@@ -209,8 +227,9 @@ var scene = {
                         _this.selectedBot = robot;
                         _this.selectedDir = null;
                         _this.target = null;
+                        break;
                     }
-                });
+                }
 
                 // if there is no not moving and there is a current target
                 if (!_this.botMoving && _this.selectedDir){
@@ -436,8 +455,9 @@ function BotTarget(cellX, cellY, context, bot){
     this.startY = bot.cellY;
     this.cellX = cellX;
     this.cellY = cellY;
-    this.x = ((cellX * 3) + 1.5) * 21;
-    this.y = ((cellY * 3) + 1.5) * 21;    
+    center = cellCenter(cellX, cellY);
+    this.x = center.x;
+    this.y = center.y;
     switch (bot.color){
         case 'Red': this.color = "rgba(200, 50, 40, 0.5)"; break;
         case 'Yellow': this.color = "rgba(225, 160, 55, 0.5)"; break;
@@ -446,18 +466,33 @@ function BotTarget(cellX, cellY, context, bot){
     }
 }
 BotTarget.prototype.draw = function(){
-    // line
+    var side = 22;
+    var padding = 21;
+    
+    // draw line with adjusted start and end 
     var center = cellCenter(this.startX, this.startY);
     this.context.strokeStyle = this.color;
     this.context.lineWidth = 8;
     this.context.beginPath();
-    this.context.moveTo(center.x, center.y);
-    this.context.lineTo(this.x, this.y);
+
+    lineStartX = center.x
+    lineStartY = center.y
+    lineEndX = this.x
+    lineEndY = this.y
+    if (lineStartX != lineEndX) {
+        lineEndX += (lineEndX > lineStartX) ? -padding : padding;
+        lineStartX += (lineEndX > lineStartX) ? padding : -padding;
+    } 
+    else if (lineStartY != lineEndY) {
+        lineEndY += (lineEndY > lineStartY) ? -padding : padding;
+        lineStartY += (lineEndY > lineStartY) ? padding : -padding;
+    }
+    this.context.moveTo(lineStartX, lineStartY);
+    this.context.lineTo(lineEndX, lineEndY);
     this.context.stroke();
-    // circle
-    var radius = 17;
-    this.context.beginPath();
-    this.context.arc(this.x, this.y, radius, 0, 2 * Math.PI, false);
+    
+    // draw landing
+    this.context.rect(this.x - (side/2), this.y - (side/2), side, side);
     this.context.fillStyle = this.color;
     this.context.fill();
 }
@@ -473,7 +508,6 @@ function RoundTarget(x, y, context, code){
 RoundTarget.prototype.draw = function(){
     this.context.drawImage(this.image, this.x, this.y);
 }
-
 
 // ======================  Game  ======================
 
@@ -505,6 +539,7 @@ Game.prototype.updateGameArea = function(){
     if (_this.scene.target) _this.scene.target.draw();
     _this.scene.robots.forEach( function(bot) { bot.update(); bot.draw(); })
 }
+
 //=====================================================
 //			            On Load
 //=====================================================
