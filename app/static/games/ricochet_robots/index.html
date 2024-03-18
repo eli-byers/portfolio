@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta charset="UTF-8">
+	<title>Ricochet Robots</title>
+	<!--<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">-->
+	<meta name="description" content="Classic Ricochet Robots written in Javascript">
+	<meta name="keywords" content="JavaScript, JS, Ricochet Robots">
+	<meta name="author" content="Eli Byers">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="jquery.min.js"></script>
+	<script src="map.js" defer></script>
+	<script src="RicochetRobots.js" defer></script>
+</head>
+<body onload="startGame()">
+
+	<canvas id="map"></canvas>
+	<canvas id="scene"></canvas>
+
+    <p><button id='newRound'>New Round</button>/<p>
+    <p><button id='reset'>Reset Turn</button></p>
+    <p><button id='timerButton'>Start Timer</button></p>
+    <h3 id='timer'>0</h3>
+
+    <!-- map -->
+    <img id="EmptyR"    src="./images/map/EmptyR.png"       hidden>
+    <img id="EmptyL"    src="./images/map/EmptyL.png"       hidden>
+    <img id="Corner"    src="./images/map/Corner.png"       hidden>
+    <img id="Straight"  src="./images/map/Straight.png"     hidden>
+    <img id="Center"    src="./images/map/Center.png"       hidden>
+    <!--moon-->
+    <img id="BM"        src="./images/target/BM.png"        hidden>
+    <img id="GM"        src="./images/target/GM.png"        hidden>
+    <img id="RM"        src="./images/target/RM.png"        hidden>
+    <img id="YM"        src="./images/target/YM.png"        hidden>
+    <!--saturn-->
+    <img id="BSa"       src="./images/target/BSa.png"       hidden>
+    <img id="GSa"       src="./images/target/GSa.png"       hidden>
+    <img id="RSa"       src="./images/target/RSa.png"       hidden>
+    <img id="YSa"       src="./images/target/YSa.png"       hidden>
+    <!--sun-->
+    <img id="BSn"       src="./images/target/BSn.png"       hidden>
+    <img id="GSn"       src="./images/target/GSn.png"       hidden>
+    <img id="RSn"       src="./images/target/RSn.png"       hidden>
+    <img id="YSn"       src="./images/target/YSn.png"       hidden>
+    <!--star-->
+    <img id="BSt"       src="./images/target/BSt.png"       hidden>
+    <img id="GSt"       src="./images/target/GSt.png"       hidden>
+    <img id="RSt"       src="./images/target/RSt.png"       hidden>
+    <img id="YSt"       src="./images/target/YSt.png"       hidden>
+    <!--black hole-->
+    <img id="BH"        src="./images/target/BH.png"        hidden>
+    <!--robots-->
+    <img id="RedR"      src="./images/pieces/RedR.png"      hidden>
+    <img id="GreenR"    src="./images/pieces/GreenR.png"    hidden>
+    <img id="BlueR"     src="./images/pieces/BlueR.png"     hidden>
+    <img id="YellowR"   src="./images/pieces/YellowR.png"   hidden>
+    <img id="SelectR"  src="./images/pieces/SelectR.png"  hidden>
+    <img id="ShadowR"  src="./images/pieces/ShadowR.png"  hidden>
+    <!--place holders-->
+    <img id="RedP"      src="./images/pieces/RedP.png"      hidden>
+    <img id="GreenP"    src="./images/pieces/GreenP.png"    hidden>
+    <img id="BlueP"     src="./images/pieces/BlueP.png"     hidden>
+    <img id="YellowP"   src="./images/pieces/YellowP.png"   hidden>
+
+	<!--<audio id="chomp" src="sounds/pacman_chomp.wav" style="display: none;"></audio>-->
+</body>
+</html>

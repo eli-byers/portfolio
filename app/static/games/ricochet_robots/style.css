@@ -1,0 +1,18 @@
+body {
+  background-color: black;
+  /*padding: 15px 0 0 0;*/
+  /*text-align: center;*/
+}
+
+#map, #scene {
+  position: absolute;
+  left: 120px;
+}
+
+
+#map { z-index: 0; }
+#scene { z-index: 1; }
+
+#timer {
+    color: white;
+}

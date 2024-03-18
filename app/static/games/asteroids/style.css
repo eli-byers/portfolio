@@ -1,0 +1,28 @@
+#bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  /* Preserve aspet ratio */
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#space { z-index: 0; }
+#game { z-index: 1; }
+#hud {
+  position: absolute;
+  top: auto;
+  bottom: 10px;
+  left: 10px;
+  z-index: 2;
+  border: 2px solid orange;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+ }
